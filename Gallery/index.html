@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Blanchard.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style/choices.min.css">
+    <link rel="stylesheet" href="style/normolize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Blanchard</title>
+</head>
+<body>
+        <header class="header">
+            <div class="container">
+                <div class="header__content flex">
+                    <div class="header__media-btn">
+                        <a href="#" class="header__nav-btn header__burger">
+                            <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
+                                <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+                                <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+                            </svg>                                        
+                        </a>
+                    </div>
+                    <div class="header__logo">
+                        <img src="img/header__logo.png" alt="Логотип Blanchard">
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="menu list-reset flex">
+                            <li class="header__item">
+                                <a class="header__link" href="#">О нас</a>                                                                   
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#">Галерея</a>                                                                
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#">Каталог</a>                                                                   
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#">События</a>                                                                   
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#">Проекты</a>                                                                   
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#">Контакты</a>                                                                    
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__media-btn">
+                        <a href="#" class="header__nav-btn header__search">
+                            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                            </svg>                                        
+                        </a>
+                    </div>
+                    <div class="header__button">
+                        <button class="header__btn btn-reset">
+                            <svg class="header__btn-arrow" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+                            </svg>                                
+                            Войти
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="hero">
+                <div class="menu-lists">
+                    <div class="container">
+                        <div class="menu__content flex">
+                            <ul class="hero__list list-reset flex">
+                                <li class="hero__item">
+                                    <button class="hero__btn-transition btn-reset">
+                                        Реализм
+                                        <svg class="hero__btn-arrow" width="14" height="9" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="hero__item">
+                                    <button class="hero__btn-transition btn-reset">
+                                        Импрессионизм
+                                        <svg class="hero__btn-arrow" width="14" height="9" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="hero__item">
+                                    <button class="hero__btn-transition btn-reset">
+                                        Постимпрессионизм
+                                        <svg class="hero__btn-arrow" width="14" height="9" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="hero__item">
+                                    <button class="hero__btn-transition btn-reset">
+                                        Авангард
+                                        <svg class="hero__btn-arrow" width="14" height="9" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="hero__item">
+                                    <button class="hero__btn-transition btn-reset">
+                                        Футуризм
+                                        <svg class="hero__btn-arrow" width="14" height="9" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                            <form action="https://jsonplaceholder.typicode.com/posts" id="form__search" class="form__search">
+                                <button class="hero__search-btn btn-reset">
+                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+                                    </svg>                                            
+                                </button>
+                                <input type="search" name="search" class="hero__search-site" value="Поиск по сайту">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="hero__content">
+                        <div class="hero__content-bottom">
+                            <h1 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
+                            <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+                            <button class="hero__btn btn-reset">Подписаться на рассылку</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="company">
+                <div class="container">
+                    <div class="company__content">
+                        <h2 class="company__subtitle site-subtitle">О нас</h2>
+                        <p class="company__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как 
+                            способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, 
+                            забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. 
+                            Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный 
+                            план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
+                            В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают 
+                            популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="container">
+                    <div class="gallery__content flex">
+                        <div class="gallery__content-left">
+                            <h2 class="gallery__subtitle site-subtitle">Галерея</h2>
+                            <span class="gallery__text">Фильтр:</span>
+                            <label class="gallery__choices">
+                                <select name="select" class="gallery__select" id="selectCustom">
+                                    <option>Живопись</option>
+                                    <option>Рисунок</option>
+                                    <option>Скульптура</option>
+                                </select>
+                            </label>
+                            <div class="gallery__custom-radio flex">
+                                <label class="gallery__custom">
+                                    <input type="radio" name="radio-1" class="gallery__radio">XIX век
+                                </label>
+                                <label class="gallery__custom">
+                                    <input type="radio" name="radio-1" class="gallery__radio">XX век
+                                </label>
+                                <label class="gallery__custom">
+                                    <input type="radio" name="radio-1" class="gallery__radio">Современность
+                                </label>
+                            </div>
+                        </div>
+                        <div class="gallery__content-right">
+                            <div class="swiper">
+                                <div class="gallery-slider swiper-container">
+                                    <div class="gallery-slider__nav">
+                                        <button class="slider-nav__btn-prev swiper-button-disabled swiper-btn-effect btn-reset"></button>
+                                        <div class="swiper-pagination gallery-slider__pagination"></div>
+                                        <button class="slider-nav__btn-next swiper-button-disabled swiper-btn-effect btn-reset"></button>
+                                    </div>
+                                    <div class="gallery-slider__wrapper swiper-wrapper">
+                                        <div class="gallery-slider__slide swiper-slide">
+                                            <picture>
+                                                <source srcset="img/media-file/gallery-1024px-1.jpg" media="(max-width: 1024px">
+                                                <img src="img/gallery-1.jpg" alt="Галлерея">
+                                            </picture>
+                                        </div>
+                                        <div class="gallery-slider__slide swiper-slide">
+                                            <source srcset="img/media-file/gallery-1024px-2.jpg" media="(max-width: 1024px">
+                                            <img src="img/gallery-2.jpg" alt="Галлерея">
+                                        </div>
+                                        <div class="gallery-slider__slide swiper-slide">
+                                            <source srcset="img/media-file/gallery-1024px-3.jpg" media="(max-width: 1024px">
+                                            <img src="img/gallery-3.jpg" alt="Галлерея">
+                                        </div>
+                                        <div class="gallery-slider__slide swiper-slide">
+                                            <source srcset="img/media-file/gallery-1024px-4.jpg" media="(max-width: 1024px">
+                                            <img src="img/gallery-4.jpg" alt="Галлерея">
+                                        </div>
+                                        <div class="gallery-slider__slide swiper-slide">
+                                            <source srcset="img/media-file/gallery-1024px-5.jpg" media="(max-width: 1024px">
+                                            <img src="img/gallery-5.jpg" alt="Галлерея">
+                                        </div>
+                                        <div class="gallery-slider__slide swiper-slide">
+                                            <source srcset="img/media-file/gallery-1024px-6.jpg" media="(max-width: 1024px">
+                                            <img src="img/gallery-6.jpg" alt="Галлерея">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog">
+                <div class="container">
+                    <div class="catalog__content">
+                        <h2 class="catalog__subtitle site-subtitle">Каталог</h2>
+                        <p class="catalog__descr">
+                            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, 
+                            будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить 
+                            традиционное производство,нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+                        </p>
+                        <div class="catalog__content-bottom flex">
+                            <div class="catalog__infoFamousPeople">
+                                <div class="tab__content catalog__content-first" data-target="one">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/catalog__bindo.jpg" alt="Бенедетто ди Биндо">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Бенедетто ди Биндо</h3>
+                                    <span class="catalog__infoDate">14&nbsp;мая 1382&nbsp;&mdash; 6&nbsp;июля 1417.</span>
+                                    <p class="catalog__infoText">
+                                        Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник, так сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь он&nbsp;выполнил ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались). Обучение он&nbsp;прошёл у&nbsp;Таддео ди&nbsp;Бартоло, крупного сиенского мастера поздней готики, в&nbsp;боттеге которого Бенедетто трудился вместе с&nbsp;Грегорио ди&nbsp;Чекко. Наибольшее влияние на&nbsp;его творчество оказали работы Симоне Мартини, в&nbsp;частности в&nbsp;выборе колорита, а&nbsp;тонко проработанные лица его персонажей напоминают произведения Джованни да&nbsp;Милано.
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-second" data-target="two">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/catalog__vekyetta.jpg" alt="Веккьетта">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Парентино, Бернардо</h3>
+                                    <span class="catalog__infoDate">10&nbsp;апреля 1412&nbsp;&mdash; 6&nbsp;июня 1480.</span>
+                                    <p class="catalog__infoText">
+                                        О&nbsp;Веккьетте сообщает в&nbsp;своих &laquo;Жизнеописаниях&raquo; Джорджо Вазари и&nbsp;описывает его как человека мрачного и&nbsp;нелюдимого, вечно погружённого в&nbsp;раздумья, и&nbsp;потому прожившего недолго. Позднейшие исследователи пытались имя этого художника увязать с&nbsp;какими-либо архивными данными. Сейчас общепризнанной считается версия, что описанный Вазари Веккьетта&nbsp;&mdash; это Лоренцо ди&nbsp;Пьетро ди&nbsp;Джованни, который был крещён в&nbsp;Сиене в&nbsp;1410&nbsp;году. Имя этого человека появляется в&nbsp;документах в&nbsp;1428 году среди членов гильдии художников Сиены.
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-three" data-target="three">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/Catalog__Bernardo.jpg" alt="Парентино, Бернардо">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Парентино, Бернардо</h3>
+                                    <span class="catalog__infoDate">29&nbsp;января 1450&nbsp;&mdash; 21&nbsp;октября 1500.</span>
+                                    <p class="catalog__infoText">
+                                        Родился в&nbsp;городе Паренцо, принадлежащем венецианской республике и&nbsp;находящимся на&nbsp;побережье полуострова Истрия. Там&nbsp;же, вероятнее всего, получил начальное образование[3]. Умер в&nbsp;городе Виченца. Испытал сильное влияние, а&nbsp;возможно и&nbsp;был учеником Андреа Мантеньи. Также художник известен под именами Бернардо Паренцано, Бернардо да&nbsp;Паренцо, Бернардино Парентино. Ошибочно отождествлялся с&nbsp;августинским монахом Лоренцо
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-four" data-target="four">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/Catalog__Ambrodjo.jpg" alt="Бергоньоне, Амброджо">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Бергоньоне, Амброджо</h3>
+                                    <span class="catalog__infoDate">09&nbsp;января 1453&nbsp;&mdash; 11&nbsp;октября 1523.</span>
+                                    <p class="catalog__infoText">
+                                        Прозвище говорит о&nbsp;его тяготении к&nbsp;бургундской школе, по&nbsp;манере ему близок Винченцо Фоппа. Испытал влияние Леонардо да&nbsp;Винчи. Наиболее известен работами 1486&ndash;1494&nbsp;в монастырской обители картезианцев Чертоза ди&nbsp;Павия. Позднее работал в&nbsp;Милане в&nbsp;базилике Сант-Эусторджо и&nbsp;церкви Сан-Сатиро, после 1497&nbsp;&mdash; в&nbsp;Лоди, в&nbsp;1512&nbsp;&mdash; в&nbsp;Бергамо, незадолго до&nbsp;смерти&nbsp;&mdash; снова в&nbsp;Милане, в&nbsp;базилике Сан-Симпличано.
+                                        Его завещание датировано 4&nbsp;апреля 1523, в&nbsp;том&nbsp;же году он&nbsp;умер. Одним из&nbsp;его учеников считают Бернардино Луини.
+                                        Работы Бергоньоне представлены в&nbsp;музеях Бергамо, Милана (пинакотека Брера, музей Польди-Пеццоли), Турина, Парижа, Лондона, Нью-Йорка и&nbsp;др., одно из&nbsp;его полотен (Иаков Зеведеев, ок.&nbsp;1500) находится в&nbsp;Эрмитаже.
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-five" data-target="five">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/Catalog_Andrea.jpg" alt="Андреа Верроккьо">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Андреа Верроккьо</h3>
+                                    <span class="catalog__infoDate">19&nbsp;августа 1435&nbsp;&mdash; 10&nbsp;октября 1488.</span>
+                                    <p class="catalog__infoText">
+                                        Андреа дель Верроккьо родился и&nbsp;работал во&nbsp;Флоренции. Своё имя (del Verrocchio&nbsp;&mdash; &laquo;от&nbsp;Верроккьо&raquo;), он&nbsp;получил от&nbsp;своего учителя, ювелира Верроккьо. Специализировался на&nbsp;скульптуре, но&nbsp;также обращался и&nbsp;к&nbsp;живописи.
+                                        В&nbsp;эпоху Раннего Возрождения художники работали почти исключительно по&nbsp;заказам, поэтому в&nbsp;то&nbsp;время была велика роль меценатов. Эта практика особенно распространилась во&nbsp;Флоренции XV&nbsp;века, где художественные мастерские осуществляли любые заказы покровителей&nbsp;&mdash; от&nbsp;росписи посуды до&nbsp;архитектурных проектов. Верроккьо считался непревзойденным декоратором и&nbsp;режиссёром придворных празднеств.
+                                        В&nbsp;1465 году он&nbsp;создал надгробие Козимо Медичи (1389&ndash;1464). В&nbsp;1467&ndash;1483 годах работал над скульптурной композицией &laquo;Уверение Фомы (Верроккьо)&raquo; для церкви Орсанмикеле.
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-six" data-target="six">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/Catalog__Pazellino.jpg" alt="Пезеллино">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Пезеллино</h3>
+                                    <span class="catalog__infoDate">13&nbsp;июля 1422&nbsp;&mdash; 10&nbsp;января 1457.</span>
+                                    <p class="catalog__infoText">
+                                        Итальянский историк искусства Джорджо Вазари составил небольшую биографию художника, в&nbsp;которой с&nbsp;восторгом отзывается о&nbsp;его творчестве, но, в&nbsp;то&nbsp;же время, перепутал в&nbsp;ней, кажется, всё, что только можно.
+                                        Франческо ди&nbsp;Стефано родился в&nbsp;семье Стефано ди&nbsp;Франческо и&nbsp;его супруги Нанны, которая была старшей дочерью художника Джулиано д&rsquo;Арриго по&nbsp;прозвищу Пезелло. В&nbsp;1427&nbsp;году, когда мальчику было всего 5&nbsp;лет, его отец скончался, и&nbsp;ребёнок переселился к&nbsp;своему деду по&nbsp;материнской линии&nbsp;&mdash; Джулиано д&rsquo;Арриго, мастерская которого находились на&nbsp;корсо Адимари во&nbsp;Флоренции (ныне это виа деи Кальцайоли). От&nbsp;деда к&nbsp;Франческо перешло и&nbsp;прозвище &laquo;Пезеллино&raquo; (то&nbsp;есть &laquo;маленький Пезелло&raquo;). В&nbsp;двадцатилетнем возрасте Франческо Пезеллино женился на&nbsp;Тарсии, 
+                                        дочери некоего Сильвестера из&nbsp;Роппо, о&nbsp;чём свидетельствует сохранившийся документ, датированный 22&nbsp;ноября 1442&nbsp;года.
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-seven" data-target="seven">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/Catalog__Franchesco.jpg" alt="Биссоло, Франческо">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Биссоло, Франческо</h3>
+                                    <span class="catalog__infoDate">22&nbsp;мая 1470&nbsp;&mdash; 20&nbsp;апреля 1554.</span>
+                                    <p class="catalog__infoText">
+                                        Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал в Венеции. 
+                                        Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал участие в создании украшений Церкви Иль Реденторе в Венеции.
+                                        Художник эпохи Возрождения. В своём творчестве подражал Джорджоне. Работы художника хранятся ныне во многих музеях мира. 
+                                        В санкт-петербургском Эрмитаже находится его картина «Богоматерь с Младенцем Христом». В Британской Национальной галерее — «Мадонна с Младенцем со святыми и донатором». Ряд его полотен находится в музеях Варшавы, 
+                                        Лос-Анджелеса (Музей Нортона Саймона и Los Angeles County Museum of Art), Дэйтоновском институте искусств (штат Огайо, США) и др.
+                                    </p>
+                                </div>                                
+                                <div class="tab__content is-active catalog__content-eight" data-target="eight">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/catalog__Domenic.png" alt="Доменико Гирландайо">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Доменико Гирландайо</h3>
+                                    <span class="catalog__infoDate">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.</span>
+                                    <p class="catalog__infoText">
+                                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат 
+                                        Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. 
+                                        Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей 
+                                        (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-nine" data-target="nine">
+                                    <div class="catolog__picture">
+                                        <picture class="catalog__list-img">
+                                            <img class="catalog__image" src="img/Catalog_Petro-perujino.jpg" alt="Пьетро Перуджино">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Пьетро Перуджино</h3>
+                                    <span class="catalog__infoDate">2&nbsp;июня 1446&nbsp;&mdash; 30&nbsp;февраля 1523.</span>
+                                    <p class="catalog__infoText">
+                                        Родился в&nbsp;местечке Читта-делла-Пьеве в&nbsp;35&nbsp;км от&nbsp;Перуджи (Умбрия), в&nbsp;семье Кристофоро Марии Ваннуччи.
+                                        Историки искусства продолжают оспаривать социально-экономический статус семьи Ваннуччи. Одни утверждают, что Ваннуччи выбрался
+                                        из&nbsp;бедности, другие считают, что его семья была одной из&nbsp;самых богатых в&nbsp;городе. Точная дата рождения художника неизвестна, 
+                                        но&nbsp;на&nbsp;основании его возраста на&nbsp;момент смерти, упомянутого Дж. Вазари, считается, что он&nbsp;родился между 1446 и&nbsp;1452 годами.
+                                    </p>
+                                </div>
+                                <div class="tab__content catalog__content-none" data-target="ten">
+                                    <div class="catolog__picture">
+                                        <picture>
+                                            <img src="img/gallery-none-1.jpg" alt="Картинка">
+                                        </picture>
+                                    </div>
+                                    <h3 class="catalog__name">Что мы о нём знаем?</h3>
+                                    <p class="catalog__infoText">
+                                        Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                    </p>
+                                    <a href="#" class="empty__link">В галерею</a>
+                                </div>
+                            </div>
+                            <div class="catalog__content-right">
+                                <ul id="accordion" class="catalog__list list-reset">
+                                    <li class="catalog__item active">
+                                        <div class="accordion-item__trigger trigger flex">
+                                            <h3 class="accordion__subtitle">C 1400 по 1499 гг.</h3>
+                                            <button class="btn-reset accordion__btn">
+                                                <svg class="accordion__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="black"/>
+                                                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="name__list-wrapper">
+                                            <ul class="name__list list-reset flex">
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="one">Бенедетто ди Биндо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="two">Веккьетта</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="three">Парентино, Бернардо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="four">Бергоньоне, Амброджо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="five">Андреа Верроккьо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="six">Пезеллино</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="seven">Биссоло, Франческо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="eight">Доменико Гирландайо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="nine">Пьетро Перуджино</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Больтраффио, Джованни</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Беноццо Гоццоли</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Перуцци, Бальдассаре</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Бонсиньори, Франческо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Бьяджо д’Антонио Туччи</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Граначчи, Франческо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Пизанелло</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Боттичини, Рафаэлло</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Грегорио ди Чекко</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Пинтуриккьо</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Брамантино</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Джованни да Удине</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Бреа, Людовико</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Джованни ди Паоло</button>
+                                                </li>
+                                                <li class="name__item">
+                                                    <button class="name__tab btn-reset" data-path="ten">Джорджоне</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="catalog__item">
+                                        <div class="accordion-item__trigger trigger flex">
+                                            <h3 class="accordion__subtitle">C 1500 по 1599 гг.</h3>
+                                            <button class="btn-reset accordion__btn">
+                                                <svg class="accordion__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="black"/>
+                                                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="name__list-wrapper">
+                                            <ul class="empty__list list-reset flex">
+                                                <li class="empty__item empty__border">
+                                                    <div class="empty__bg"></div>
+                                                </li>
+                                                <li class="empty__item">
+                                                    <h3 class="empty__subtitle">Здесь пока пусто</h3>
+                                                    <p class="empty__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                                    <a href="#" class="empty__link">В галерею</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="catalog__item">
+                                        <div class="accordion-item__trigger trigger flex">
+                                            <h3 class="accordion__subtitle">C 1600 по 1699 гг.</h3>
+                                            <button class="btn-reset accordion__btn">
+                                                <svg class="accordion__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="black"/>
+                                                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="name__list-wrapper">
+                                            <ul class="empty__list list-reset flex">
+                                                <li class="empty__item empty__border">
+                                                    <div class="empty__bg"></div>
+                                                </li>
+                                                <li class="empty__item">
+                                                    <h3 class="empty__subtitle">Здесь пока пусто</h3>
+                                                    <p class="empty__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                                    <a href="#" class="empty__link">В галерею</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="catalog__item">
+                                        <div class="accordion-item__trigger trigger flex">
+                                            <h3 class="accordion__subtitle">C 1700 по 1799 гг.</h3>
+                                            <button class="btn-reset accordion__btn">
+                                                <svg class="accordion__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="black"/>
+                                                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="name__list-wrapper">
+                                            <ul class="empty__list list-reset flex">
+                                                <li class="empty__item empty__border">
+                                                    <div class="empty__bg"></div>
+                                                </li>
+                                                <li class="empty__item">
+                                                    <h3 class="empty__subtitle">Здесь пока пусто</h3>
+                                                    <p class="empty__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                                    <a href="#" class="empty__link">В галерею</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="catalog__item">
+                                        <div class="accordion-item__trigger trigger flex">
+                                            <h3 class="accordion__subtitle">C 1800 по 1899 гг.</h3>
+                                            <button class="btn-reset accordion__btn">
+                                                <svg class="accordion__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="black"/>
+                                                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="name__list-wrapper">
+                                            <ul class="empty__list list-reset flex">
+                                                <li class="empty__item empty__border">
+                                                    <div class="empty__bg"></div>
+                                                </li>
+                                                <li class="empty__item">
+                                                    <h3 class="empty__subtitle">Здесь пока пусто</h3>
+                                                    <p class="empty__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                                    <a href="#" class="empty__link">В галерею</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="catalog__item">
+                                        <div class="accordion-item__trigger trigger flex">
+                                            <h3 class="accordion__subtitle">C 1900 по 1999 гг.</h3>
+                                            <button class="btn-reset accordion__btn">
+                                                <svg class="accordion__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="black"/>
+                                                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="name__list-wrapper">
+                                            <ul class="empty__list list-reset flex">
+                                                <li class="empty__item empty__border">
+                                                    <div class="empty__bg"></div>
+                                                </li>
+                                                <li class="empty__item">
+                                                    <h3 class="empty__subtitle">Здесь пока пусто</h3>
+                                                    <p class="empty__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                                    <a href="#" class="empty__link">В галерею</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="catalog__item">
+                                        <div class="accordion-item__trigger trigger flex">
+                                            <h3 class="accordion__subtitle">C 2000 г.</h3>
+                                            <button class="btn-reset accordion__btn">
+                                                <svg class="accordion__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                                                    <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" stroke="black"/>
+                                                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="name__list-wrapper">
+                                            <ul class="empty__list list-reset flex">
+                                                <li class="empty__item empty__border">
+                                                    <div class="empty__bg"></div>
+                                                </li>
+                                                <li class="empty__item">
+                                                    <h3 class="empty__subtitle">Здесь пока пусто</h3>
+                                                    <p class="empty__text">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                                    <a href="#" class="empty__link">В галерею</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="event">
+                <div class="container">
+                    <div class="event__content">
+                        <h2 class="event__subtitle site-subtitle">События</h2>
+                        <div class="swiper">
+                            <div class="event-slider swiper-container">
+                                <div class="event-slider__wrapper swiper-wrapper">
+                                    <div class="event-slider__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/event-1.png" alt="события">
+                                        </picture>
+                                        <div class="event__item-text">
+                                            <div class="event__item-height">
+                                                <span class="event__text">
+                                                    Музей им. Щусева <br> 
+                                                    с 20 марта по 30 апреля</span>
+                                                <h3 class="event__item-subtitle">Книжная гравюра в живом восприятии</h3>
+                                                <p class="event__descr">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                                            </div>
+                                            <a href="#" class="event__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/event-2.png" alt="события">
+                                        </picture>
+                                        <div class="event__item-text">
+                                            <div class="event__item-height">
+                                                <span class="event__text">
+                                                    ММОМА <br>
+                                                    24 марта 19:00
+                                                </span>
+                                                <h3 class="event__item-subtitle">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+                                                <p class="event__descr">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                                            </div>
+                                            <a href="#" class="event__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/event-3.png" alt="события">
+                                        </picture>
+                                        <div class="event__item-text">
+                                            <div class="event__item-height">
+                                                <span class="event__text">
+                                                    Еврейский музей <br>
+                                                    с 31 марта по 21 апреля
+                                                </span>
+                                                <h3 class="event__item-subtitle">Выставка «Формация 2020»</h3>
+                                                <p class="event__descr">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                                            </div>
+                                            <a href="#" class="event__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/event-4.png" alt="события">
+                                        </picture>
+                                        <div class="event__item-text">
+                                            <div class="event__item-height">
+                                                <span class="event__text">
+                                                    ММАМ <br>
+                                                    с 8 апреля по 20 мая
+                                                </span>
+                                                <h3 class="event__item-subtitle">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                                                <p class="event__descr">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                                            </div>
+                                            <a href="#" class="event__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="event-slider__slide swiper-slide">
+                                        <picture>
+                                            <img src="img/event-5.png" alt="события">
+                                        </picture>
+                                        <div class="event__item-text">
+                                            <div class="event__item-height">
+                                                <span class="event__text">
+                                                    Третьяковка на Крымском валу <br>
+                                                    с 30 марта по 30 апреля 
+                                                </span>
+                                                <h3 class="event__item-subtitle">XXIV Международная биеннале молодого искусства</h3>
+                                                <p class="event__descr">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+                                            </div>
+                                            <a href="#" class="event__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-slider__nav flex">
+                            <button class="event-slider__btn-prev slider-btn__effect swiper-button-disabled btn-reset"></button>
+                            <button class="event-slider__btn-next slider-btn__effect swiper-button-disabled btn-reset"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="container">
+                    <div class="project__content">
+                        <h2 class="project___subtitle site-subtitle">Проекты</h2>
+                        <p class="project__descr">
+                            Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость 
+                            своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной 
+                            неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское XXX обеспечение 
+                            нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия 
+                            представителей оппозиции могут быть рассмотрены XXX исключительно в разрезе маркетинговых и финансовых XXX предпосылок. 
+                            Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, 
+                            в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. 
+                            Подробнее: <a href="#" class="project__link">blanchard-art.ru/projects</a>
+                        </p>
+                        <h3 class="project__swiper-subtitle">Партнёры проектов:</h3>
+                        <div class="swiper project-swiper">
+                            <div class="project-slider swiper-container">
+                                <div class="project-slider__wrapper swiper-wrapper">
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-1.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-2.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-3.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-4.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-5.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-6.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-7.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-8.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                    <div class="project-slider__slide swiper-slide">
+                                        <a href="#" class="project-slider__partner-link flex">
+                                            <img class="project-slider__img" src="img/project-9.jpg" alt="Картина">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-slider__nav flex">
+                            <button class="project-slider__button-prev slider-btn__effect swiper-button-disabled btn-reset"></button>
+                            <button class="project-slider__button-next slider-btn__effect swiper-button-disabled btn-reset"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="container">
+                    <div class="contact__content">
+                        <form class="form flex">
+                            <h3 class="contact__form-subtitle site-subtitle">
+                                Шоурум №4 
+                                <br>
+                                Леонтьевский переулок, дом 5/1
+                            </h3>
+                            <label class="form__contact-label">
+                                <input class="form__contact-input" type="text" name="Имя" required placeholder="Имя*">
+                            </label>
+                            <label class="form__contact-label">
+                                <input class="form__contact-input" type="tel" name="tel" required placeholder="Телефон*">
+                            </label>
+                            <button class="contact__btn btn-reset">Заказать обратный звонок</button>
+                            <div class="contact__social">
+                                <h3 class="contact__subtitle">Связаться в один клик</h3>
+                                <ul class="contact__list list-reset flex">
+                                    <li class="contact__item">
+                                        <a href="#" class="contact__link">
+                                            <img src="img/Whatsapp-Icon.svg" alt="Whatsapp-Icon">
+                                        </a>                                     
+                                    </li>
+                                    <li class="contact__item">
+                                        <a href="#" class="contact__link">                                        
+                                            <img src="img/Telegram-Icon.svg" alt="Telegram-Icon">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="map">
+                <div id="myMap1" class="myMap"></div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content flex">
+                    <div class="footer__logo">
+                        <img src="img/header__logo.png" alt="Логотип Blanchard">
+                    </div>
+                    <ul class="footer__list list-reset flex">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157 22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163 18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206 17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89 36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z" fill="#CACACA"/>
+                                </svg>      
+                            </a>                          
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.1172 22.5C18.1172 24.8785 20.0453 26.8066 22.4238 26.8066C24.8024 26.8066 26.7305 24.8785 26.7305 22.5C26.7305 20.1215 24.8024 18.1934 22.4238 18.1934C20.0453 18.1934 18.1172 20.1215 18.1172 22.5Z" fill="#CACACA"/>
+                                    <path d="M12.3521 14.8803C12.5591 14.3194 12.8894 13.8116 13.3186 13.3948C13.7354 12.9656 14.2428 12.6354 14.8041 12.4283C15.2594 12.2515 15.9433 12.0411 17.2029 11.9837C18.5656 11.9216 18.9741 11.9082 22.4238 11.9082C25.8739 11.9082 26.2824 11.9212 27.6447 11.9834C28.9044 12.0411 29.5886 12.2515 30.0435 12.4283C30.6049 12.6354 31.1126 12.9656 31.5291 13.3948C31.9582 13.8116 32.2885 14.319 32.4959 14.8803C32.6727 15.3356 32.8832 16.0198 32.9405 17.2795C33.0026 18.6418 33.016 19.0503 33.016 22.5004C33.016 25.9501 33.0026 26.3587 32.9405 27.7213C32.8832 28.981 32.6727 29.6649 32.4959 30.1201C32.2885 30.6814 31.9586 31.1889 31.5294 31.6057C31.1126 32.0348 30.6052 32.3651 30.0439 32.5721C29.5886 32.7493 28.9044 32.9597 27.6447 33.0171C26.2824 33.0792 25.8742 33.0922 22.4242 33.0922C18.9738 33.0922 18.5652 33.0792 17.2033 33.0171C15.9436 32.9597 15.2594 32.7493 14.8041 32.5721C13.6773 32.1375 12.7868 31.2469 12.3521 30.1201C12.1753 29.6649 11.9648 28.981 11.9072 27.7213C11.845 26.3587 11.832 25.9501 11.832 22.5004C11.832 19.0503 11.845 18.6418 11.9072 17.2795C11.9645 16.0198 12.175 15.3356 12.3521 14.8803ZM22.4238 29.1344C26.0881 29.1344 29.0585 26.1643 29.0585 22.5001C29.0585 18.8358 26.0881 15.8657 22.4238 15.8657C18.7599 15.8657 15.7895 18.8358 15.7895 22.5001C15.7895 26.1643 18.7599 29.1344 22.4238 29.1344ZM15.5272 17.1538C16.3834 17.1538 17.0776 16.4596 17.0776 15.6034C17.0776 14.7471 16.3834 14.0529 15.5272 14.0529C14.6709 14.0529 13.9767 14.7471 13.9767 15.6034C13.9771 16.4596 14.6709 17.1538 15.5272 17.1538Z" fill="#CACACA"/>
+                                    <path d="M22.6204 0C34.9364 0 44.9238 9.98747 44.9238 22.3034C44.9238 34.6194 34.9364 44.6069 22.6204 44.6069C10.3044 44.6069 0.316959 34.6194 0.316959 22.3034C0.316959 9.98747 10.3044 0 22.6204 0ZM9.89059 27.5836C9.95253 28.9469 10.1693 29.8777 10.4858 30.6924C11.1512 32.4127 12.5111 33.7727 14.2314 34.438C15.0458 34.7545 15.9769 34.971 17.3399 35.0332C18.7057 35.0955 19.1419 35.1105 22.6201 35.1105C26.0985 35.1105 26.5345 35.0955 27.9005 35.0332C29.2635 34.971 30.1946 34.7545 31.009 34.438C31.8639 34.1164 32.6378 33.6124 33.2776 32.9607C33.929 32.3212 34.433 31.547 34.7546 30.6924C35.0711 29.878 35.2879 28.9469 35.3498 27.5839C35.4128 26.2178 35.4274 25.7815 35.4274 22.3034C35.4274 18.8253 35.4128 18.389 35.3502 17.0233C35.2883 15.66 35.0718 14.7292 34.7553 13.9145C34.4337 13.0599 33.9293 12.2857 33.2776 11.6462C32.6382 10.9945 31.8639 10.4905 31.0094 10.1689C30.1946 9.85236 29.2638 9.63592 27.9005 9.57364C26.5348 9.51136 26.0985 9.49638 22.6204 9.49638C19.1423 9.49638 18.706 9.51136 17.3403 9.57398C15.9769 9.63592 15.0462 9.85236 14.2314 10.1685C13.3769 10.4901 12.6026 10.9945 11.9628 11.6462C11.3114 12.286 10.8071 13.0599 10.4858 13.9145C10.169 14.7292 9.95253 15.66 9.89025 17.0233C9.82798 18.389 9.81334 18.8253 9.81334 22.3034C9.81334 25.7815 9.82798 26.2178 9.89059 27.5836Z" fill="#CACACA"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645 26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z" fill="#CACACA"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+        <script src="js/choices.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>
