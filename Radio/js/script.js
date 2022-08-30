@@ -13,9 +13,19 @@ $( function() {
 
 let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.menu');
+let menuNav = document.querySelector('.header__nav');
+let menuLinkList = document.querySelector('.header__links-nav');
+let contentBottom = document.querySelector('.header__block-bottom');
 
 let headerTabs = document.querySelector('.header__tabs-Btn');
 let headerEther = document.querySelector('.header__ether-list');
+let headerBgTabs = document.querySelector('.header__container-bottom');
+
+headerTabs.addEventListener('click', function(){
+  headerTabs.classList.toggle('is-active');
+  headerEther.classList.toggle('is-active');
+  headerBgTabs.classList.toggle('is-active')
+})
 
 const element = document.querySelector('#selectCustom');
 const choices = new Choices(element, {
@@ -47,11 +57,39 @@ window.addEventListener('DOMContentLoaded', function () {
   menuBtn.addEventListener('click', function(){
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
+    menuNav.classList.toggle('active');
+    menuLinkList.classList.toggle('active');
+    contentBottom.classList.toggle('active');
   })
-  headerTabs.addEventListener('click', function() {
-    headerTabs.classList.toggle('is-active');
-    headerEther.classList.toggle('is-active');
-  })
+  
+  var open = document.querySelector(".header__btn");
+  var close = document.querySelector(".sign-in__closed");
+  var signIn = document.querySelector(".sign-in");
+
+  var tl = gsap.timeline();
+
+
+  tl.to(".sign-in", { duration: 0.5, opacity: 1, ease: "power1.out", onReverseComplete: removeClass })
+
+
+  open.onclick = function () {
+    tl.play();
+  }
+
+  close.onclick = function () {
+    tl.reverse()
+  }
+
+  open.addEventListener("click", function () {
+    this.classList.add("is-active");
+
+    signIn.classList.add("is-active");
+    document.body.style.overflow = 'hidden';
+  });
+  function removeClass() {
+    signIn.classList.remove("is-active");
+    document.body.removeAttribute('style');
+  }
 })
 
 let myPlaylistsSlider = new Swiper('.playlists-slider', {
@@ -74,6 +112,66 @@ let myPlaylistsSlider = new Swiper('.playlists-slider', {
   slidesPerView: 2.3,
   slidesPerGroup: 1,
   spaceBetween: 15,   
+})
 
-  
+let infoClients = new Swiper('.info-slider', {
+  navigation: {
+    nextEl: '.info-slider__btn-next',
+    prevEl: '.info-slider__btn-prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  sensitivity: 1,
+  // slidesPerView: 2,
+  slidesPerGroup: 1,
+  spaceBetween: 0, 
+  breakpoints: {
+    1200: {
+      slidesPerView: 2,
+
+    },
+
+    768: {
+      slidesPerView: 2.3,
+    },
+
+    320: {
+        slidesPerView: 2.3, 
+    },
+    1920: {
+        slidesPerView: 4,
+    }
+  },
+})
+
+var input = document.getElementById('in-txt')
+  ,value = input.value;
+
+input.addEventListener('input', onInput);
+
+function onInput(e){
+  var newValue = e.target.value;
+  if( newValue.match(/[^a-zA-Zа-яА-Я]/g)) {
+     input.value = value;
+     return;
+  }
+  value = newValue;
+};
+
+new JustValidate('.info__form', {
+  rules: {
+      name: {
+          required: true,
+          minLength: 2,
+          maxLength: 20
+      },
+      mail: {
+          required: true,
+          errorMessage: 'no mail',
+          email: true
+      },
+  },
 })
