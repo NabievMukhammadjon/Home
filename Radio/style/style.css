@@ -38,6 +38,7 @@ body {
     display: grid;
     font-family: 'Muller', sans-serif;
     font-weight: 400;
+    background-color: #121723;
 }
 
 img {
@@ -46,8 +47,17 @@ img {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: blue;
+    font-size: 38px;
+    
 }
+
+.container {
+    margin: 0 auto;
+    margin: 50px 50px;
+}
+
+
 
 /* ***************************************************** */
 /* glob */
