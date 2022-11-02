@@ -8,12 +8,21 @@
     <style>
         body {
             height: 100vh;
-            margin: 30px 50px;
+            margin-top: 20px;
             background-color: #909080;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
         }
         a {
             font-size: 36px;
             padding: 14px 22px;
+            margin-bottom: 20px;
+            align-self: flex-start;
+            width: min-content;
             color: gold;
             background-color: #60ff;
             border-radius: 6px;
@@ -24,6 +33,7 @@
             opacity: .7;
         }
         .exel {
+            color: #101080;
             background-color: limegreen;
         }
         .word {
@@ -32,8 +42,10 @@
     </style>
 </head>
 <body>
-    <a href="./СиОС сборник.pdf">pdf(через google)</a>
-    <a class="word" href="./СиОС сборник.docx">word(скачать)</a>
-    <a class="exel" href="./СиОС 93.xlsx">xlsx(скачать)</a>
+    <div class="content">
+        <a href="./тест вс он подготовка.pdf">pdf(через google)</a>
+        <a class="exel" href="./O'rnatilgan tizimlar test рус 200.xlsx">O'rnatilgan tizimlar test рус 200.xlsx(скачать)</a>
+        <a class="exel" href="./ВС 200.xlsx">ВС 200.xlsx(скачать)</a>
+    </div>
 </body>
 </html>
