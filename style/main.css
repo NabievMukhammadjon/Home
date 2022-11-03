@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+* {
+    box-sizing: border-box;
+}
+:root {
+    --index: calc(1vw + 1vh);
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+.img-404 {
+    width: calc(var(--index) * 40);
+    object-fit: cover;
+}
