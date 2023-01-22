@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Catalog</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230122095621">
+	<link rel="shortcut icon" type="image/x-icon" href="img/icons/favicon.svg">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230122095621"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js?_v=20230122095621"></script>
+</head>
+
+<body>
+	<div class="preloader" id="preloader">
+		<div class="preloader__load">
+			<hr />
+			<hr />
+			<hr />
+			<hr />
+		</div>
+		<div class="preloader__text">Loading</div>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div data-da=".header, 636.98, 2" class="header__hidden hidden-header">
+				<div class="hidden-header__container"></div>
+			</div>
+			<div data-da=".header, 636.98, 1" class="header__top top-header">
+				<div class="top-header__container">
+					<div data-da=".hidden-header__container, 1120" class="top-header__info">
+						<div class="top-header__region region-header">
+							<div data-spollers class="region-header__items">
+								<div data-aos="fade-down" data-aos-delay="100" class="region-header__item">
+									<div class="region-header__text">Ваш регион:</div>
+									<div class="region-header__value">
+										<select name="form{}" class="region-header__city">
+											<option value="1" selected>Москва</option>
+											<option value="2">Казань</option>
+											<option value="3">Уфа</option>
+											<option value="4">Пермь</option>
+										</select>
+									</div>
+									<!--<a href="#" class="region-header__region">Москва</a>
+							<button data-spoller class="region-header__arrow _icon-spoller-arrow"></button>
+							<ul class="region-header__list">
+								<li><a href="#" class="region-header__region">Казань</a></li>
+								<li><a href="#" class="region-header__region">Уфа</a></li>
+								<li><a href="#" class="region-header__region">Пермь</a></li>
+							</ul> -->
+								</div>
+							</div>
+						</div>
+						<div data-aos="fade-down" data-aos-delay="100" class="top-header__phone phone-header">
+							<a href="tel:+74958854547" class="phone-header__link _icon-phone"><span>+7 (495) 885-45-47</span></a>
+						</div>
+					</div>
+					<nav data-da=".menu__body, 636.98" class="top-header__menu menu-top-header">
+						<ul class="menu-top-header__list">
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">О компании</a></li>
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">Гарантия и возврат</a></li>
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="suppliers.html" class="menu-top-header__link">Корпоративным клиентам</a></li>
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">Дизайн-решение</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="header__catalog catalog-header">
+				<div class="catalog-header__container">
+					<nav hidden class="menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<div class="menu__body"></div>
+					</nav>
+					<a data-da=".top-header__container, 636.98" href="/" class="catalog-header__logo">
+						<picture><source srcset="img/logo.webp" type="image/webp"><img data-aos="zoom-in" data-aos-delay="100" src="img/logo.png" alt="Логотип сайта"></picture>
+					</a>
+					<nav data-da=".menu__body, 892.98" class="catalog-header__menu menu-catalog">
+						<ul class="menu-catalog__list">
+							<li data-aos="fade-left" data-aos-delay="100" class="menu-catalog__item"><a href="catalog.html" class="menu-catalog__link">Каталог</a></li>
+							<li data-aos="fade-left" data-aos-delay="150" class="menu-catalog__item"><a href="" class="menu-catalog__link">Магазины</a></li>
+							<li data-aos="fade-left" data-aos-delay="200" class="menu-catalog__item"><a href="" class="menu-catalog__link">Шоу-рум</a></li>
+							<li data-aos="fade-left" data-aos-delay="250" class="menu-catalog__item"><a href="" class="menu-catalog__link">Доставка и оплата</a></li>
+							<li data-aos="fade-left" data-aos-delay="300" class="menu-catalog__item"><a href="" class="menu-catalog__link">Дисконт</a></li>
+							<li data-aos="fade-left" data-aos-delay="350" class="menu-catalog__item"><a href="contacts.html" class="menu-catalog__link">Контакты</a></li>
+						</ul>
+						<div class="menu-top-header__img">
+							<picture>
+								<source srcset="img/site-logo.png" media="(min-width: 637px)">
+								<source srcset="img/site-logo-mobile.png" media="(max-width: 636px)">
+								<img src="img/site-logo.png" alt="Картина">
+							</picture>
+						</div>
+					</nav>
+					<div class="catalog-header__btns"></div>
+				</div>
+			</div>
+			<div class="header__body body-header">
+				<div class="body-header__container">
+					<div class="body-header__searchs">
+						<form data-aos="fade-right" data-aos-delay="300" action="#" class="searchs-header">
+							<div class="searchs-header__icon _icon-search"></div>
+							<input id="header-search" value="" type="text" class="searchs-header__search" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Я хочу купить...">
+							<button type="submit" class="searchs-header__button"></button>
+						</form>
+						<div data-aos="fade-right" data-aos-delay="200" class="body-header__value">
+							<select name="form[]" class="form">
+								<option value disabled selected>Категория</option>
+								<option value="1">Диваны</option>
+								<option value="6">Комоды</option>
+								<option value="2">Кресла</option>
+								<option value="7">Стулья</option>
+								<option value="3">Пуфы</option>
+								<option value="8">Столы</option>
+								<option value="4">Кровати</option>
+								<option value="9">Аксессуары</option>
+								<option value="5">Тумбы</option>
+							</select>
+						</div>
+					</div>
+					<div data-da=".top-header__container, 1120" class="body-header__actions actions-body-header">
+						<a data-aos="fade-left" data-aos-delay="200" data-da=".catalog-header__btns, 892.98" href="" class="actions-body-header__user _icon-user"></a>
+						<a data-aos="fade-left" data-aos-delay="250" data-da=".catalog-header__btns, 892.98" href="" class="actions-body-header__cart cart-header">
+							<div class="cart-header__icon _icon-cart"><span>0</span></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page inner-page">
+			<div class="inner-page__container">
+				<nav class="inner-page__breadcrumbs breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li data-aos="fade-right" data-aos-delay="350" class="breadcrumbs__item">
+							<a href="index.html" class="breadcrumbs__link">Главная /</a>
+						</li>
+						<li data-aos="fade-right" data-aos-delay="300" class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">Каталог /</a>
+						</li>
+						<li data-aos="fade-right" data-aos-delay="250" class="breadcrumbs__item">
+							<a href="#" class="breadcrumbs__link">Диваны /</a>
+						</li>
+						<li data-aos="fade-right" data-aos-delay="200" class="breadcrumbs__item">
+							<span class="breadcrumbs__current">Прямые диваны</span>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="catalog">
+				<div class="catalog__container">
+					<div class="catalog__body">
+						<div class="catalog__filter filter-catalog">
+							<div data-aos="fade-up" data-aos-delay="200" class="filter-catalog__title">Фильтровать по:</div>
+							<div data-aos="fade-up" data-aos-delay="200" class="filter-catalog__title">Фильтры</div>
+							<div class="filter-catalog__list">
+								<div data-spollers="1120" class="filter-catalog__items">
+									<div class="filter-catalog__item item-filter-catalog">
+										<button data-aos="fade-up" data-aos-delay="250" type="button" data-spoller class="item-filter-catalog__title filter-btn--arrow">Категория</button>
+										<div class="item-filter-catalog__body" data-aos="fade-up" data-aos-delay="300">
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" checked>
+												<label for="c_1" class="checkbox__label"><span class="checkbox__text">Диваны</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_2" class="checkbox__label"><span class="checkbox__text">Кресла</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_3" class="checkbox__label"><span class="checkbox__text">Пуфы</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_4" class="checkbox__label"><span class="checkbox__text">Кровати</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_5" class="checkbox__label"><span class="checkbox__text">Тумбы</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_6" class="checkbox__label"><span class="checkbox__text">Комоды</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_7" class="checkbox__label"><span class="checkbox__text">Стулья</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_8" class="checkbox__label"><span class="checkbox__text">Столы</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_9" class="checkbox__label"><span class="checkbox__text">Аксессуары</span></label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-catalog__price price-filter">
+										<button data-aos="fade-up" data-aos-delay="400" type="button" data-spoller class="item-filter-catalog__title filter-btn--arrow">Цена</button>
+										<div data-aos="fade-up" data-aos-delay="250" data-range class="price-filter__body">
+											<div class="price-filter__inputs">
+												<div class="price-filter__item">
+													<label for="#priceFromInput" class="price-filter__label">от</label>
+													<input id="priceFromInput" data-range-from="0" value="2000" type="text" name="form[]" autocomplete="off" class="price-filter__input">
+												</div>
+												<div class="price-filter__item">
+													<label for="#priceToInput" class="price-filter__label">до</label>
+													<input id="priceToInput" data-range-to="200000" value="150000" type="text" name="form[]" autocomplete="off" class="price-filter__input">
+												</div>
+											</div>
+											<div data-range-item class="price-filter__range"></div>
+										</div>
+									</div>
+									<div class="filter-catalog__item item-filter-catalog">
+										<button data-aos="fade-up" data-aos-delay="400" type="button" data-spoller class="item-filter-catalog__title filter-btn--arrow">Скидка</button>
+										<div data-aos="fade-up" data-aos-delay="250" class="item-filter-catalog__body">
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="b_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="b_1" class="checkbox__label"><span class="checkbox__text">Более 5 000</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="b_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="b_2" class="checkbox__label"><span class="checkbox__text">Менее 5 000</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="b_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" checked>
+												<label for="b_3" class="checkbox__label"><span class="checkbox__text">Не важно</span></label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-catalog__item item-filter-catalog">
+										<button data-aos="fade-up" data-aos-delay="400" type="button" data-spoller class="item-filter-catalog__title filter-btn--arrow">Цвет</button>
+										<div data-aos="fade-up" data-aos-delay="250" class="item-filter-catalog__body">
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_1" class="checkbox__label"><span class="checkbox__text">Коричневый</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_2" class="checkbox__label"><span class="checkbox__text">Черный</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_3" class="checkbox__label"><span class="checkbox__text">Бежевый</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_4" class="checkbox__label"><span class="checkbox__text">Серый</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_5" class="checkbox__label"><span class="checkbox__text">Белый</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_6" class="checkbox__label"><span class="checkbox__text">Синий</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" checked>
+												<label for="a_7" class="checkbox__label"><span class="checkbox__text">Оранжевый</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_8" class="checkbox__label"><span class="checkbox__text">Желтый</span></label>
+											</div>
+											<div class="item-filter-catalog__checkbox checkbox">
+												<input id="a_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="a_9" class="checkbox__label"><span class="checkbox__text">Зеленый</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<article data-aos="fade-up" data-aos-delay="100" class="filter-catalog__card card-filter-catalog">
+									<div class="card-filter-catalog__image-ibg">
+										<picture><source srcset="img/new-collection/Oxford_phone.webp" type="image/webp"><img src="img/new-collection/Oxford_phone.jpg" alt="Картинка"></picture>
+									</div>
+									<div class="card-filter-catalog__body">
+										<div class="card-filter-catalog__title">Оксфорд 1950</div>
+										<div class="card-filter-catalog__text">Новая коллекция изысканных кресел</div>
+										<a href="#" class="card-filter-catalog__link">
+											<span>В каталог</span>
+											<div class="card-filter-catalog__link-icon">
+												<svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1.625 1.5625L5.0625 5L1.625 8.4375" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+										</a>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="catalog__content">
+							<h2 data-aos="zoom" data-da=".catalog__container, 892.98" data-aos-delay="1000" class="catalog__title">Каталог</h2>
+							<div data-tabs class="catalog__tabs">
+								<div data-tabs-body class="catalog__products">
+									<div class="catalog__tab-inner">
+										<div class="catalog__tab-item catalog__tab-item_1">
+											<article data-aos="fade-up" data-aos-delay="1150" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_R-94.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_R-94.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">5,0</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван кожаный “R-94”
+														</a>
+													</h4>
+													<div class="body-products-card__price">94 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="1150" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_T-75.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_T-75.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,9</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван апартековый “T-75”
+														</a>
+													</h4>
+													<div class="body-products-card__price">69 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="1150" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_D-31.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_D-31.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,8</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван тканевый “D-31”
+														</a>
+													</h4>
+													<div class="body-products-card__price">28 490 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_Y-68.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_Y-68.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,8</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван велюровый “Y-68”
+														</a>
+													</h4>
+													<div class="body-products-card__price">22 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_W-95.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_W-95.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,8</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван из шинила “W-95”
+														</a>
+													</h4>
+													<div class="body-products-card__price">22 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_G-41.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_G-41.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,8</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван флоковый “G-41”
+														</a>
+													</h4>
+													<div class="body-products-card__price">17 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-da=".catalog__tab-item_3, 892.98" data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_V-43.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_V-43.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,8</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван шиниловый “V-43”
+														</a>
+													</h4>
+													<div class="body-products-card__price">19 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-da=".catalog__tab-item_3, 892.98" data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_S-99.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_S-99.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,7</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван велюровый “S-99”
+														</a>
+													</h4>
+													<div class="body-products-card__price">19 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-da=".catalog__tab-item_3, 892.98" data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_F-85.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_F-85.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,7</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван из кожзама “F-85”
+														</a>
+													</h4>
+													<div class="body-products-card__price">26 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+										</div>
+									</div>
+									<div class="catalog__tab-inner">
+										<div class="catalog__tab-item catalog__tab-item_2">
+											<article data-aos="fade-up" data-aos-delay="1150" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_H-64.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_H-64.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,6</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван флоковый “H-64”
+														</a>
+													</h4>
+													<div class="body-products-card__price">25 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="1150" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_H-58.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_H-58.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,6</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван флоковый “H-58”
+														</a>
+													</h4>
+													<div class="body-products-card__price">23 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="1150" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_R-43.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_R-43.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,6</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван из кожзама “R-43”
+														</a>
+													</h4>
+													<div class="body-products-card__price">33 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_C-42.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_C-42.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,6</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван из шинила “С-42”
+														</a>
+													</h4>
+													<div class="body-products-card__price">18 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_U-58.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_U-58.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,6</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван велюровый “U-58”
+														</a>
+													</h4>
+													<div class="body-products-card__price">21 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_F-41.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_F-41.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,5</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван флоковый “F-41”
+														</a>
+													</h4>
+													<div class="body-products-card__price">17 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-da=".catalog__tab-item_3, 892.98" data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_R-85.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_R-85.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,5</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван велюровый “R-85”
+														</a>
+													</h4>
+													<div class="body-products-card__price">34 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-da=".catalog__tab-item_3, 892.98" data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_S-44.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_S-44.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,5</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван велюровый “S-44”
+														</a>
+													</h4>
+													<div class="body-products-card__price">19 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+											<article data-da=".catalog__tab-item_3, 892.98" data-aos="fade-up" data-aos-delay="100" class="products-card">
+												<a href="" class="products-card__image">
+													<picture><source srcset="img/high-rating/highRating_sofa_C-80.webp" type="image/webp"><img src="img/high-rating/highRating_sofa_C-80.png" alt="Картинка"></picture>
+												</a>
+												<div class="products-card__rating">4,4</div>
+												<div class="products-card__body body-products-card">
+													<h4 class="body-products-card__title">
+														<a href="#" class="body-products-card__link-title">
+															Диван из шинила “С-80”
+														</a>
+													</h4>
+													<div class="body-products-card__price">20 990 руб</div>
+													<button class="body-products-card__button button btn-by"><span>Купить</span></button>
+												</div>
+											</article>
+										</div>
+									</div>
+									<div class="catalog__tab-inner">
+										<div class="catalog__tab-item catalog__tab-item_3"></div>
+									</div>
+								</div>
+								<nav data-tabs-titles class="catalog__pagging pagging">
+									<button data-aos="zoom-in" data-aos-delay="100" type="submit" class="pagging__title button _tab-active">1</button>
+									<button data-aos="zoom-in" data-aos-delay="100" type="submit" class="pagging__title button">2</button>
+									<button data-aos="zoom-in" data-aos-delay="100" type="submit" class="pagging__title button">3</button>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<section class="footer__body body-footer">
+				<div class="body-footer__container">
+					<div class="body-footer__row">
+						<a data-aos="zoom-in" data-aos-delay="100" href="/" class="body-footer__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Логотип"></picture>
+						</a>
+						<ul class="body-footer__social social-footer">
+							<li data-aos="fade-right" data-aos-delay="200" class="social-footer__item">
+								<a href="#" class="social-footer__link _icon-facebook"></a>
+							</li>
+							<li data-aos="fade-right" data-aos-delay="150" class="social-footer__item">
+								<a href="#" class="social-footer__link _icon-vk"></a>
+							</li>
+							<li data-aos="fade-right" data-aos-delay="100" class="social-footer__item">
+								<a href="#" class="social-footer__link _icon-instagram"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="body-footer__bottom">
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">О нас</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">О компании</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Блог</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">Услуги</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Доставка</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Рассрочка и кредит</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="250" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Сборка и установка</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">Связь с нами</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Обратная связь</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Контакты</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">Сотрудничество</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Поставщикам</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Оптовикам</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="250" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Карьера</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="footer__copy copy-footer">
+				<div data-aos="fade-up" data-aos-delay="300" data-aos-offset="10" class="copy-footer__container">
+					<span class="copy-footer__text">SDP® 2011-2021</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js?_v=20230122095621"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&_v=20230122095621"></script>
+	<div id="byOneClick" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0" />
+					</svg>
+				</button>
+				<div class="popup__text text-popup">
+					<h2 class="text-popup__title">Купить в один клик</h2>
+					<p class="text-popup__descr">
+						Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.
+					</p>
+					<form action="#" class="text-popup__form form" data-dev data-goto-error data-popup-message="#form-message">
+						<label for="popupName" class="text-popup__label">
+							<input type="text" name="name" id="popupName" placeholder="Как вас зовут?" class="text-popup__input" data-error="Недопустимый формат" data-required data-validate autocomplete="off">
+						</label>
+						<label for="popupPhone" class="text-popup__label">
+							<input type="tel" name="tel" id="popupPhone" placeholder="Ваш телефон" class="text-popup__input" data-error="Поле не заполнено" autocomplete="off" data-required="tel">
+						</label>
+						<div class="text-popup__btns">
+							<button type="submit" class="text-popup__button button btn-site"><span>Отправить</span></button>
+							<input type="checkbox" id="popupCheckbox" class="home-form__checkbox checkbox__input" value="1" name="form[]" data-error="Ошибка" checked>
+							<label for="homeInputCheckbox" class="checkbox__label home-form__label">
+								<span class="checkbox__text">Принимаю <a href="#">пользовательское соглашение</a></span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup-form">
+				<button data-close type="button" class="popup__close popup-form__close-btn">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0" />
+					</svg>
+				</button>
+				<div class="popup-form__image">
+					<picture>
+						<source srcset="img/site-logo.png" media="(min-width: 637px)">
+						<source srcset="img/site-logo-mobile.png" media="(max-width: 636px)">
+						<img src="img/site-logo.png" alt="Картина">
+					</picture>
+				</div>
+				<p class="popup-form__text">Спасибо, мы вам перезвоним!</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="product-D-31" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup-product-slider">
+				<button data-aos="zoom-in" data-aos-delay="100" data-aos-offset="0" data-aos-once="false" data-close type="button" class="popup__close popup-form__close-btn">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0" />
+					</svg>
+				</button>
+				<div class="images-product__img" data-aos="zoom-in" data-aos-delay="200" data-aos-offset="0" data-aos-once="false">
+					<picture><source srcset="img/main-product/popup/sofa-D-31-Big.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-Big.png" alt="Картинка"></picture>
+				</div>
+				<div class="images-product__mini-slider">
+					<div class="images-product__thumbs thumbs-images">
+						<div data-aos="fade-up" data-aos-delay="200" data-aos-offset="0" data-aos-once="false" class="thumbs-images__swiper">
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-1.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-1.png" alt="Картинка"></picture>
+							</div>
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-2.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-2.png" alt="Картинка"></picture>
+							</div>
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-3.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-3.png" alt="Картинка"></picture>
+							</div>
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-4.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-4.png" alt="Картинка"></picture>
+							</div>
+						</div>
+					</div>
+					<div class="thumbs-images__controll">
+						<div class="thumbs-images__prev">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 1L1 6L6 11" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<div class="thumbs-images__next">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230122095621"></script>
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Suppliers</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230122095621">
+	<link rel="shortcut icon" type="image/x-icon" href="img/icons/favicon.svg">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?_v=20230122095621"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js?_v=20230122095621"></script>
+</head>
+
+<body>
+	<div class="preloader" id="preloader">
+		<div class="preloader__load">
+			<hr />
+			<hr />
+			<hr />
+			<hr />
+		</div>
+		<div class="preloader__text">Loading</div>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div data-da=".header, 636.98, 2" class="header__hidden hidden-header">
+				<div class="hidden-header__container"></div>
+			</div>
+			<div data-da=".header, 636.98, 1" class="header__top top-header">
+				<div class="top-header__container">
+					<div data-da=".hidden-header__container, 1120" class="top-header__info">
+						<div class="top-header__region region-header">
+							<div data-spollers class="region-header__items">
+								<div data-aos="fade-down" data-aos-delay="100" class="region-header__item">
+									<div class="region-header__text">Ваш регион:</div>
+									<div class="region-header__value">
+										<select name="form{}" class="region-header__city">
+											<option value="1" selected>Москва</option>
+											<option value="2">Казань</option>
+											<option value="3">Уфа</option>
+											<option value="4">Пермь</option>
+										</select>
+									</div>
+									<!--<a href="#" class="region-header__region">Москва</a>
+							<button data-spoller class="region-header__arrow _icon-spoller-arrow"></button>
+							<ul class="region-header__list">
+								<li><a href="#" class="region-header__region">Казань</a></li>
+								<li><a href="#" class="region-header__region">Уфа</a></li>
+								<li><a href="#" class="region-header__region">Пермь</a></li>
+							</ul> -->
+								</div>
+							</div>
+						</div>
+						<div data-aos="fade-down" data-aos-delay="100" class="top-header__phone phone-header">
+							<a href="tel:+74958854547" class="phone-header__link _icon-phone"><span>+7 (495) 885-45-47</span></a>
+						</div>
+					</div>
+					<nav data-da=".menu__body, 636.98" class="top-header__menu menu-top-header">
+						<ul class="menu-top-header__list">
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">О компании</a></li>
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">Гарантия и возврат</a></li>
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="suppliers.html" class="menu-top-header__link">Корпоративным клиентам</a></li>
+							<li data-aos="fade-down" data-aos-delay="100" class="menu-top-header__item"><a href="#" class="menu-top-header__link">Дизайн-решение</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="header__catalog catalog-header">
+				<div class="catalog-header__container">
+					<nav hidden class="menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<div class="menu__body"></div>
+					</nav>
+					<a data-da=".top-header__container, 636.98" href="/" class="catalog-header__logo">
+						<picture><source srcset="img/logo.webp" type="image/webp"><img data-aos="zoom-in" data-aos-delay="100" src="img/logo.png" alt="Логотип сайта"></picture>
+					</a>
+					<nav data-da=".menu__body, 892.98" class="catalog-header__menu menu-catalog">
+						<ul class="menu-catalog__list">
+							<li data-aos="fade-left" data-aos-delay="100" class="menu-catalog__item"><a href="catalog.html" class="menu-catalog__link">Каталог</a></li>
+							<li data-aos="fade-left" data-aos-delay="150" class="menu-catalog__item"><a href="" class="menu-catalog__link">Магазины</a></li>
+							<li data-aos="fade-left" data-aos-delay="200" class="menu-catalog__item"><a href="" class="menu-catalog__link">Шоу-рум</a></li>
+							<li data-aos="fade-left" data-aos-delay="250" class="menu-catalog__item"><a href="" class="menu-catalog__link">Доставка и оплата</a></li>
+							<li data-aos="fade-left" data-aos-delay="300" class="menu-catalog__item"><a href="" class="menu-catalog__link">Дисконт</a></li>
+							<li data-aos="fade-left" data-aos-delay="350" class="menu-catalog__item"><a href="contacts.html" class="menu-catalog__link">Контакты</a></li>
+						</ul>
+						<div class="menu-top-header__img">
+							<picture>
+								<source srcset="img/site-logo.png" media="(min-width: 637px)">
+								<source srcset="img/site-logo-mobile.png" media="(max-width: 636px)">
+								<img src="img/site-logo.png" alt="Картина">
+							</picture>
+						</div>
+					</nav>
+					<div class="catalog-header__btns"></div>
+				</div>
+			</div>
+			<div class="header__body body-header">
+				<div class="body-header__container">
+					<div class="body-header__searchs">
+						<form data-aos="fade-right" data-aos-delay="300" action="#" class="searchs-header">
+							<div class="searchs-header__icon _icon-search"></div>
+							<input id="header-search" value="" type="text" class="searchs-header__search" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Я хочу купить...">
+							<button type="submit" class="searchs-header__button"></button>
+						</form>
+						<div data-aos="fade-right" data-aos-delay="200" class="body-header__value">
+							<select name="form[]" class="form">
+								<option value disabled selected>Категория</option>
+								<option value="1">Диваны</option>
+								<option value="6">Комоды</option>
+								<option value="2">Кресла</option>
+								<option value="7">Стулья</option>
+								<option value="3">Пуфы</option>
+								<option value="8">Столы</option>
+								<option value="4">Кровати</option>
+								<option value="9">Аксессуары</option>
+								<option value="5">Тумбы</option>
+							</select>
+						</div>
+					</div>
+					<div data-da=".top-header__container, 1120" class="body-header__actions actions-body-header">
+						<a data-aos="fade-left" data-aos-delay="200" data-da=".catalog-header__btns, 892.98" href="" class="actions-body-header__user _icon-user"></a>
+						<a data-aos="fade-left" data-aos-delay="250" data-da=".catalog-header__btns, 892.98" href="" class="actions-body-header__cart cart-header">
+							<div class="cart-header__icon _icon-cart"><span>0</span></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page suppliers-page">
+			<section class="page__header">
+				<div class="page__container">
+					<nav class="page__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li data-aos="fade-right" data-aos-delay="1050" class="breadcrumbs__item">
+								<a href="/" class="breadcrumbs__link">Главная /</a>
+							</li>
+							<li data-aos="fade-right" data-aos-delay="1000" class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Сотрудничество</span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			<section class="suppliers">
+				<div class="suppliers__container">
+					<div class="suppliers__content">
+						<h1 data-aos="fade-up" data-aos-delay="1100" class="suppliers__title">Сотрудничество</h1>
+						<div class="suppliers__block block-suppliers">
+							<div data-spollers="892.98" class="block-suppliers__item">
+								<button data-aos="fade-up" data-aos-delay="1100" data-spoller type="button" class="block-suppliers__title button">
+									Поставщикам
+								</button>
+								<p data-aos="fade-up" data-aos-delay="1200" class="block-suppliers__descr">
+									При планировании обстановки торгового помещения важно обустроить его с&nbsp;комфортом для покупателей: грамотно зонировать, обеспечить эффективную демонстрацию и&nbsp;хранение товаров в&nbsp;зале. Если вам необходимо комплексное оснащение, организация зоны отдыха или отдельные предметы меблировки для поддержания эффективной торговой деятельности, мы&nbsp;поможем выбрать продукцию с&nbsp;учетом нагрузки от&nbsp;поступающего трафика.
+								</p>
+							</div>
+							<div data-spollers="892.98" class="block-suppliers__item">
+								<button data-aos="fade-up" data-aos-delay="100" data-spoller type="button" class="block-suppliers__title button">Что вы получаете?</button>
+								<ul class="block-suppliers__benefit benefit-suppliers">
+									<li data-aos="fade-up" data-aos-delay="100" class="benefit-suppliers__item">
+										<div class="benefit-suppliers__icon">
+											<img src="img/cooperation/icons/network.svg" alt="Иконка">
+										</div>
+										<p class="benefit-suppliers__descr">
+											Мы&nbsp;ценим идеи и&nbsp;вдохновение и&nbsp;предлагаем сотрудничество талантливым дизайнерам и&nbsp;архитекторам. Выпускаемая нами продукция гармонично дополнит любой современный проект.
+										</p>
+									</li>
+									<li data-aos="fade-up" data-aos-delay="100" class="benefit-suppliers__item">
+										<div class="benefit-suppliers__icon">
+											<img src="img/cooperation/icons/briefcase.svg" alt="Иконка">
+										</div>
+										<p class="benefit-suppliers__descr">
+											Комплексное решение для красивого и&nbsp;функционального обустройства любых пространств.
+										</p>
+									</li>
+									<li data-aos="fade-up" data-aos-delay="100" class="benefit-suppliers__item">
+										<div class="benefit-suppliers__icon">
+											<img src="img/cooperation/icons/git-pull-request.svg" alt="Иконка">
+										</div>
+										<p class="benefit-suppliers__descr">
+											В&nbsp;ассортименте представлены все товарные группы для того, чтобы воссоздать обстановку в&nbsp;помещениях разных типов: кабинетах, смешанных пространствах, Open Space, гостевых и&nbsp;переговорных комнатах.
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div data-spollers="892.98" class="block-suppliers__item">
+								<button data-aos="fade-up" data-aos-delay="100" data-spoller type="button" class="block-suppliers__title button">Ваши преимущества от&nbsp;сотрудничества</button>
+								<div class="block-suppliers__advantage advantage-suppliers">
+									<div data-aos="fade-up" data-aos-delay="200" class="advantage-suppliers__item">
+										<h3 class="advantage-suppliers__title">Возможность 1:</h3>
+										<p class="advantage-suppliers__descr">
+											Создавайте незабываемые впечатления. Красиво меблированная фотостудия не&nbsp;оставит клиентов равнодушными, а&nbsp;созданная интерьером атмосфера будет надолго запечатлена на&nbsp;их&nbsp;снимках. Стильная и&nbsp;разноплановая обстановка творческого пространства&nbsp;&mdash; ключевая составляющая его успешной деятельности. Позаботьтесь о&nbsp;людях в&nbsp;кадре, а&nbsp;мы&nbsp;поможем правильно выбрать мебель.
+										</p>
+									</div>
+									<div data-aos="fade-up" data-aos-delay="200" class="advantage-suppliers__item">
+										<h3 class="advantage-suppliers__title">Возможность 2:</h3>
+										<p class="advantage-suppliers__descr">
+											Мы&nbsp;предлагаем застройщикам, работающим на&nbsp;территории&nbsp;РФ, участие наших специалистов от&nbsp;этапа проектирования обстановки квартир и&nbsp;подбора комплексных интерьерных решений до&nbsp;оптовых поставок мебели. Поможем организовать демонстрационный зал с&nbsp;образцами изделий и&nbsp;материалов на&nbsp;площади нового здания, чтобы покупатель заблаговременно подобрал тот вариант меблировки, который удовлетворит даже самые взыскательные ожидания.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div data-spollers="892.98" class="block-suppliers__item">
+								<button data-aos="fade-up" data-aos-delay="100" data-spoller type="button" class="block-suppliers__title button">Гарантии</button>
+								<ol class="block-suppliers__guarantee guarantee-suppliers">
+									<li data-aos="fade-up" data-aos-delay="100" class="guarantee-suppliers__item">
+										<p class="guarantee-suppliers__descr">
+											При приемке товара Покупатель должен внимательно проверить его количество, качество и&nbsp;ассортимент на&nbsp;соответствие сопроводительным документам и&nbsp;заказу. После подписания товарного чека Покупатель утрачивает право предъявления претензий, которые можно выявить при приемке товара.
+										</p>
+									</li>
+									<li data-aos="fade-up" data-aos-delay="200" class="guarantee-suppliers__item">
+										<p class="guarantee-suppliers__descr">
+											На товары, сборка которых производилась покупателем самостоятельно (не специалистами Продавца), гарантийные обязательства Продавца не распространяются. Также гарантия не распространяется на повреждения товара, полученные в ходе самостоятельной доставки и подъема товара. Покупатель не вправе отказаться от товара надлежащего качества, имеющего индивидуально-определенные свойства, т.е. если товар может быть использован исключительно приобретающим его потребителем.
+										</p>
+									</li>
+									<li data-aos="fade-up" data-aos-delay="300" class="guarantee-suppliers__item">
+										<p class="guarantee-suppliers__descr">
+											Возврат или обмен товара возможен при условии, что сохранена упаковка, товарный вид и&nbsp;потребительские свойства товара, а&nbsp;также товарный и&nbsp;кассовый чеки. В&nbsp;этом случае мы&nbsp;гарантируем вам возврат полной стоимости товара (за&nbsp;вычетом стоимости доставки). В&nbsp;случае отказа от&nbsp;товара при доставке, клиент оплачивает услуги доставки.
+										</p>
+									</li>
+								</ol>
+							</div>
+							<div class="block-suppliers__item term-suppliers">
+								<div data-aos="zoom-out" data-aos-delay="100" data-aos-delay="100" class="term-suppliers__image">
+									<picture><source srcset="img/suppliers/guarante.webp" type="image/webp"><img src="img/suppliers/guarante.png" alt="Картинка карандаш"></picture>
+								</div>
+								<h2 data-aos="fade-left" data-aos-delay="100" class="term-suppliers__title">
+									Срок гарантии на&nbsp;нашу мебель составляет от&nbsp;18&nbsp;до&nbsp;60&nbsp;месяцев
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<section class="footer__body body-footer">
+				<div class="body-footer__container">
+					<div class="body-footer__row">
+						<a data-aos="zoom-in" data-aos-delay="100" href="/" class="body-footer__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Логотип"></picture>
+						</a>
+						<ul class="body-footer__social social-footer">
+							<li data-aos="fade-right" data-aos-delay="200" class="social-footer__item">
+								<a href="#" class="social-footer__link _icon-facebook"></a>
+							</li>
+							<li data-aos="fade-right" data-aos-delay="150" class="social-footer__item">
+								<a href="#" class="social-footer__link _icon-vk"></a>
+							</li>
+							<li data-aos="fade-right" data-aos-delay="100" class="social-footer__item">
+								<a href="#" class="social-footer__link _icon-instagram"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="body-footer__bottom">
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">О нас</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">О компании</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Блог</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">Услуги</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Доставка</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Рассрочка и кредит</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="250" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Сборка и установка</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">Связь с нами</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Обратная связь</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Контакты</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+						<div class="body-footer__item item-footer">
+							<div data-spollers="640" class="item-footer__spoller spoller-item-footer">
+								<div class="spoller-item-footer__inner">
+									<button data-aos="fade-up" data-aos-delay="100" data-spoller class="spoller-item-footer__title">Сотрудничество</button>
+									<nav class="menu-footer">
+										<ul class="menu-footer__list">
+											<li data-aos="fade-up" data-aos-delay="150" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Поставщикам</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="200" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Оптовикам</a>
+											</li>
+											<li data-aos="fade-up" data-aos-delay="250" class="menu-footer__item">
+												<a href="" class="menu-footer__link">Карьера</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="footer__copy copy-footer">
+				<div data-aos="fade-up" data-aos-delay="300" data-aos-offset="10" class="copy-footer__container">
+					<span class="copy-footer__text">SDP® 2011-2021</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js?_v=20230122095621"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&_v=20230122095621"></script>
+	<div id="byOneClick" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0" />
+					</svg>
+				</button>
+				<div class="popup__text text-popup">
+					<h2 class="text-popup__title">Купить в один клик</h2>
+					<p class="text-popup__descr">
+						Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.
+					</p>
+					<form action="#" class="text-popup__form form" data-dev data-goto-error data-popup-message="#form-message">
+						<label for="popupName" class="text-popup__label">
+							<input type="text" name="name" id="popupName" placeholder="Как вас зовут?" class="text-popup__input" data-error="Недопустимый формат" data-required data-validate autocomplete="off">
+						</label>
+						<label for="popupPhone" class="text-popup__label">
+							<input type="tel" name="tel" id="popupPhone" placeholder="Ваш телефон" class="text-popup__input" data-error="Поле не заполнено" autocomplete="off" data-required="tel">
+						</label>
+						<div class="text-popup__btns">
+							<button type="submit" class="text-popup__button button btn-site"><span>Отправить</span></button>
+							<input type="checkbox" id="popupCheckbox" class="home-form__checkbox checkbox__input" value="1" name="form[]" data-error="Ошибка" checked>
+							<label for="homeInputCheckbox" class="checkbox__label home-form__label">
+								<span class="checkbox__text">Принимаю <a href="#">пользовательское соглашение</a></span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup-form">
+				<button data-close type="button" class="popup__close popup-form__close-btn">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0" />
+					</svg>
+				</button>
+				<div class="popup-form__image">
+					<picture>
+						<source srcset="img/site-logo.png" media="(min-width: 637px)">
+						<source srcset="img/site-logo-mobile.png" media="(max-width: 636px)">
+						<img src="img/site-logo.png" alt="Картина">
+					</picture>
+				</div>
+				<p class="popup-form__text">Спасибо, мы вам перезвоним!</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="product-D-31" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup-product-slider">
+				<button data-aos="zoom-in" data-aos-delay="100" data-aos-offset="0" data-aos-once="false" data-close type="button" class="popup__close popup-form__close-btn">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29915 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="#A65CF0" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5915 19.6023C20.1362 19.0719 20.1362 18.2121 19.5915 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="#A65CF0" />
+					</svg>
+				</button>
+				<div class="images-product__img" data-aos="zoom-in" data-aos-delay="200" data-aos-offset="0" data-aos-once="false">
+					<picture><source srcset="img/main-product/popup/sofa-D-31-Big.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-Big.png" alt="Картинка"></picture>
+				</div>
+				<div class="images-product__mini-slider">
+					<div class="images-product__thumbs thumbs-images">
+						<div data-aos="fade-up" data-aos-delay="200" data-aos-offset="0" data-aos-once="false" class="thumbs-images__swiper">
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-1.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-1.png" alt="Картинка"></picture>
+							</div>
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-2.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-2.png" alt="Картинка"></picture>
+							</div>
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-3.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-3.png" alt="Картинка"></picture>
+							</div>
+							<div class="thumbs-images__slide">
+								<picture><source srcset="img/main-product/popup/sofa-D-31-preview-4.webp" type="image/webp"><img src="img/main-product/popup/sofa-D-31-preview-4.png" alt="Картинка"></picture>
+							</div>
+						</div>
+					</div>
+					<div class="thumbs-images__controll">
+						<div class="thumbs-images__prev">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 1L1 6L6 11" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<div class="thumbs-images__next">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230122095621"></script>
+</body>
+
+</html>
