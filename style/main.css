@@ -14,9 +14,135 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: #333;
+}
+a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+}
+ul,
+ol {
+    list-style: none;
 }
 .img-404 {
     width: calc(var(--index) * 40);
     object-fit: cover;
+}
+.wrapper {
+}
+.header {
+
+}
+.header__container {
+    max-width: 87.5rem;
+    margin: 0 auto;
+    padding: 1.875rem 2.5rem;
+}
+.header__nav{
+
+}
+.header__list{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    column-gap: 2.8125rem;
+}
+.header__item{
+
+}
+.header__link{
+    position: relative;
+    float: left;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 120%;
+    color: #fff;
+    transition: color .5s ease 0s, transform .5s ease 0s;
+}
+.header__label {
+    padding: 10px;
+    display: inline-block;
+}
+.header__icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skew(-40deg, 0deg);
+}
+.header__icon::after,
+.header__icon::before { 
+    content: '';
+    height: 1px;
+    width: 30px;
+    position: absolute;
+    display: block;
+    background: #f0202f;
+    transition: width 0.5s;
+}
+.header__icon::before { 
+    left: 0;
+    top: 0;
+}
+.header__icon::after { 
+    right: 0;
+    bottom: 0;
+}
+.header__icon span::after,
+.header__icon span::before {
+    content: '';
+    background: #f0202f;
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 30px;
+    transition: height 0.5s;
+}
+.header__icon span::before {
+    left: 0;
+    top: 0;
+}
+.header__icon span::after {
+    right: 0;
+    bottom: 0;
+}
+.header__link:focus-visible {
+    color: #9ACEEB;
+}
+.header__link:focus-visible .header__icon::after,
+.header__link:focus-visible .header__icon::before {
+    width: 0.625rem;
+}
+.header__link:focus-visible .header__icon span::after,
+.header__link:focus-visible .header__icon span::before {
+    height: 0.625rem;
+}
+
+.header__link:hover .header__icon span::after,
+.header__link:hover .header__icon span::before {
+    height: 100%;
+}
+
+.header__link:hover {
+    transform: scale(0.9);
+    color: #9ACEEB;
+}
+
+.header__link:hover .header__icon::after,
+.header__link:hover .header__icon::before {
+    width: 100%;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/ 
+.page {
+}
+.footer {
 }
