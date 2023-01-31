@@ -1,0 +1,28 @@
+.page {
+
+    /* .page__container */
+    &__container {
+    }
+    /* .page__content */
+    &__content {
+    }
+    /* .page__title */
+    &__title {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 120%;
+    }
+    /* .page__link */
+    &__descr {
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 150%;
+    }
+    /* .page__link */
+    &__link {
+        transition: color 0.3s ease 0s;
+        &:hover {
+            color: #cacaca;
+        }
+    }
+}
