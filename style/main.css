@@ -26,10 +26,7 @@ a {
 img {
     max-width: 100%;
 }
-ul,
-ol {
-    list-style: none;
-}
+
 .img-404 {
     width: calc(var(--index) * 40);
     object-fit: cover;
