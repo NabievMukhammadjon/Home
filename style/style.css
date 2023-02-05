@@ -44,4 +44,10 @@
 }
 .page__link:hover {
   color: lime;
+}
+.page__img {
+  transition: all 0.3s ease 0s;
+}
+.page__img-link {
+  transform: scale(0.9);
 }/*# sourceMappingURL=style.css.map */

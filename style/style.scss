@@ -48,6 +48,10 @@
     }
     /* .page__img */
     &__img {
+        transition: all 0.3s ease 0s;
+        &-link {
+            transform: scale(.9);
+        }
     }
     /* .page__text */
     &__text {
