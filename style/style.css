@@ -45,9 +45,12 @@
 .page__link:hover {
   color: lime;
 }
-.page__img {
+.page__img-link {
+  display: inline-block;
   transition: all 0.3s ease 0s;
 }
-.page__img-link {
-  transform: scale(0.9);
+@media (any-hover: hover) {
+  .page__img-link:hover {
+    transform: scale(0.9);
+  }
 }/*# sourceMappingURL=style.css.map */

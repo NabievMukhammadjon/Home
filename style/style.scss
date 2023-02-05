@@ -48,9 +48,14 @@
     }
     /* .page__img */
     &__img {
-        transition: all 0.3s ease 0s;
         &-link {
-            transform: scale(.9);
+            display: inline-block;
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover){
+                &:hover{
+                    transform: scale(.9);
+                }
+            }
         }
     }
     /* .page__text */
