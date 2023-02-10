@@ -1,0 +1,15 @@
+.page-main {
+  /* .page-main__container */
+  /* .page-main__list */
+  /* .page-main__item */
+}
+.page-main__container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.page-main__list {
+  list-style: none;
+}
+.page-main__item:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}/*# sourceMappingURL=main.css.map */

@@ -10,7 +10,7 @@
             margin: 50px;
             background-color: #303030;
         }
-        h1 {
+        span {
             font-size: 36px;
             line-height: 100%;
             color: silver;
@@ -20,8 +20,25 @@
             color: blueviolet;
         }
     </style>
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    <h1>Сертификат Веб-верстка "База": <a href="./ВерсткаБаза.pdf">Нажми меня</a></h1>
+    <div class="wrapper">
+        <main class="main">
+            <section class="page page-main">
+                <div class="page-main__container">
+                    <ul class="page-main__list">
+                        <li class="page-main__item">
+                            <span>Сертификат Веб-верстка "База": <a href="./ВерсткаБаза.pdf">Нажми меня</a></span>
+                        </li>
+                        <li class="page-main__item">
+                            <span>Сертификат Веб-верстка "Про": <a href="./ВерсткаПро.pdf">Нажми меня</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
 </body>
 </html>

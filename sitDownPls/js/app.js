@@ -12051,6 +12051,10 @@
                     speed: 800,
                     parallax: true,
                     loop: true,
+                    autoplay: {
+                        delay: 3e3,
+                        disableOnInteraction: false
+                    },
                     pagination: {
                         el: ".controll-main-block__dotts",
                         clickable: true
