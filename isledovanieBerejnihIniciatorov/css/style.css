@@ -727,6 +727,18 @@ textarea.input {
   position: relative;
 }
 
+.tabs-schedule__slide._active-pos::before {
+  content: "";
+  position: absolute;
+  width: 336px;
+  height: 293px;
+  inset: 0 0;
+  z-index: 100;
+  left: 0;
+  top: -80px;
+  border: 2px solid #FFFFFF;
+}
+
 .tabs-schedule__controll {
   position: absolute;
   display: -webkit-box;
@@ -1808,6 +1820,10 @@ textarea.input {
 }
 
 @media (min-width: 93.75em) {
+  .tabs-schedule__navigation {
+    left: 6.25rem;
+  }
+
   .list-team {
     -webkit-column-gap: 4rem;
        -moz-column-gap: 4rem;
@@ -1874,10 +1890,6 @@ textarea.input {
 
   .column-schedule__btn {
     font-size: 1rem;
-  }
-
-  .tabs-schedule__navigation {
-    left: 6.25rem;
   }
 
   .tabs-partners__block {
@@ -2133,10 +2145,6 @@ textarea.input {
 
   .column-schedule__btn {
     font-size: 0.875rem;
-  }
-
-  .tabs-schedule__navigation {
-    left: 2rem;
   }
 
   .tabs-partners__block {
@@ -2537,6 +2545,12 @@ textarea.input {
   }
 }
 
+@media (max-width: 61.9375em) {
+  .tabs-schedule__navigation {
+    left: 2rem;
+  }
+}
+
 @media (max-width: 61.99875em) and (max-width: 20em) {
   .tabs-schedule__content {
     padding-top: 0.25rem;
@@ -2843,18 +2857,6 @@ textarea.input {
 @supports not (font-size: clamp( 0.875rem , 0.8433794466rem  +  0.1581027668vw , 1rem )) {
     .column-schedule__btn {
       font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 79.0625);
-    }
-}
-
-@supports (left: clamp( 2rem , 0.9249011858rem  +  5.3754940711vw , 6.25rem )) {
-    .tabs-schedule__navigation {
-      left: clamp( 2rem , 0.9249011858rem  +  5.3754940711vw , 6.25rem );
-    }
-}
-
-@supports not (left: clamp( 2rem , 0.9249011858rem  +  5.3754940711vw , 6.25rem )) {
-    .tabs-schedule__navigation {
-      left: calc(2rem + 4.25 * (100vw - 20rem) / 79.0625);
     }
 }
 
@@ -3412,6 +3414,20 @@ textarea.input {
 @supports not (padding-bottom: clamp( 0.625rem , 19.375rem  +  -23.4375vw , 10rem )) {
     .hero__container {
       padding-bottom: calc(10rem + -9.375 * (100vw - 40rem) / 40);
+    }
+}
+}
+
+@media (min-width: 61.9375em) and (max-width: 93.75em) {
+@supports (left: clamp( 2rem , -6.2745579568rem  +  13.3595284872vw , 6.25rem )) {
+    .tabs-schedule__navigation {
+      left: clamp( 2rem , -6.2745579568rem  +  13.3595284872vw , 6.25rem );
+    }
+}
+
+@supports not (left: clamp( 2rem , -6.2745579568rem  +  13.3595284872vw , 6.25rem )) {
+    .tabs-schedule__navigation {
+      left: calc(2rem + 4.25 * (100vw - 61.9375rem) / 31.8125);
     }
 }
 }
