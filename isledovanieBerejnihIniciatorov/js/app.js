@@ -3462,6 +3462,326 @@
             destroy
         });
     }
+    function Parallax({swiper, extendParams, on}) {
+        extendParams({
+            parallax: {
+                enabled: false
+            }
+        });
+        const setTransform = (el, progress) => {
+            const {rtl} = swiper;
+            const rtlFactor = rtl ? -1 : 1;
+            const p = el.getAttribute("data-swiper-parallax") || "0";
+            let x = el.getAttribute("data-swiper-parallax-x");
+            let y = el.getAttribute("data-swiper-parallax-y");
+            const scale = el.getAttribute("data-swiper-parallax-scale");
+            const opacity = el.getAttribute("data-swiper-parallax-opacity");
+            const rotate = el.getAttribute("data-swiper-parallax-rotate");
+            if (x || y) {
+                x = x || "0";
+                y = y || "0";
+            } else if (swiper.isHorizontal()) {
+                x = p;
+                y = "0";
+            } else {
+                y = p;
+                x = "0";
+            }
+            if (x.indexOf("%") >= 0) x = `${parseInt(x, 10) * progress * rtlFactor}%`; else x = `${x * progress * rtlFactor}px`;
+            if (y.indexOf("%") >= 0) y = `${parseInt(y, 10) * progress}%`; else y = `${y * progress}px`;
+            if ("undefined" !== typeof opacity && null !== opacity) {
+                const currentOpacity = opacity - (opacity - 1) * (1 - Math.abs(progress));
+                el.style.opacity = currentOpacity;
+            }
+            let transform = `translate3d(${x}, ${y}, 0px)`;
+            if ("undefined" !== typeof scale && null !== scale) {
+                const currentScale = scale - (scale - 1) * (1 - Math.abs(progress));
+                transform += ` scale(${currentScale})`;
+            }
+            if (rotate && "undefined" !== typeof rotate && null !== rotate) {
+                const currentRotate = rotate * progress * -1;
+                transform += ` rotate(${currentRotate}deg)`;
+            }
+            el.style.transform = transform;
+        };
+        const setTranslate = () => {
+            const {el, slides, progress, snapGrid} = swiper;
+            utils_elementChildren(el, "[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").forEach((subEl => {
+                setTransform(subEl, progress);
+            }));
+            slides.forEach(((slideEl, slideIndex) => {
+                let slideProgress = slideEl.progress;
+                if (swiper.params.slidesPerGroup > 1 && "auto" !== swiper.params.slidesPerView) slideProgress += Math.ceil(slideIndex / 2) - progress * (snapGrid.length - 1);
+                slideProgress = Math.min(Math.max(slideProgress, -1), 1);
+                slideEl.querySelectorAll("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale], [data-swiper-parallax-rotate]").forEach((subEl => {
+                    setTransform(subEl, slideProgress);
+                }));
+            }));
+        };
+        const setTransition = (duration = swiper.params.speed) => {
+            const {el} = swiper;
+            el.querySelectorAll("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]").forEach((parallaxEl => {
+                let parallaxDuration = parseInt(parallaxEl.getAttribute("data-swiper-parallax-duration"), 10) || duration;
+                if (0 === duration) parallaxDuration = 0;
+                parallaxEl.style.transitionDuration = `${parallaxDuration}ms`;
+            }));
+        };
+        on("beforeInit", (() => {
+            if (!swiper.params.parallax.enabled) return;
+            swiper.params.watchSlidesProgress = true;
+            swiper.originalParams.watchSlidesProgress = true;
+        }));
+        on("init", (() => {
+            if (!swiper.params.parallax.enabled) return;
+            setTranslate();
+        }));
+        on("setTranslate", (() => {
+            if (!swiper.params.parallax.enabled) return;
+            setTranslate();
+        }));
+        on("setTransition", ((_swiper, duration) => {
+            if (!swiper.params.parallax.enabled) return;
+            setTransition(duration);
+        }));
+    }
+    function Autoplay({swiper, extendParams, on, emit, params}) {
+        swiper.autoplay = {
+            running: false,
+            paused: false,
+            timeLeft: 0
+        };
+        extendParams({
+            autoplay: {
+                enabled: false,
+                delay: 3e3,
+                waitForTransition: true,
+                disableOnInteraction: true,
+                stopOnLastSlide: false,
+                reverseDirection: false,
+                pauseOnMouseEnter: false
+            }
+        });
+        let timeout;
+        let raf;
+        let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3e3;
+        let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3e3;
+        let autoplayTimeLeft;
+        let autoplayStartTime = (new Date).getTime;
+        let wasPaused;
+        let isTouched;
+        let pausedByTouch;
+        let touchStartTimeout;
+        let slideChanged;
+        let pausedByInteraction;
+        function onTransitionEnd(e) {
+            if (!swiper || swiper.destroyed || !swiper.wrapperEl) return;
+            if (e.target !== swiper.wrapperEl) return;
+            swiper.wrapperEl.removeEventListener("transitionend", onTransitionEnd);
+            resume();
+        }
+        const calcTimeLeft = () => {
+            if (swiper.destroyed || !swiper.autoplay.running) return;
+            if (swiper.autoplay.paused) wasPaused = true; else if (wasPaused) {
+                autoplayDelayCurrent = autoplayTimeLeft;
+                wasPaused = false;
+            }
+            const timeLeft = swiper.autoplay.paused ? autoplayTimeLeft : autoplayStartTime + autoplayDelayCurrent - (new Date).getTime();
+            swiper.autoplay.timeLeft = timeLeft;
+            emit("autoplayTimeLeft", timeLeft, timeLeft / autoplayDelayTotal);
+            raf = requestAnimationFrame((() => {
+                calcTimeLeft();
+            }));
+        };
+        const getSlideDelay = () => {
+            let activeSlideEl;
+            if (swiper.virtual && swiper.params.virtual.enabled) activeSlideEl = swiper.slides.filter((slideEl => slideEl.classList.contains("swiper-slide-active")))[0]; else activeSlideEl = swiper.slides[swiper.activeIndex];
+            if (!activeSlideEl) return;
+            const currentSlideDelay = parseInt(activeSlideEl.getAttribute("data-swiper-autoplay"), 10);
+            return currentSlideDelay;
+        };
+        const run = delayForce => {
+            if (swiper.destroyed || !swiper.autoplay.running) return;
+            cancelAnimationFrame(raf);
+            calcTimeLeft();
+            let delay = "undefined" === typeof delayForce ? swiper.params.autoplay.delay : delayForce;
+            autoplayDelayTotal = swiper.params.autoplay.delay;
+            autoplayDelayCurrent = swiper.params.autoplay.delay;
+            const currentSlideDelay = getSlideDelay();
+            if (!Number.isNaN(currentSlideDelay) && currentSlideDelay > 0 && "undefined" === typeof delayForce) {
+                delay = currentSlideDelay;
+                autoplayDelayTotal = currentSlideDelay;
+                autoplayDelayCurrent = currentSlideDelay;
+            }
+            autoplayTimeLeft = delay;
+            const speed = swiper.params.speed;
+            const proceed = () => {
+                if (!swiper || swiper.destroyed) return;
+                if (swiper.params.autoplay.reverseDirection) {
+                    if (!swiper.isBeginning || swiper.params.loop || swiper.params.rewind) {
+                        swiper.slidePrev(speed, true, true);
+                        emit("autoplay");
+                    } else if (!swiper.params.autoplay.stopOnLastSlide) {
+                        swiper.slideTo(swiper.slides.length - 1, speed, true, true);
+                        emit("autoplay");
+                    }
+                } else if (!swiper.isEnd || swiper.params.loop || swiper.params.rewind) {
+                    swiper.slideNext(speed, true, true);
+                    emit("autoplay");
+                } else if (!swiper.params.autoplay.stopOnLastSlide) {
+                    swiper.slideTo(0, speed, true, true);
+                    emit("autoplay");
+                }
+                if (swiper.params.cssMode) {
+                    autoplayStartTime = (new Date).getTime();
+                    requestAnimationFrame((() => {
+                        run();
+                    }));
+                }
+            };
+            if (delay > 0) {
+                clearTimeout(timeout);
+                timeout = setTimeout((() => {
+                    proceed();
+                }), delay);
+            } else requestAnimationFrame((() => {
+                proceed();
+            }));
+            return delay;
+        };
+        const start = () => {
+            swiper.autoplay.running = true;
+            run();
+            emit("autoplayStart");
+        };
+        const stop = () => {
+            swiper.autoplay.running = false;
+            clearTimeout(timeout);
+            cancelAnimationFrame(raf);
+            emit("autoplayStop");
+        };
+        const pause = (internal, reset) => {
+            if (swiper.destroyed || !swiper.autoplay.running) return;
+            clearTimeout(timeout);
+            if (!internal) pausedByInteraction = true;
+            const proceed = () => {
+                emit("autoplayPause");
+                if (swiper.params.autoplay.waitForTransition) swiper.wrapperEl.addEventListener("transitionend", onTransitionEnd); else resume();
+            };
+            swiper.autoplay.paused = true;
+            if (reset) {
+                if (slideChanged) autoplayTimeLeft = swiper.params.autoplay.delay;
+                slideChanged = false;
+                proceed();
+                return;
+            }
+            const delay = autoplayTimeLeft || swiper.params.autoplay.delay;
+            autoplayTimeLeft = delay - ((new Date).getTime() - autoplayStartTime);
+            if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop) return;
+            if (autoplayTimeLeft < 0) autoplayTimeLeft = 0;
+            proceed();
+        };
+        const resume = () => {
+            if (swiper.isEnd && autoplayTimeLeft < 0 && !swiper.params.loop || swiper.destroyed || !swiper.autoplay.running) return;
+            autoplayStartTime = (new Date).getTime();
+            if (pausedByInteraction) {
+                pausedByInteraction = false;
+                run(autoplayTimeLeft);
+            } else run();
+            swiper.autoplay.paused = false;
+            emit("autoplayResume");
+        };
+        const onVisibilityChange = () => {
+            if (swiper.destroyed || !swiper.autoplay.running) return;
+            const document = ssr_window_esm_getDocument();
+            if ("hidden" === document.visibilityState) {
+                pausedByInteraction = true;
+                pause(true);
+            }
+            if ("visible" === document.visibilityState) resume();
+        };
+        const onPointerEnter = e => {
+            if ("mouse" !== e.pointerType) return;
+            pausedByInteraction = true;
+            pause(true);
+        };
+        const onPointerLeave = e => {
+            if ("mouse" !== e.pointerType) return;
+            if (swiper.autoplay.paused) resume();
+        };
+        const attachMouseEvents = () => {
+            if (swiper.params.autoplay.pauseOnMouseEnter) {
+                swiper.el.addEventListener("pointerenter", onPointerEnter);
+                swiper.el.addEventListener("pointerleave", onPointerLeave);
+            }
+        };
+        const detachMouseEvents = () => {
+            swiper.el.removeEventListener("pointerenter", onPointerEnter);
+            swiper.el.removeEventListener("pointerleave", onPointerLeave);
+        };
+        const attachDocumentEvents = () => {
+            const document = ssr_window_esm_getDocument();
+            document.addEventListener("visibilitychange", onVisibilityChange);
+        };
+        const detachDocumentEvents = () => {
+            const document = ssr_window_esm_getDocument();
+            document.removeEventListener("visibilitychange", onVisibilityChange);
+        };
+        on("init", (() => {
+            if (swiper.params.autoplay.enabled) {
+                attachMouseEvents();
+                attachDocumentEvents();
+                autoplayStartTime = (new Date).getTime();
+                start();
+            }
+        }));
+        on("destroy", (() => {
+            detachMouseEvents();
+            detachDocumentEvents();
+            if (swiper.autoplay.running) stop();
+        }));
+        on("beforeTransitionStart", ((_s, speed, internal) => {
+            if (swiper.destroyed || !swiper.autoplay.running) return;
+            if (internal || !swiper.params.autoplay.disableOnInteraction) pause(true, true); else stop();
+        }));
+        on("sliderFirstMove", (() => {
+            if (swiper.destroyed || !swiper.autoplay.running) return;
+            if (swiper.params.autoplay.disableOnInteraction) {
+                stop();
+                return;
+            }
+            isTouched = true;
+            pausedByTouch = false;
+            pausedByInteraction = false;
+            touchStartTimeout = setTimeout((() => {
+                pausedByInteraction = true;
+                pausedByTouch = true;
+                pause(true);
+            }), 200);
+        }));
+        on("touchEnd", (() => {
+            if (swiper.destroyed || !swiper.autoplay.running || !isTouched) return;
+            clearTimeout(touchStartTimeout);
+            clearTimeout(timeout);
+            if (swiper.params.autoplay.disableOnInteraction) {
+                pausedByTouch = false;
+                isTouched = false;
+                return;
+            }
+            if (pausedByTouch && swiper.params.cssMode) resume();
+            pausedByTouch = false;
+            isTouched = false;
+        }));
+        on("slideChange", (() => {
+            if (swiper.destroyed || !swiper.autoplay.running) return;
+            slideChanged = true;
+        }));
+        Object.assign(swiper.autoplay, {
+            start,
+            stop,
+            pause,
+            resume
+        });
+    }
     function bildSliders() {
         let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)');
         if (sliders) sliders.forEach((slider => {
@@ -3474,11 +3794,15 @@
         bildSliders();
         if (document.querySelector(".tabs-schedule__content")) {
             new core(".tabs-schedule__slider_1", {
-                modules: [ Navigation ],
+                modules: [ Navigation, Autoplay ],
+                autoplay: {
+                    delay: 3e3,
+                    disableOnInteraction: false
+                },
                 observer: true,
                 observeParents: true,
                 slidesPerView: 4,
-                spaceBetween: 16,
+                spaceBetween: 40,
                 speed: 800,
                 navigation: {
                     prevEl: ".controll-slider_1__prev",
@@ -3494,18 +3818,22 @@
                     992: {
                         slidesPerView: 3
                     },
-                    1268: {
+                    1410: {
                         slidesPerView: 4
                     }
                 },
                 on: {}
             });
             new core(".tabs-schedule__slider_2", {
-                modules: [ Navigation ],
+                modules: [ Navigation, Autoplay ],
+                autoplay: {
+                    delay: 3e3,
+                    disableOnInteraction: false
+                },
                 observer: true,
                 observeParents: true,
                 slidesPerView: 5,
-                spaceBetween: 16,
+                spaceBetween: 40,
                 speed: 800,
                 navigation: {
                     prevEl: ".controll-slider_2__prev",
@@ -3533,6 +3861,24 @@
                 on: {}
             });
         }
+        if (document.querySelector(".tabs-experts__slider")) new core(".tabs-experts__slider", {
+            modules: [ Navigation, Parallax, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 800,
+            parallax: true,
+            autoplay: {
+                delay: 3e3,
+                disableOnInteraction: false
+            },
+            navigation: {
+                prevEl: ".tabs-experts__btn-prev",
+                nextEl: ".tabs-experts__btn-next"
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
