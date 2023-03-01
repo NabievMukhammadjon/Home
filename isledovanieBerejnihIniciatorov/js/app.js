@@ -3818,7 +3818,7 @@
                     992: {
                         slidesPerView: 3
                     },
-                    1410: {
+                    1580: {
                         slidesPerView: 4
                     }
                 },
@@ -3854,8 +3854,11 @@
                         spaceBetween: 20
                     },
                     1268: {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                         spaceBetween: 30
+                    },
+                    1600: {
+                        slidesPerView: 5
                     }
                 },
                 on: {}
@@ -3976,22 +3979,6 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
-    let ps = document.querySelectorAll(".list-inner-team__numb");
-    let num = document.querySelectorAll(".active-block-samples__num");
-    function getRandomColor() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) color += letters[Math.floor(16 * Math.random())];
-        return color;
-    }
-    for (let p of ps) p.style.color = getRandomColor();
-    function getRandomColorSamples() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) color += letters[Math.floor(16 * Math.random())];
-        return color;
-    }
-    for (let p of num) p.style.color = getRandomColorSamples();
     window["FLS"] = true;
     isWebp();
     addTouchClass();
