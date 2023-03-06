@@ -53,4 +53,48 @@
   .page__img-link:hover {
     transform: scale(0.9);
   }
+}
+.footer {
+  height: 100vh;
+  /* .footer__container */
+  /* .footer__content */
+  /* .footer__image */
+}
+.footer__container {
+  display: flex;
+  height: 100%;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer__image {
+  max-width: 16.25rem;
+}
+
+.content-footer {
+  /* .content-footer__logo */
+  /* .content-footer__texts */
+  /* .content-footer__bottom */
+  /* .content-footer__descr */
+}
+.content-footer__logo {
+  max-width: 11.25rem;
+  margin-bottom: 0.75rem;
+}
+.content-footer__texts {
+  margin-bottom: 1.5rem;
+}
+.content-footer__descr {
+  font-size: 1.125rem;
+  line-height: 120%;
+}
+
+.null-1 {
+  font-weight: 600;
+}
+.null-3 {
+  margin-bottom: 0.25rem;
+}
+.null-4 {
+  color: rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=style.css.map */
