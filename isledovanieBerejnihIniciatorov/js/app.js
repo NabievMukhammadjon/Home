@@ -3979,6 +3979,13 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
+    const dopSpollerBtn = document.querySelector(".spollers-dop__btn");
+    const dopSpollerDescr = document.querySelector(".dop__descr");
+    dopSpollerBtn.addEventListener("click", (() => {
+        if (dopSpollerDescr.classList.contains("_disabled")) setTimeout((() => {
+            dopSpollerDescr.classList.remove("_disabled");
+        }), 500); else dopSpollerDescr.classList.add("_disabled");
+    }));
     window["FLS"] = true;
     isWebp();
     addTouchClass();
