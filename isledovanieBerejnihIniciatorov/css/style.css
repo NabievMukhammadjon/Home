@@ -1271,9 +1271,9 @@ textarea.input {
 }
 
 .active-block-samples {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 2.25rem;
   /* .active-block-samples__row */
   /* .active-block-samples__num */
@@ -1290,6 +1290,34 @@ textarea.input {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 1.6875rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20.9375rem;
+          flex: 0 1 20.9375rem;
+}
+
+.active-block-samples__row:nth-child(2) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41.875rem;
+          flex: 1 1 41.875rem;
+}
+
+.active-block-samples__row:nth-child(2) .active-block-samples__num {
+  text-align: center;
+}
+
+.active-block-samples__row:nth-child(2) h3 {
+  position: relative;
+  text-align: center;
+}
+
+.active-block-samples__row:nth-child(2) h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
 }
 
 .active-block-samples__num {
@@ -1307,8 +1335,16 @@ textarea.input {
 
 .items-samples {
   line-height: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* .items-samples__list */
   /* .items-samples__item */
+  /* .items-samples__link */
 }
 
 .items-samples__list {
@@ -1316,6 +1352,23 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+}
+
+.items-samples__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.items-samples__link {
+  text-decoration: underline;
+  -webkit-transition: color 0.5s ease 0s;
+  -o-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
 }
 
 .actors-samples {
@@ -2476,10 +2529,6 @@ textarea.input {
     font-size: 2.625rem;
   }
 
-  .items-samples {
-    font-size: 1.125rem;
-  }
-
   .geography {
     padding-bottom: 8.125rem;
   }
@@ -2789,10 +2838,6 @@ textarea.input {
 
   .active-block-samples__name {
     font-size: 2.25rem;
-  }
-
-  .items-samples {
-    font-size: 0.75rem;
   }
 
   .geography {
@@ -3769,18 +3814,6 @@ textarea.input {
     }
 }
 
-@supports (font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem )) {
-    .items-samples {
-      font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem )) {
-    .items-samples {
-      font-size: calc(0.75rem + 0.375 * (100vw - 20rem) / 79.0625);
-    }
-}
-
 @supports (padding-bottom: clamp( 5rem , 4.209486166rem  +  3.95256917vw , 8.125rem )) {
     .geography {
       padding-bottom: clamp( 5rem , 4.209486166rem  +  3.95256917vw , 8.125rem );
@@ -4540,6 +4573,10 @@ textarea.input {
 
   .list-null-block__link:hover {
     text-decoration: underline;
+  }
+
+  .items-samples__link:hover {
+    color: #fff;
   }
 
   .form-connection__input:focus-visible {
