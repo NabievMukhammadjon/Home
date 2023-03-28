@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230327153538">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230328121046">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
 				<header class="header">
 					<div class="header__container">
 						<div class="header__content">
-							<div class="header__logo logo icon-logo"></div>
+							<a href="https://tepertak.ru/" class="header__logo logo icon-logo"></a>
 							<nav class="header__nav nav-header">
 								<ul data-da=".menu__body, 991.98" class="nav-header__list">
 									<li class="nav-header__item item-header">
@@ -31,7 +31,7 @@
 														<a href="#" class="header-spollers__link">2022</a>
 													</li>
 													<li class="header-spollers__items">
-														<a href="#" class="header-spollers__link">2021</a>
+														<a href="https://tepertak.ru/spisok2021/" class="header-spollers__link">2021</a>
 													</li>
 													<li class="header-spollers__items">
 														<a href="#" class="header-spollers__link">Как использовать итоги</a>
@@ -49,10 +49,10 @@
 														<a href="#" class="header-spollers__link">Цель исследования</a>
 													</li>
 													<li class="header-spollers__items">
-														<a href="#" class="header-spollers__link">ЦУР</a>
+														<a href="#" data-goto-header data-goto="#target" class="header-spollers__link">ЦУР</a>
 													</li>
 													<li class="header-spollers__items">
-														<a href="#" class="header-spollers__link">Методология</a>
+														<a href="#" data-goto-header data-goto="#metodology" class="header-spollers__link">Методология</a>
 													</li>
 													<li class="header-spollers__items">
 														<a href="#" data-goto-header data-goto="#experts" class="header-spollers__link">Эксперты</a>
@@ -68,7 +68,7 @@
 										<a href="#" data-goto-header data-goto="#partners" class="item-header__link header-links">Партнёры</a>
 									</li>
 									<li class="nav-header__item item-header">
-										<a href="#" class="item-header__link header-links">
+										<a href="https://tepertak.ru/bureau/" target="_blank" class="item-header__link header-links">
 											Бюро
 											<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<rect width="31" height="31" fill="url(#pattern0)" />
@@ -158,22 +158,22 @@
 											<div class="tabs-schedule__slide block-schedule">
 												<div class="block-schedule__column column-schedule">
 													<div class="column-schedule__title">Опрос (сбор мнений аудитории)</div>
-													<span class="column-schedule__text">5 - 31 января 2023</span>
+													<span class="column-schedule__text">5 - 31 января 2023*</span>
 												</div>
-												<p class="column-schedule__">* Согласно методологии опроса даты могут сдвигаться</p>
+												<p class="column-schedule__info-text">* Согласно методологии опроса даты могут сдвигаться</p>
 											</div>
 											<div class="tabs-schedule__slide block-schedule _active-pos">
 												<div class="block-schedule__column column-schedule">
 													<div class="column-schedule__title">Анализ данных опроса и информационной среды</div>
 													<span class="column-schedule__text">1 февраля - 5 апреля 2023</span>
-													<button type="button" class="column-schedule__btn">Подписаться</button>
+													<a href="#" data-goto-header data-goto="#connection" class="column-schedule__btn">Подписаться</a>
 												</div>
 											</div>
 											<div class="tabs-schedule__slide block-schedule">
 												<div class="block-schedule__column column-schedule">
 													<div class="column-schedule__title">Публикация итогов исследования</div>
 													<span class="column-schedule__text">6 апреля 2023</span>
-													<button type="button" class="column-schedule__btn">Подписаться</button>
+													<a href="#" data-goto-header data-goto="#connection" class="column-schedule__btn">Подписаться</a>
 												</div>
 											</div>
 											<div class="tabs-schedule__slide block-schedule">
@@ -191,11 +191,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__dop dop">
+			<section id="metodology" data-watch="navigator" class="page__dop dop">
 				<div class="dop__container">
 					<div class="dop__content">
 						<div class="dop__descr">
-							С методологией проекта можно ознакомиться <a href="#">здесь</a>.
+							С методологией проекта можно ознакомиться <a href="https://tepertak.ru/spisok2021/metodologia-sbi.html">здесь</a>.
 						</div>
 						<div data-spollers class="dop__spollers spollers-dop">
 							<div class="spollers-dop__item">
@@ -244,7 +244,7 @@
 									<div class="author-partners__logo icon-logo"></div>
 									<div class="author-partners__block">
 										<div class="author-partners__subtitle">Инициатор</div>
-										<p class="author-partners__text">Бюро партнёрств для достижения целей устойчивого развития &laquo;Теперь так&raquo;.</p>
+										<p class="author-partners__text">Бюро партнёрств для достижения целей устойчивого развития &laquo;<a href="https://tepertak.ru/bureau/" target="_blank">Теперь так</a>&raquo;.</p>
 									</div>
 								</div>
 								<div data-tabs-body class="bottom-partners__content partners-tabs">
@@ -283,12 +283,15 @@
 									</div>
 									<div class="partners-tabs__body">
 										<div class="partners-tabs__inner">
-											<div class="partners-tabs__companies companies-partners">
+											<div class="partners-tabs__companies companies-partners companies-partners_2022">
 												<a href="https://aventi.ca/" target="_blank" class="companies-partners__img">
 													<picture><source srcset="img/partners/Aventica.webp" type="image/webp"><img class="companies-partners__new" src="img/partners/Aventica.png" alt="Логотип партнеров"></picture>
 												</a>
+												<p class="companies-partners__descr">
+													Собрали и проанализировали 8 миллионов упоминаний устойчивого развития в социальных медиа
+												</p>
 											</div>
-											<div class="partners-tabs__companies companies-partners">
+											<div class="partners-tabs__companies companies-partners companies-partners_2022">
 												<a href="https://sarafun.spb.ru/" target="_blank" class="companies-partners__img">
 													<picture><source srcset="img/partners/pr.webp" type="image/webp"><img class="companies-partners__new" src="img/partners/pr.png" alt="Логотип партнеров"></picture>
 												</a>
@@ -1672,7 +1675,7 @@
 										</div>
 										<div class="active-block-samples__row">
 											<span class="active-block-samples__num">91</span>
-											<h3 class="active-block-samples__name">Организации</h3>
+											<h3 class="active-block-samples__name">Организация</h3>
 											<div class="active-block-samples__items items-samples">
 												<ul class="items-samples__list">
 													<li class="items-samples__item">
@@ -2009,62 +2012,60 @@
 												</div>
 											</div>
 											<div class="active-block-samples__inner">
-												<div class="active-block-samples__inner">
-													<span class="active-block-samples__num">17</span>
-													<h3 class="active-block-samples__name">Блогеров</h3>
-													<div class="active-block-samples__items items-samples">
-														<a href="#" class="items-samples__link">
-															Экологиня
-														</a>
-														<a href="#" class="items-samples__link">
-															Борис Лорер
-														</a>
-														<a href="#" class="items-samples__link">
-															Лена Володина
-														</a>
-														<a href="#" class="items-samples__link">
-															Возможности в устойчивом развитии
-														</a>
-														<a href="#" class="items-samples__link">
-															Экологичные мероприятия
-														</a>
-														<a href="#" class="items-samples__link">
-															Саша экопросвет
-														</a>
-														<a href="#" class="items-samples__link">
-															Настя Приказчикова
-														</a>
-														<a href="#" class="items-samples__link">
-															Правила деления
-														</a>
-														<a href="#" class="items-samples__link">
-															Анна Гаркуша
-														</a>
-														<a href="#" class="items-samples__link">
-															Вика Рарог
-														</a>
-														<a href="#" class="items-samples__link">
-															Анна Ланге
-														</a>
-														<a href="#" class="items-samples__link">
-															Юлия Космынина
-														</a>
-														<a href="#" class="items-samples__link">
-															Cвета Инвестова
-														</a>
-														<a href="#" class="items-samples__link">
-															Лина
-														</a>
-														<a href="#" class="items-samples__link">
-															Тимофей Зайцев
-														</a>
-														<a href="#" class="items-samples__link">
-															Михаил Vegan
-														</a>
-														<a href="#" class="items-samples__link">
-															Лидия Пиви
-														</a>
-													</div>
+												<span class="active-block-samples__num">17</span>
+												<h3 class="active-block-samples__name">Блогеров</h3>
+												<div class="active-block-samples__items items-samples">
+													<a href="#" class="items-samples__link">
+														Экологиня
+													</a>
+													<a href="#" class="items-samples__link">
+														Борис Лорер
+													</a>
+													<a href="#" class="items-samples__link">
+														Лена Володина
+													</a>
+													<a href="#" class="items-samples__link">
+														Возможности в устойчивом развитии
+													</a>
+													<a href="#" class="items-samples__link">
+														Экологичные мероприятия
+													</a>
+													<a href="#" class="items-samples__link">
+														Саша экопросвет
+													</a>
+													<a href="#" class="items-samples__link">
+														Настя Приказчикова
+													</a>
+													<a href="#" class="items-samples__link">
+														Правила деления
+													</a>
+													<a href="#" class="items-samples__link">
+														Анна Гаркуша
+													</a>
+													<a href="#" class="items-samples__link">
+														Вика Рарог
+													</a>
+													<a href="#" class="items-samples__link">
+														Анна Ланге
+													</a>
+													<a href="#" class="items-samples__link">
+														Юлия Космынина
+													</a>
+													<a href="#" class="items-samples__link">
+														Cвета Инвестова
+													</a>
+													<a href="#" class="items-samples__link">
+														Лина
+													</a>
+													<a href="#" class="items-samples__link">
+														Тимофей Зайцев
+													</a>
+													<a href="#" class="items-samples__link">
+														Михаил Vegan
+													</a>
+													<a href="#" class="items-samples__link">
+														Лидия Пиви
+													</a>
 												</div>
 											</div>
 										</div>
@@ -2129,76 +2130,101 @@
 								</div>
 							</div>
 							<div class="tabs-geography__body body-tabs-geography">
-								<div class="body-tabs-geography__block block-geography">
-									<div class="block-geography__row">
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
-										Город
-										<br>
+								<div class="body-tabs-geography__block block-geography block-geography_2022">
+									<div class="block-geography__titles">
+										<h3 class="block-geography__subtitle">Города</h3>
+										<h3 class="block-geography__subtitle">Население</h3>
+										<h3 class="block-geography__subtitle">Акторы</h3>
 									</div>
-									<div class="block-geography__row">
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-										Население
-										<br>
-									</div>
-									<div class="block-geography__row">
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
-										Акторы
-										<br>
+									<div class="block-geography__inner">
+										<div class="block-geography__info">
+											<div class="block-geography__column">Федеральные</div>
+											<div class="block-geography__column">146 424 729</div>
+											<div class="block-geography__column">23 организации,17 СМИ, 17 ТГ-каналов, 17 блогеров</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Владивосток</div>
+											<div class="block-geography__column">603 519</div>
+											<div class="block-geography__column">4 организации</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Москва</div>
+											<div class="block-geography__column">13 097 539</div>
+											<div class="block-geography__column">11 организаций</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Казань</div>
+											<div class="block-geography__column">1 308 660</div>
+											<div class="block-geography__column">2 организации, 3 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Краснодар</div>
+											<div class="block-geography__column">1 099 344</div>
+											<div class="block-geography__column">2 организации, 1 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Санкт-Петербург</div>
+											<div class="block-geography__column">5 361 900</div>
+											<div class="block-geography__column">9 организаций, 1 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Уфа</div>
+											<div class="block-geography__column">1 167 775</div>
+											<div class="block-geography__column">3 организации, 1 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Красноярск</div>
+											<div class="block-geography__column">1 187 771</div>
+											<div class="block-geography__column">1 организация, 1 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Новосибирск</div>
+											<div class="block-geography__column">1 633 595</div>
+											<div class="block-geography__column">4 организации, 1 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Нижний Новгород</div>
+											<div class="block-geography__column">1 233 949</div>
+											<div class="block-geography__column">2 организации</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Волгоград</div>
+											<div class="block-geography__column">1 028 036</div>
+											<div class="block-geography__column">3 организации</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Екатеринбург</div>
+											<div class="block-geography__column">1 544 376</div>
+											<div class="block-geography__column">5 организаций, 3 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Челябинск</div>
+											<div class="block-geography__column">1 189 525</div>
+											<div class="block-geography__column">3 организации, 1 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Самара</div>
+											<div class="block-geography__column">1 173 299</div>
+											<div class="block-geography__column">3 организации, 2 СМИ</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Воронеж</div>
+											<div class="block-geography__column">1 048 738</div>
+											<div class="block-geography__column">3 организации</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Пермь</div>
+											<div class="block-geography__column">1 034 002</div>
+											<div class="block-geography__column">3 организации</div>
+										</div>
+										<div class="block-geography__info">
+											<div class="block-geography__column">Омск</div>
+											<div class="block-geography__column">1 126 193</div>
+											<div class="block-geography__column">3 организации</div>
+										</div>
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -2788,7 +2814,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="team__inner inner-team">
+						<div id="target" data-watch="navigator" class="team__inner inner-team">
 							<div class="inner-team__texts">
 								<h2 class="inner-team__title">Вызовы устойчивого развития</h2>
 								<p class="inner-team__descr">
@@ -2903,7 +2929,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__connection connection">
+			<section id="connection" data-watch="navigator" class="page__connection connection">
 				<div class="connection__container">
 					<div class="connection__content">
 						<div class="connection__subscr subscr-connection">
@@ -3002,7 +3028,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230327153538"></script>
+	<script src="js/app.min.js?_v=20230328121046"></script>
 </body>
 
 </html>

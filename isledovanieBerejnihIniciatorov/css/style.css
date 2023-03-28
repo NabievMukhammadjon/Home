@@ -811,7 +811,7 @@ textarea.input {
   width: 336px;
   height: 293px;
   left: 0;
-  top: -55px;
+  top: -53px;
   z-index: 1;
   border: 2px solid #FFFFFF;
 }
@@ -880,6 +880,10 @@ textarea.input {
 .column-schedule__info {
   font-size: 10px;
   line-height: 1.4;
+}
+
+.column-schedule__info-text {
+  font-size: 0.75rem;
 }
 
 .block-schedule {
@@ -954,6 +958,12 @@ textarea.input {
   /* .author-partners__text */
 }
 
+.author-partners__block {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14.375rem;
+          flex: 0 0 14.375rem;
+}
+
 .author-partners__subtitle {
   font-family: CraftworkGrotesk, "PT Mono", sans-serif;
   font-weight: 700;
@@ -964,6 +974,12 @@ textarea.input {
 
 .author-partners__text {
   font-family: "PT Mono", sans-serif;
+}
+
+.author-partners__text a {
+  -webkit-transition: color 0.5s ease 0s;
+  -o-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
 }
 
 .partners-tabs {
@@ -996,12 +1012,24 @@ textarea.input {
   transition: all 0.5s ease 0s;
 }
 
+.companies-partners_2022 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.companies-partners_2022 .companies-partners__img {
+  height: 3.3125rem;
+}
+
 .companies-partners__descr {
   line-height: 120%;
 }
 
 .companies-partners__new {
-  max-width: 100%;
+  max-width: 10.9375rem;
 }
 
 .experts {
@@ -1100,7 +1128,8 @@ textarea.input {
 }
 
 .info-experts__works {
-  font-family: CraftworkGrotesk, "PT Mono", sans-serif;
+  font-family: "PT Mono", sans-serif;
+  line-height: 1.4444444444;
 }
 
 .inner-experts {
@@ -1289,7 +1318,6 @@ textarea.input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 1.6875rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 20.9375rem;
           flex: 0 1 20.9375rem;
@@ -1301,19 +1329,15 @@ textarea.input {
           flex: 1 1 41.875rem;
 }
 
-.active-block-samples__row:nth-child(2) .active-block-samples__num {
-  text-align: center;
-}
-
 .active-block-samples__row:nth-child(2) h3 {
   position: relative;
-  text-align: center;
+  margin-bottom: 3.25rem;
 }
 
 .active-block-samples__row:nth-child(2) h3::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -27px;
   left: 0;
   width: 100%;
   height: 3px;
@@ -1331,6 +1355,12 @@ textarea.input {
   font-family: CraftworkGrotesk, "PT Mono", sans-serif;
   font-weight: 900;
   line-height: 1.1904761905;
+  margin-top: 1.6875rem;
+  margin-bottom: 1.6875rem;
+}
+
+.active-block-samples__inner:not(:last-child) {
+  margin-bottom: 5rem;
 }
 
 .items-samples {
@@ -1395,13 +1425,6 @@ textarea.input {
   /* .geography__container */
 }
 
-.geography__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 3.75rem;
-}
-
 .tabs-geography {
   /* .tabs-geography__head */
   /* .tabs-geography__navigation */
@@ -1432,11 +1455,53 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* .block-geography__row */
+  /* .block-geography__titles */
+  /* .block-geography__subtitle */
+  /* .block-geography__inner */
+  /* .block-geography__info */
+  /* .block-geography__column */
 }
 
-.block-geography__row {
-  line-height: 1.7777777778;
+.block-geography_2022 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-geography__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6.625rem;
+}
+
+.block-geography__subtitle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 23.125rem;
+          flex: 1 1 23.125rem;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 2.25;
+}
+
+.block-geography__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6.625rem;
+}
+
+.block-geography__info:not(:last-child) {
+  margin-bottom: 0.8125rem;
+}
+
+.block-geography__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 23.125rem;
+          flex: 1 1 23.125rem;
+  font-size: 1.375rem;
+  line-height: 1.6363636364;
 }
 
 .team {
@@ -1551,8 +1616,8 @@ textarea.input {
 }
 
 .list-team__works {
-  font-family: CraftworkGrotesk, "PT Mono", sans-serif;
-  line-height: 1.12;
+  font-family: "PT Mono", sans-serif;
+  line-height: 1.5;
 }
 
 .volunteers-team {
@@ -2033,6 +2098,10 @@ textarea.input {
   display: flex;
 }
 
+.body-dop__items {
+  line-height: 1.5555555556;
+}
+
 .no-webp .wrapper{
   background-image: url(../img/bg.jpg); }
 
@@ -2304,7 +2373,7 @@ textarea.input {
 
 @media (min-width: 61.25em) {
   .block-geography {
-    gap: 6.625rem;
+    gap: 2.5rem;
   }
 }
 
@@ -2452,7 +2521,7 @@ textarea.input {
   }
 
   .column-schedule__btn {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   .tabs-partners__block {
@@ -2535,10 +2604,6 @@ textarea.input {
 
   .tabs-geography__title {
     font-size: 3.375rem;
-  }
-
-  .block-geography__row {
-    font-size: 1.125rem;
   }
 
   .team {
@@ -2846,10 +2911,6 @@ textarea.input {
 
   .tabs-geography__title {
     font-size: 1.875rem;
-  }
-
-  .block-geography__row {
-    font-size: 0.75rem;
   }
 
   .team {
@@ -3397,7 +3458,7 @@ textarea.input {
 
 @media (max-width: 41.25em) {
   .block-geography {
-    gap: 1.875rem;
+    gap: 1.5625rem;
   }
 }
 
@@ -3582,15 +3643,15 @@ textarea.input {
     }
 }
 
-@supports (font-size: clamp( 0.875rem , 0.8433794466rem  +  0.1581027668vw , 1rem )) {
+@supports (font-size: clamp( 0.875rem , 0.8117588933rem  +  0.3162055336vw , 1.125rem )) {
     .column-schedule__btn {
-      font-size: clamp( 0.875rem , 0.8433794466rem  +  0.1581027668vw , 1rem );
+      font-size: clamp( 0.875rem , 0.8117588933rem  +  0.3162055336vw , 1.125rem );
     }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.8433794466rem  +  0.1581027668vw , 1rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.8117588933rem  +  0.3162055336vw , 1.125rem )) {
     .column-schedule__btn {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 79.0625);
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 79.0625);
     }
 }
 
@@ -3835,18 +3896,6 @@ textarea.input {
 @supports not (font-size: clamp( 1.875rem , 1.4955533597rem  +  1.8972332016vw , 3.375rem )) {
     .tabs-geography__title {
       font-size: calc(1.875rem + 1.5 * (100vw - 20rem) / 79.0625);
-    }
-}
-
-@supports (font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem )) {
-    .block-geography__row {
-      font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem )) {
-    .block-geography__row {
-      font-size: calc(0.75rem + 0.375 * (100vw - 20rem) / 79.0625);
     }
 }
 
@@ -4373,15 +4422,15 @@ textarea.input {
 }
 
 @media (min-width: 41.25em) and (max-width: 61.25em) {
-@supports (gap: clamp( 1.875rem , -7.921875rem  +  23.75vw , 6.625rem )) {
+@supports (gap: clamp( 1.5625rem , -0.37109375rem  +  4.6875vw , 2.5rem )) {
     .block-geography {
-      gap: clamp( 1.875rem , -7.921875rem  +  23.75vw , 6.625rem );
+      gap: clamp( 1.5625rem , -0.37109375rem  +  4.6875vw , 2.5rem );
     }
 }
 
-@supports not (gap: clamp( 1.875rem , -7.921875rem  +  23.75vw , 6.625rem )) {
+@supports not (gap: clamp( 1.5625rem , -0.37109375rem  +  4.6875vw , 2.5rem )) {
     .block-geography {
-      gap: calc(1.875rem + 4.75 * (100vw - 41.25rem) / 20);
+      gap: calc(1.5625rem + 0.9375 * (100vw - 41.25rem) / 20);
     }
 }
 }
@@ -4559,6 +4608,10 @@ textarea.input {
 
   .column-schedule__btn:hover {
     text-decoration: underline;
+  }
+
+  .author-partners__text a:hover {
+    color: #532CE5;
   }
 
   .companies-partners__img:hover {
