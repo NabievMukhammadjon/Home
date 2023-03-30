@@ -4028,6 +4028,13 @@
             dopSpollerDescr.classList.remove("_disabled");
         }), 500); else dopSpollerDescr.classList.add("_disabled");
     }));
+    const formSubscribe = document.querySelector(".form-connection"), checkboxSubscribe = document.getElementById("c_1"), checkboxLabelSubsc = document.querySelector(".checkbox-connection__label");
+    formSubscribe.addEventListener("submit", (e => {
+        if (!checkboxSubscribe.checked) checkboxLabelSubsc.classList.add("error-red__border"); else checkboxLabelSubsc.classList.remove("error-red__border");
+    }));
+    checkboxSubscribe.addEventListener("click", (e => {
+        if (checkboxLabelSubsc.classList.contains("error-red__border")) checkboxLabelSubsc.classList.remove("error-red__border");
+    }));
     window["FLS"] = true;
     isWebp();
     addTouchClass();
