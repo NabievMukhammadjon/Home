@@ -3872,15 +3872,45 @@
             spaceBetween: 0,
             speed: 800,
             parallax: true,
-            autoplay: {
-                delay: 3e3,
-                disableOnInteraction: false
-            },
             navigation: {
                 prevEl: ".tabs-experts__btn-prev",
                 nextEl: ".tabs-experts__btn-next"
             },
             on: {}
+        });
+        if (document.querySelector(".workers-empty")) new core(".workers-empty__slider", {
+            modules: [ Navigation, Parallax, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            speed: 800,
+            parallax: true,
+            autoplay: {
+                delay: 3e3,
+                disableOnInteraction: false
+            },
+            navigation: {
+                prevEl: ".workers-empty__btn-prev",
+                nextEl: ".workers-empty__btn-next"
+            }
+        });
+        if (document.querySelector(".volontr-empty")) new core(".volontr-empty__slider", {
+            modules: [ Navigation, Parallax, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            speed: 800,
+            parallax: true,
+            autoplay: {
+                delay: 3e3,
+                disableOnInteraction: false
+            },
+            navigation: {
+                prevEl: ".volontr-empty__btn-prev",
+                nextEl: ".volontr-empty__btn-next"
+            }
         });
     }
     window.addEventListener("load", (function(e) {
@@ -4024,9 +4054,9 @@
     const dopSpollerBtn = document.querySelector(".spollers-dop__btn");
     const dopSpollerDescr = document.querySelector(".dop__descr");
     dopSpollerBtn.addEventListener("click", (() => {
-        if (dopSpollerDescr.classList.contains("_disabled")) setTimeout((() => {
+        if (!dopSpollerDescr.classList.contains("_disabled")) dopSpollerDescr.classList.add("_disabled"); else setTimeout((() => {
             dopSpollerDescr.classList.remove("_disabled");
-        }), 500); else dopSpollerDescr.classList.add("_disabled");
+        }), 500);
     }));
     const formSubscribe = document.querySelector(".form-connection"), checkboxSubscribe = document.getElementById("c_1"), checkboxLabelSubsc = document.querySelector(".checkbox-connection__label");
     formSubscribe.addEventListener("submit", (e => {
