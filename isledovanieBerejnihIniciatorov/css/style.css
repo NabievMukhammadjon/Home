@@ -1003,6 +1003,7 @@ textarea.input {
 
 .author-partners__text {
   font-family: "PT Mono", sans-serif;
+  line-height: 1.5555555556;
 }
 
 .author-partners__text a {
@@ -1054,7 +1055,7 @@ textarea.input {
 }
 
 .companies-partners__descr {
-  line-height: 120%;
+  line-height: 1.5555555556;
 }
 
 .companies-partners__new {
