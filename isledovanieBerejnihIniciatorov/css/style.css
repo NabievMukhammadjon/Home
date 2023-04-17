@@ -83,6 +83,47 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Arrow1:before {
+  content: "\e907";
+}
+
+.icon-arrow-bottom:before {
+  content: "\e908";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.8;
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+
+.icon-ArrowLong1:before {
+  content: "\e909";
+}
+
+.icon-dzen1:before {
+  content: "\e90a";
+}
+
+.icon-logo1:before {
+  content: "\e90b";
+}
+
+.icon-telegram1:before {
+  content: "\e90c";
+}
+
+.icon-vk1:before {
+  content: "\e90d";
+}
+
+.icon-youtube1:before {
+  content: "\e90e";
+}
+
 .icon-Arrow:before {
   content: "\e900";
 }
@@ -500,6 +541,7 @@ textarea.input {
       align-self: flex-start;
   font-weight: 700;
   line-height: 1.6363636364;
+  color: rgba(178, 178, 178, 0.7);
   -webkit-transition: -webkit-transform 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s, -webkit-text-decoration 0.3s ease 0s;
   -o-transition: transform 0.3s ease 0s, text-decoration 0.3s ease 0s;
@@ -508,7 +550,7 @@ textarea.input {
 }
 
 .site-years._tab-active {
-  color: rgba(255, 255, 255, 0.5);
+  color: #000;
 }
 
 ._icon-star::before {
@@ -518,6 +560,28 @@ textarea.input {
   height: 1.75rem;
   top: 0;
   left: 100%;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
+thead tr {
+  font-weight: 700;
+}
+
+tr {
+  font-size: 1.375rem;
+  line-height: 1.6363636364;
+  color: #000;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .header {
@@ -935,7 +999,6 @@ textarea.input {
 
 .tabs-schedule__navigation {
   position: absolute;
-  top: 28px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1182,9 +1245,23 @@ textarea.input {
 
 .inner-experts__more {
   position: relative;
+  padding: 24px 60px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1111111111;
+  color: #fff;
+  background-color: #000;
+  border-radius: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .inner-experts__more span {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1196,9 +1273,11 @@ textarea.input {
           column-gap: 1.375rem;
 }
 
-.inner-experts__more i {
-  font-weight: 900;
-  font-size: 2.8125rem;
+.inner-experts._showmore-active .inner-experts__more::before {
+  content: "\e908";
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .samples {
@@ -1230,6 +1309,12 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 6.875rem;
+}
+
+.tabs-samples__navigation {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 128px;
+          flex: 0 0 128px;
 }
 
 .tabs-samples__subtitle {
@@ -1460,7 +1545,8 @@ textarea.input {
 
 .tabs-geography {
   /* .tabs-geography__head */
-  /* .tabs-geography__navigation */
+  /* .tabs-geography__block */
+  /* .tabs-geography__table */
   /* .tabs-geography__title */
   /* .tabs-geography__content */
   /* .tabs-geography__body */
@@ -1875,6 +1961,7 @@ textarea.input {
   -webkit-column-width: 400px;
      -moz-column-width: 400px;
           column-width: 400px;
+  padding: 0;
   /* .list-inner-team__item */
   /* .list-inner-team__numb */
   /* .list-inner-team__descr */
@@ -2140,11 +2227,7 @@ textarea.input {
 }
 
 .no-webp .checkbox-connection__input:checked + .checkbox-connection__label::before{
-  background: url("../img/arrowCheckbox.png") center/15px no-repeat; }
-
-.checkbox-connection__input:checked + .checkbox-connection__label::before {
-  background-color: #000;
-}
+  background: url("../img/arrowCheckbox.png") #000 center/15px no-repeat; }
 
 .checkbox-connection__label {
   position: relative;
@@ -2276,10 +2359,6 @@ textarea.input {
   display: flex;
 }
 
-.dop__descr {
-  line-height: 2;
-}
-
 .dop__descr a {
   text-decoration: underline;
   -webkit-transition: all 0.3s ease 0s;
@@ -2287,16 +2366,23 @@ textarea.input {
   transition: all 0.3s ease 0s;
 }
 
+.dop__descr p {
+  line-height: 2;
+  width: 20rem;
+}
+
+.dop__descr p svg {
+  margin-bottom: -8px;
+}
+
 .dop__descr._disabled {
   position: absolute;
   top: 0;
   left: 0;
-  width: 17.5rem;
 }
 
 .spollers-dop {
   text-align: center;
-  /* .spollers-dop__item */
   /* .spollers-dop__btn */
   /* .spollers-dop__body */
 }
@@ -2306,22 +2392,30 @@ textarea.input {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  background-color: #000;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 60px;
+  padding-right: 90px;
+  border-radius: 65px;
+  color: #fff;
 }
 
-.spollers-dop__btn::after {
-  content: "+";
+.spollers-dop__btn span {
+  white-space: nowrap;
+  margin-right: -10px;
+}
+
+.spollers-dop__btn::before {
+  content: "\e908";
   position: absolute;
-  font-weight: 700;
-  line-height: 0.8;
-  height: 100%;
-  top: -0.3125rem;
-  right: -2.5rem;
+  right: 48px;
 }
 
-.spollers-dop__btn._spoller-active::after {
-  content: "-";
-  right: -9%;
-  top: -0.5rem;
+.spollers-dop__btn._spoller-active::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .spollers-dop__body {
@@ -2464,12 +2558,6 @@ textarea.input {
 
   .tabs-schedule__slider_2 ._active-pos {
     width: 20.625rem !important;
-  }
-
-  .dop__descr {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 280px;
-            flex: 0 0 280px;
   }
 
   .spollers-dop__btn {
@@ -2656,7 +2744,7 @@ textarea.input {
 
 @media (min-width: 88.125em) {
   .tabs-schedule__content {
-    margin-left: 7.5rem;
+    margin-left: 12.5rem;
   }
 }
 
@@ -3017,20 +3105,12 @@ textarea.input {
     font-size: 0.875rem;
   }
 
-  .dop__descr {
+  .dop__descr p {
     font-size: 1.125rem;
   }
 
   .spollers-dop__btn {
     font-size: 1.125rem;
-  }
-
-  .spollers-dop__btn::after {
-    font-size: 2.8125rem;
-  }
-
-  .spollers-dop__btn::after {
-    right: -2.5rem;
   }
 
   .body-dop {
@@ -3123,7 +3203,7 @@ textarea.input {
 
 @media (max-width: 100em) {
   .tabs-schedule__navigation {
-    top: -2.5rem;
+    top: -4.5rem;
   }
 }
 
@@ -3475,20 +3555,12 @@ textarea.input {
     font-size: 0.5rem;
   }
 
-  .dop__descr {
+  .dop__descr p {
     font-size: 0.75rem;
   }
 
   .spollers-dop__btn {
     font-size: 0.75rem;
-  }
-
-  .spollers-dop__btn::after {
-    font-size: 2rem;
-  }
-
-  .spollers-dop__btn::after {
-    right: -1.5625rem;
   }
 
   .body-dop {
@@ -4016,6 +4088,10 @@ textarea.input {
             flex: 0 1 48%;
   }
 
+  .tabs-geography__block {
+    overflow: scroll;
+  }
+
   .inner-team__texts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4069,6 +4145,15 @@ textarea.input {
 }
 
 @media (max-width: 29.99875em) {
+  .tabs-schedule__navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
   .author-partners {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5043,13 +5128,13 @@ textarea.input {
 }
 
 @supports (font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem )) {
-    .dop__descr {
+    .dop__descr p {
       font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem );
     }
 }
 
 @supports not (font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem )) {
-    .dop__descr {
+    .dop__descr p {
       font-size: calc(0.75rem + 0.375 * (100vw - 20rem) / 79.0625);
     }
 }
@@ -5063,30 +5148,6 @@ textarea.input {
 @supports not (font-size: clamp( 0.75rem , 0.6551383399rem  +  0.4743083004vw , 1.125rem )) {
     .spollers-dop__btn {
       font-size: calc(0.75rem + 0.375 * (100vw - 20rem) / 79.0625);
-    }
-}
-
-@supports (font-size: clamp( 2rem , 1.7944664032rem  +  1.0276679842vw , 2.8125rem )) {
-    .spollers-dop__btn::after {
-      font-size: clamp( 2rem , 1.7944664032rem  +  1.0276679842vw , 2.8125rem );
-    }
-}
-
-@supports not (font-size: clamp( 2rem , 1.7944664032rem  +  1.0276679842vw , 2.8125rem )) {
-    .spollers-dop__btn::after {
-      font-size: calc(2rem + 0.8125 * (100vw - 20rem) / 79.0625);
-    }
-}
-
-@supports (right: clamp( -2.5rem , -1.3253458498rem  +  -1.185770751vw , -1.5625rem )) {
-    .spollers-dop__btn::after {
-      right: clamp( -2.5rem , -1.3253458498rem  +  -1.185770751vw , -1.5625rem );
-    }
-}
-
-@supports not (right: clamp( -2.5rem , -1.3253458498rem  +  -1.185770751vw , -1.5625rem )) {
-    .spollers-dop__btn::after {
-      right: calc(-1.5625rem + -0.9375 * (100vw - 20rem) / 79.0625);
     }
 }
 
@@ -5245,15 +5306,15 @@ textarea.input {
 }
 
 @media (min-width: 100em) and (max-width: 107.5em) {
-@supports (top: clamp( -2.5rem , -59.1666666667rem  +  56.6666666667vw , 1.75rem )) {
+@supports (top: clamp( -4.5rem , -87.8333333333rem  +  83.3333333333vw , 1.75rem )) {
     .tabs-schedule__navigation {
-      top: clamp( -2.5rem , -59.1666666667rem  +  56.6666666667vw , 1.75rem );
+      top: clamp( -4.5rem , -87.8333333333rem  +  83.3333333333vw , 1.75rem );
     }
 }
 
-@supports not (top: clamp( -2.5rem , -59.1666666667rem  +  56.6666666667vw , 1.75rem )) {
+@supports not (top: clamp( -4.5rem , -87.8333333333rem  +  83.3333333333vw , 1.75rem )) {
     .tabs-schedule__navigation {
-      top: calc(-2.5rem + 4.25 * (100vw - 100rem) / 7.5);
+      top: calc(-4.5rem + 6.25 * (100vw - 100rem) / 7.5);
     }
 }
 }
@@ -5625,6 +5686,6 @@ textarea.input {
   }
 }
 
-.webp .checkbox-connection__input:checked + .checkbox-connection__label::before{ background: url(../img/arrowCheckbox.webp) center/15px no-repeat; }
+.webp .checkbox-connection__input:checked + .checkbox-connection__label::before{ background: url(../img/arrowCheckbox.webp) #000 center/15px no-repeat; }
 
 .webp .wrapper{ background-image: url(../img/bg.webp); }

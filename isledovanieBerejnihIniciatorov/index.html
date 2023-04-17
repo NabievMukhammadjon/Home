@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230404203813">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css?_v=20230417214209" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230417214209">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -101,8 +102,8 @@
 					<div class="schedule__content">
 						<div data-tabs class="schedule__tabs tabs-schedule">
 							<nav data-tabs-titles class="tabs-schedule__navigation tabs-nav">
-								<button type="button" class="tabs-schedule__title site-years">2021</button>
-								<button type="button" class="tabs-schedule__title site-years _tab-active">2022</button>
+								<button type="button" class="tabs-schedule__title site-years">2021-2022</button>
+								<button type="button" class="tabs-schedule__title site-years _tab-active">2022-2023</button>
 							</nav>
 							<div data-tabs-body class="tabs-schedule__content">
 								<div class="tabs-schedule__body">
@@ -193,11 +194,24 @@
 				<div class="dop__container">
 					<div class="dop__content">
 						<div class="dop__descr">
-							С методологией проекта можно ознакомиться <a href="https://tepertak.ru/spisok2021/metodologia-sbi.html">здесь</a>.
+							<p>
+								С методологией проекта можно ознакомиться <a href="https://tepertak.ru/spisok2021/metodologia-sbi.html">здесь</a>
+								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<g style="mix-blend-mode:difference">
+										<rect width="31" height="31" fill="url(#pattern0)" />
+									</g>
+									<defs>
+										<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+											<use xlink:href="#image0_706_538" transform="scale(0.01)" />
+										</pattern>
+										<image id="image0_706_538" width="100" height="100" xlink:href="data:image/png;base64,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" />
+									</defs>
+								</svg>
+							</p>
 						</div>
 						<div data-spollers class="dop__spollers spollers-dop">
 							<div class="spollers-dop__item">
-								<button data-spoller type="button" class="spollers-dop__btn">
+								<button data-spoller type="button" class="spollers-dop__btn icon-arrow-bottom">
 									<span>
 										Как использовать итоги исследования
 									</span>
@@ -232,8 +246,8 @@
 						<div data-tabs class="partners__tabs tabs-partners">
 							<div class="tabs-partners__block">
 								<nav data-tabs-titles class="tabs-partners__navigation tabs-nav">
-									<button type="button" class="tabs-partners__btn site-years">2021</button>
-									<button type="button" class="tabs-partners__btn _tab-active site-years">2022</button>
+									<button type="button" class="tabs-partners__btn site-years">2021-2022</button>
+									<button type="button" class="tabs-partners__btn _tab-active site-years">2022-2023</button>
 								</nav>
 								<h2 class="tabs-partners__title">Партнёры</h2>
 							</div>
@@ -309,8 +323,8 @@
 						<div data-tabs class="experts__tabs tabs-experts">
 							<div class="tabs-experts__texts">
 								<nav data-tabs-titles class="tabs-experts__navigation tabs-nav">
-									<button type="button" class="tabs-experts__btn site-years">2021</button>
-									<button type="button" class="tabs-experts__btn site-years _tab-active">2022</button>
+									<button type="button" class="tabs-experts__btn site-years">2021-2022</button>
+									<button type="button" class="tabs-experts__btn site-years _tab-active">2022-2023</button>
 								</nav>
 								<h2 class="tabs-experts__title">Эксперты</h2>
 							</div>
@@ -318,26 +332,6 @@
 								<div class="tabs-experts__body">
 									<div class="tabs-experts__block block-experts">
 										<p class="block-experts__descr">Эксперты принимают участие в&nbsp;анализе инициатив, полученных опросным методом, комментируют тематические области и&nbsp;проекты. Они представляют гражданский сектор, в&nbsp;проекте участвуют pro bono. Мы&nbsp;выражаем глубокую признательность за&nbsp;работу, которую они делают для устойчивого развития</p>
-										<ul class="block-experts__peop">
-											<li data-da=".inner-experts__list, 1568.98" class="block-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/anastasiya_krasilnikova.webp" type="image/webp"><img src="img/experts/anastasiya_krasilnikova.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Анастасия Красильникова</h3>
-													<span class="info-experts__works">Дочь разбойника, Вашу мать</span>
-												</div>
-											</li>
-											<li data-da=".inner-experts__list, 1568.98" class="block-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Нина_Ильина.webp" type="image/webp"><img src="img/experts/Нина_Ильина.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Нина Ильина</h3>
-													<span class="info-experts__works">«ЭкоТехнологии», «ГК EcoPartners»</span>
-												</div>
-											</li>
-										</ul>
 									</div>
 									<div class="tabs-experts__slider">
 										<div class="tabs-experts__controll">
@@ -538,6 +532,24 @@
 										<ul data-showmore-content="3" class="inner-experts__list">
 											<li class="inner-experts__item experts-item">
 												<div class="experts-item__image">
+													<picture><source srcset="img/experts/anastasiya_krasilnikova.webp" type="image/webp"><img src="img/experts/anastasiya_krasilnikova.jpg" alt="Фото эксперта"></picture>
+												</div>
+												<div class="experts-item__info info-experts">
+													<h3 class="info-experts__name">Анастасия Красильникова</h3>
+													<span class="info-experts__works">Дочь разбойника, Вашу мать</span>
+												</div>
+											</li>
+											<li class="inner-experts__item experts-item">
+												<div class="experts-item__image">
+													<picture><source srcset="img/experts/Нина_Ильина.webp" type="image/webp"><img src="img/experts/Нина_Ильина.jpg" alt="Фото эксперта"></picture>
+												</div>
+												<div class="experts-item__info info-experts">
+													<h3 class="info-experts__name">Нина Ильина</h3>
+													<span class="info-experts__works">«ЭкоТехнологии», «ГК EcoPartners»</span>
+												</div>
+											</li>
+											<li class="inner-experts__item experts-item">
+												<div class="experts-item__image">
 													<picture><source srcset="img/experts/alena_yuzefovich.webp" type="image/webp"><img src="img/experts/alena_yuzefovich.jpg" alt="Фото эксперта"></picture>
 												</div>
 												<div class="experts-item__info info-experts">
@@ -714,43 +726,15 @@
 												</div>
 											</li>
 										</ul>
-										<button hidden data-showmore-button type="button" class="inner-experts__more">
-											<span>Показать ещё <i>
-													<svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M25.7347 10.845V15.84H15.5196V26.1H10.4796V15.84H0.264648V10.845H10.4796V0.629999H15.5196V10.845H25.7347Z" fill="black" />
-													</svg>
-												</i> </span>
-											<span>Скрыть <i>-</i></span>
+										<button hidden data-showmore-button type="button" class="inner-experts__more icon-arrow-bottom">
+											<span>Показать ещё</span>
+											<span>Скрыть</span>
 										</button>
 									</div>
 								</div>
 								<div class="tabs-experts__body">
 									<div class="tabs-experts__block block-experts">
 										<p class="block-experts__descr">Эксперты принимают участие в&nbsp;анализе инициатив, полученных опросным методом, комментируют тематические области и&nbsp;проекты. Они представляют гражданский сектор, в&nbsp;проекте участвуют pro bono. Мы&nbsp;выражаем глубокую признательность за&nbsp;работу, которую они делают для устойчивого развития</p>
-										<ul class="block-experts__peop">
-											<li data-da=".inner-experts__list, 1568.98" class="inner-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Татьяна_Дроздова.webp" type="image/webp"><img src="img/experts/Татьяна_Дроздова.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Татьяна Дроздова</h3>
-													<span class="info-experts__works">
-														Young Old Lab
-													</span>
-												</div>
-											</li>
-											<li data-da=".inner-experts__list, 1568.98" class="inner-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Арина_Плюснина.webp" type="image/webp"><img src="img/experts/Арина_Плюснина.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Арина Плюснина</h3>
-													<span class="info-experts__works">
-														Фонд «Новый учитель»
-													</span>
-												</div>
-											</li>
-										</ul>
 									</div>
 									<div class="tabs-experts__slider">
 										<div class="tabs-experts__controll">
@@ -964,6 +948,28 @@
 										<ul data-showmore-content class="inner-experts__list">
 											<li class="inner-experts__item experts-item">
 												<div class="experts-item__image">
+													<picture><source srcset="img/experts/Татьяна_Дроздова.webp" type="image/webp"><img src="img/experts/Татьяна_Дроздова.jpg" alt="Фото эксперта"></picture>
+												</div>
+												<div class="experts-item__info info-experts">
+													<h3 class="info-experts__name">Татьяна Дроздова</h3>
+													<span class="info-experts__works">
+														Young Old Lab
+													</span>
+												</div>
+											</li>
+											<li class="inner-experts__item experts-item">
+												<div class="experts-item__image">
+													<picture><source srcset="img/experts/Арина_Плюснина.webp" type="image/webp"><img src="img/experts/Арина_Плюснина.jpg" alt="Фото эксперта"></picture>
+												</div>
+												<div class="experts-item__info info-experts">
+													<h3 class="info-experts__name">Арина Плюснина</h3>
+													<span class="info-experts__works">
+														Фонд «Новый учитель»
+													</span>
+												</div>
+											</li>
+											<li class="inner-experts__item experts-item">
+												<div class="experts-item__image">
 													<picture><source srcset="img/experts/Ирина_Шулгестерова.webp" type="image/webp"><img src="img/experts/Ирина_Шулгестерова.jpg" alt="Фото эксперта"></picture>
 												</div>
 												<div class="experts-item__info info-experts">
@@ -1151,13 +1157,11 @@
 											</li>
 
 										</ul>
-										<button hidden data-showmore-button type="button" class="inner-experts__more">
-											<span>Показать ещё <i>
-													<svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M25.7347 10.845V15.84H15.5196V26.1H10.4796V15.84H0.264648V10.845H10.4796V0.629999H15.5196V10.845H25.7347Z" fill="black" />
-													</svg>
-												</i> </span>
-											<span>Скрыть <i>-</i></span>
+										<button hidden data-showmore-button type="button" class="inner-experts__more icon-arrow-bottom">
+											<span>
+												Показать ещё
+											</span>
+											<span>Скрыть</span>
 										</button>
 									</div>
 								</div>
@@ -1171,8 +1175,8 @@
 					<div data-tabs class="samples__tabs tabs-samples">
 						<div class="tabs-samples__head">
 							<nav data-tabs-titles class="tabs-samples__navigation tabs-nav">
-								<button type="button" class="tabs-samples__btn site-years">2021</button>
-								<button type="button" class="tabs-samples__btn site-years _tab-active">2022</button>
+								<button type="button" class="tabs-samples__btn site-years">2021-2022</button>
+								<button type="button" class="tabs-samples__btn site-years _tab-active">2022-2023</button>
 							</nav>
 							<div class="tabs-samples__inner head-samples">
 								<div class="head-samples__texts">
@@ -2045,101 +2049,187 @@
 						<div class="tabs-geography__head">
 							<h2 class="tabs-geography__title">География выборки</h2>
 						</div>
-						<div class="tabs-geography__body body-tabs-geography">
-							<div class="body-tabs-geography__block block-geography block-geography_2022">
-								<div class="block-geography__titles">
-									<h3 class="block-geography__subtitle">Города</h3>
-									<h3 class="block-geography__subtitle">Население</h3>
-									<h3 class="block-geography__subtitle">Акторы</h3>
-								</div>
-								<ul class="block-geography__inner">
-									<li class="block-geography__info">
-										<div class="block-geography__column">Федеральные</div>
-										<div class="block-geography__column">146 424 729</div>
-										<div class="block-geography__column">23 организации,17 СМИ, 17 ТГ-каналов, 17 блогеров</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Владивосток</div>
-										<div class="block-geography__column">603 519</div>
-										<div class="block-geography__column">4 организации</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Москва</div>
-										<div class="block-geography__column">13 097 539</div>
-										<div class="block-geography__column">11 организаций</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Казань</div>
-										<div class="block-geography__column">1 308 660</div>
-										<div class="block-geography__column">2 организации, 3 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Краснодар</div>
-										<div class="block-geography__column">1 099 344</div>
-										<div class="block-geography__column">2 организации, 1 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Санкт-Петербург</div>
-										<div class="block-geography__column">5 361 900</div>
-										<div class="block-geography__column">9 организаций, 1 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Уфа</div>
-										<div class="block-geography__column">1 167 775</div>
-										<div class="block-geography__column">3 организации, 1 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Красноярск</div>
-										<div class="block-geography__column">1 187 771</div>
-										<div class="block-geography__column">1 организация, 1 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Новосибирск</div>
-										<div class="block-geography__column">1 633 595</div>
-										<div class="block-geography__column">4 организации, 1 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Нижний Новгород</div>
-										<div class="block-geography__column">1 233 949</div>
-										<div class="block-geography__column">2 организации</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Волгоград</div>
-										<div class="block-geography__column">1 028 036</div>
-										<div class="block-geography__column">3 организации</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Екатеринбург</div>
-										<div class="block-geography__column">1 544 376</div>
-										<div class="block-geography__column">5 организаций, 3 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Челябинск</div>
-										<div class="block-geography__column">1 189 525</div>
-										<div class="block-geography__column">3 организации, 1 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Самара</div>
-										<div class="block-geography__column">1 173 299</div>
-										<div class="block-geography__column">3 организации, 2 СМИ</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Воронеж</div>
-										<div class="block-geography__column">1 048 738</div>
-										<div class="block-geography__column">3 организации</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Пермь</div>
-										<div class="block-geography__column">1 034 002</div>
-										<div class="block-geography__column">3 организации</div>
-									</li>
-									<li class="block-geography__info">
-										<div class="block-geography__column">Омск</div>
-										<div class="block-geography__column">1 126 193</div>
-										<div class="block-geography__column">3 организации</div>
-									</li>
-								</ul>
-							</div>
+						<div class="tabs-geography__block">
+							<table class="tabs-geography__table table table-striped">
+								<tbody>
+									<tr>
+										<th>Города</th>
+										<th>Население</th>
+										<th>Экологические акторы</th>
+										<th>Социальные акторы</th>
+										<th>Смешанные акторы</th>
+										<th>Городские акторы</th>
+									</tr>
+									<tr>
+										<td>Федеральный охват</td>
+										<td>146 424 729</td>
+										<td>34</td>
+										<td>19</td>
+										<td>8</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>Москва</td>
+										<td>13 097 539</td>
+										<td>8</td>
+										<td>1</td>
+										<td>1</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>Санкт-Петербург</td>
+										<td>5 361 900</td>
+										<td>6</td>
+										<td>5</td>
+										<td>0</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<td>Новосибирск</td>
+										<td>1 633 595</td>
+										<td>3</td>
+										<td>1</td>
+										<td>1</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>Екатеринбург</td>
+										<td>1 544 376</td>
+										<td>3</td>
+										<td>2</td>
+										<td>0</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<td>Казань</td>
+										<td>1 308 660</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>6</td>
+									</tr>
+									<tr>
+										<td>Нижний Новгород</td>
+										<td>1 233 949</td>
+										<td>1</td>
+										<td>1</td>
+										<td>0</td>
+										<td>6</td>
+									</tr>
+									<tr>
+										<td>Челябинск</td>
+										<td>1 189 525</td>
+										<td>5</td>
+										<td>0</td>
+										<td>0</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>Красноярск</td>
+										<td>1 187 771</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>Самара</td>
+										<td>1 173 299</td>
+										<td>2</td>
+										<td>1</td>
+										<td>0</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<td>Уфа</td>
+										<td>1 167 775</td>
+										<td>2</td>
+										<td>1</td>
+										<td>0</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>Ростов-на-Дону</td>
+										<td>1 137 904</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>Омск</td>
+										<td>1 126 193</td>
+										<td>2</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Воронеж</td>
+										<td>1 048 738</td>
+										<td>2</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Пермь</td>
+										<td>1 034 002</td>
+										<td>0</td>
+										<td>0</td>
+										<td>1</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Волгоград</td>
+										<td>1 028 036</td>
+										<td>2</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Тюмень</td>
+										<td>855 618</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Владивосток</td>
+										<td>603 519</td>
+										<td>2</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Тверь</td>
+										<td>425 072</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>Саранск</td>
+										<td>349 751</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<td>Сыктывкар</td>
+										<td>259 884</td>
+										<td>0</td>
+										<td>1</td>
+										<td>0</td>
+										<td>1</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -2150,8 +2240,8 @@
 						<div data-tabs class="team__tabs tabs-team">
 							<div class="tabs-team__head">
 								<nav data-tabs-titles class="tabs-team__navigation tabs-nav">
-									<button type="button" class="tabs-team__btn site-years">2021</button>
-									<button type="button" class="tabs-team__btn _tab-active site-years">2022</button>
+									<button type="button" class="tabs-team__btn site-years">2021-2022</button>
+									<button type="button" class="tabs-team__btn _tab-active site-years">2022-2023</button>
 								</nav>
 								<div class="tabs-team__titles">
 									<h2 class="tabs-team__title">Команда проекта исследования</h2>
@@ -2371,12 +2461,12 @@
 											</li>
 											<li class="list-team__item">
 												<div class="list-team__image">
-													<picture><source srcset="img/team-members/Татьяна_Жукова.webp" type="image/webp"><img src="img/team-members/Татьяна_Жукова.jpg" alt="Фотография члена команды"></picture>
+													<picture><source srcset="img/team-members/Екатерина_Богомолова.webp" type="image/webp"><img src="img/team-members/Екатерина_Богомолова.png" alt="Фотография члена команды"></picture>
 												</div>
 												<div class="list-team__texts">
-													<div class="list-team__name">Татьяна Жукова</div>
+													<div class="list-team__name">Екатерина Богомолова</div>
 													<p class="list-team__works">
-														PR-специалист, Сарафан PR
+														Методолог
 													</p>
 												</div>
 											</li>
@@ -2393,12 +2483,12 @@
 											</li>
 											<li class="list-team__item">
 												<div class="list-team__image">
-													<picture><source srcset="img/team-members/Устя_Хохлова.webp" type="image/webp"><img src="img/team-members/Устя_Хохлова.jpg" alt="Фотография члена команды"></picture>
+													<picture><source srcset="img/team-members/Татьяна_Жукова.webp" type="image/webp"><img src="img/team-members/Татьяна_Жукова.jpg" alt="Фотография члена команды"></picture>
 												</div>
 												<div class="list-team__texts">
-													<div class="list-team__name">Устя Хохлова</div>
+													<div class="list-team__name">Татьяна Жукова</div>
 													<p class="list-team__works">
-														Работа с экспертами, бюро партнёрств «Теперь так»
+														PR-специалист, Сарафан PR
 													</p>
 												</div>
 											</li>
@@ -2503,12 +2593,12 @@
 											</li>
 											<li class="list-team__item">
 												<div class="list-team__image">
-													<picture><source srcset="img/team-members/Маргарита_Стаф.webp" type="image/webp"><img src="img/team-members/Маргарита_Стаф.jpg" alt="Фотография члена команды"></picture>
+													<picture><source srcset="img/team-members/Устя_Хохлова.webp" type="image/webp"><img src="img/team-members/Устя_Хохлова.jpg" alt="Фотография члена команды"></picture>
 												</div>
 												<div class="list-team__texts">
-													<div class="list-team__name">Маргарита Стаф</div>
+													<div class="list-team__name">Устя Хохлова</div>
 													<p class="list-team__works">
-														Менеджер и эксперт проекта, Aventica
+														Работа с экспертами, бюро партнёрств «Теперь так»
 													</p>
 												</div>
 											</li>
@@ -2600,7 +2690,18 @@
 													</p>
 												</div>
 											</li>
-											<li class="list-team__item list-team__item_null"></li>
+											<li class="list-team__item">
+												<div class="list-team__image">
+													<picture><source srcset="img/team-members/Маргарита_Стаф.webp" type="image/webp"><img src="img/team-members/Маргарита_Стаф.jpg" alt="Фотография члена команды"></picture>
+												</div>
+												<div class="list-team__texts">
+													<div class="list-team__name">Маргарита Стаф</div>
+													<p class="list-team__works">
+														Менеджер и эксперт проекта, Aventica
+													</p>
+												</div>
+											</li>
+
 											<li data-da=".empty-team, 1500.98" class="list-team__item">
 												<div class="list-team__image">
 													<picture><source srcset="img/team-members/Анна_Оха.webp" type="image/webp"><img src="img/team-members/Анна_Оха.jpg" alt="Фотография члена команды"></picture>
@@ -3144,7 +3245,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230404203813"></script>
+	<script src="js/app.min.js?_v=20230417214209"></script>
 </body>
 
 </html>
