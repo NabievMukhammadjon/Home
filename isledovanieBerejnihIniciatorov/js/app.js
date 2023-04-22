@@ -3795,10 +3795,6 @@
         if (document.querySelector(".tabs-schedule__content")) {
             new core(".tabs-schedule__slider_1", {
                 modules: [ Navigation, Autoplay ],
-                autoplay: {
-                    delay: 3e3,
-                    disableOnInteraction: false
-                },
                 observer: true,
                 observeParents: true,
                 slidesPerView: 4,
@@ -3826,10 +3822,6 @@
             });
             new core(".tabs-schedule__slider_2", {
                 modules: [ Navigation, Autoplay ],
-                autoplay: {
-                    delay: 3e3,
-                    disableOnInteraction: false
-                },
                 observer: true,
                 observeParents: true,
                 slidesPerView: 5,
@@ -3842,7 +3834,7 @@
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        spaceBetween: 0,
+                        spaceBetween: 40,
                         autoHeight: true
                     },
                     768: {
@@ -3886,10 +3878,6 @@
             spaceBetween: 30,
             speed: 800,
             parallax: true,
-            autoplay: {
-                delay: 3e3,
-                disableOnInteraction: false
-            },
             navigation: {
                 prevEl: ".workers-empty__btn-prev",
                 nextEl: ".workers-empty__btn-next"
@@ -3903,10 +3891,6 @@
             spaceBetween: 30,
             speed: 800,
             parallax: true,
-            autoplay: {
-                delay: 3e3,
-                disableOnInteraction: false
-            },
             navigation: {
                 prevEl: ".volontr-empty__btn-prev",
                 nextEl: ".volontr-empty__btn-next"
@@ -4064,6 +4048,14 @@
     }));
     checkboxSubscribe.addEventListener("click", (e => {
         if (checkboxLabelSubsc.classList.contains("error-red__border")) checkboxLabelSubsc.classList.remove("error-red__border");
+    }));
+    const mod = document.querySelectorAll(".tabs-team__btn"), titleVolontr = document.querySelector(".tabs-team__subtitl");
+    mod.forEach((item => {
+        if ("2021-2022" === item.textContent) item.addEventListener("click", (() => {
+            titleVolontr.innerHTML = "";
+        })); else if ("2022-2023" === item.textContent) item.addEventListener("click", (() => {
+            titleVolontr.innerHTML = "Волонтёры исследования";
+        }));
     }));
     window["FLS"] = true;
     isWebp();

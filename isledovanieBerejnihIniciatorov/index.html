@@ -2,18 +2,23 @@
 <html lang="ru">
 
 <head>
-	<title>HomePage</title>
+	<title>Исследование бережных инициатив</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css?_v=20230417214209" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230417214209">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css?_v=20230420234236" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230420234236">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<div class="page-preloader preloader" id="preloader">
+		<span class="preloader__item preloader__item1"></span>
+		<span class="preloader__item preloader__item2"></span>
+		<span class="preloader__item preloader__item3"></span>
+		<span class="preloader__item preloader__item4"></span>
+	</div>
 	<div class="wrapper">
 		<main class="page">
 			<section class="page__hero hero">
@@ -26,16 +31,16 @@
 									<li class="nav-header__item item-header">
 										<div data-spollers class="item-header__spollers header-spollers">
 											<div class="header-spollers__item">
-												<button type="button" data-spoller class="header-spollers__title header-links">Итоги</button>
+												<button id="spollerRes" type="button" data-spoller class="header-spollers__title header-links">Итоги</button>
 												<ul class="header-spollers__list">
 													<li class="header-spollers__items">
-														<a href="#" class="header-spollers__link">2022</a>
+														<a href="#" class="header-spollers__link">Сезон 2022-2023</a>
 													</li>
 													<li class="header-spollers__items">
-														<a href="https://tepertak.ru/spisok2021/" class="header-spollers__link">2021</a>
+														<a href="https://tepertak.ru/spisok2021/" target="_blank" class="header-spollers__link">Сезон 2021-2022</a>
 													</li>
 													<li class="header-spollers__items">
-														<a href="#" class="header-spollers__link">Как использовать итоги</a>
+														<a href="#" data-goto-header data-goto="#metodology" class="header-spollers__link">Как использовать итоги</a>
 													</li>
 												</ul>
 											</div>
@@ -44,7 +49,7 @@
 									<li class="nav-header__item item-header">
 										<div data-spollers class="item-header__spollers header-spollers spollers">
 											<div class="header-spollers__item ">
-												<button type="button" data-spoller class="header-spollers__title header-links">Об исследовании</button>
+												<button id="spollerInfo" type="button" data-spoller class="header-spollers__title header-links">Об исследовании</button>
 												<ul class="header-spollers__list header-spollers__list_big">
 													<li class="header-spollers__items">
 														<a href="#" data-goto-header data-goto="#metodology" class="header-spollers__link">Методология</a>
@@ -91,8 +96,8 @@
 				<div class="hero__container">
 					<div class="hero__content">
 						<h1 class="hero__title">Исследование бережных инициатив</h1>
-						<p class="hero__descr">Что сделано для <strong>окружающей среды</strong> и&nbsp;<strong>благосостояния людей</strong> за&nbsp;предыдущий год в&nbsp;России?</p>
-						<p class="hero__descr">Отслеживаем ежегодно кем, в&nbsp;каких регионах и что <strong>реализовано</strong> в&nbsp;целях устойчивого развития.</p>
+						<p class="hero__descr">Что, кем и в каких регионах, по мнению россиян сделано за год для окружающей среды и благосостояния людей.</p>
+						<p class="hero__descr">Анализ обсуждений в социальных медиа, опрос россиян и экспертная оценка.</p>
 						<button data-goto=".connection__subscr" class="hero__btn">Скачать исследование</button>
 					</div>
 				</div>
@@ -149,35 +154,35 @@
 										<div class="tabs-schedule__swiper">
 											<div class="tabs-schedule__slide block-schedule">
 												<div class="block-schedule__column column-schedule">
-													<div class="column-schedule__title">Подготовка к опросу</div>
-													<span class="column-schedule__text">1 ноября — 25 декабря 2022</span>
+													<div class="column-schedule__title">Подготовка</div>
+													<span class="column-schedule__text">1 ноября 2022 — <br> 4 января 2023</span>
 													<a href="https://docs.google.com/forms/d/e/1FAIpQLSe0YGEDYiRUlxHHpQ9VDijRVTIQshwHMZTJOnw_wTlX6oXBjw/viewform" target="_blank" class="column-schedule__btn">Присоединиться</a>
 												</div>
 											</div>
 											<div class="tabs-schedule__slide block-schedule">
 												<div class="block-schedule__column column-schedule">
-													<div class="column-schedule__title">Опрос (сбор мнений аудитории)</div>
-													<span class="column-schedule__text">5 - 31 января 2023*</span>
+													<div class="column-schedule__title">Опрос</div>
+													<span class="column-schedule__text">5 — 31 января 2023</span>
 												</div>
 												<p class="column-schedule__info-text">* Согласно методологии опроса даты могут сдвигаться</p>
 											</div>
 											<div class="tabs-schedule__slide block-schedule _active-pos">
 												<div class="block-schedule__column column-schedule">
-													<div class="column-schedule__title">Анализ данных опроса и информационной среды</div>
-													<span class="column-schedule__text">1 февраля - 5 апреля 2023</span>
+													<div class="column-schedule__title">Анализ</div>
+													<span class="column-schedule__text">1 февраля — <br> 20 апреля 2023</span>
 													<a href="#" data-goto-header data-goto="#connection" class="column-schedule__btn">Подписаться</a>
 												</div>
 											</div>
 											<div class="tabs-schedule__slide block-schedule">
 												<div class="block-schedule__column column-schedule">
-													<div class="column-schedule__title">Публикация итогов исследования</div>
-													<span class="column-schedule__text">6 апреля 2023</span>
+													<div class="column-schedule__title">Публикация</div>
+													<span class="column-schedule__text">21 апреля 2023</span>
 													<a href="#" data-goto-header data-goto="#connection" class="column-schedule__btn">Подписаться</a>
 												</div>
 											</div>
 											<div class="tabs-schedule__slide block-schedule">
 												<div class="block-schedule__column column-schedule">
-													<div class="column-schedule__title">Подготовка к новому сезону исследования</div>
+													<div class="column-schedule__title">Подготовка</div>
 													<span class="column-schedule__text">сентябрь 2023</span>
 													<a href="https://docs.google.com/forms/d/e/1FAIpQLSe0YGEDYiRUlxHHpQ9VDijRVTIQshwHMZTJOnw_wTlX6oXBjw/viewform" target="_blank" class="column-schedule__btn">Присоединиться</a>
 												</div>
@@ -195,7 +200,7 @@
 					<div class="dop__content">
 						<div class="dop__descr">
 							<p>
-								С методологией проекта можно ознакомиться <a href="https://tepertak.ru/spisok2021/metodologia-sbi.html">здесь</a>
+								С методологией проекта можно ознакомиться <a target="_blank" href="https://tepertak.ru/spisok2021/metodologia-sbi.html">здесь</a>
 								<svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<g style="mix-blend-mode:difference">
 										<rect width="31" height="31" fill="url(#pattern0)" />
@@ -211,10 +216,13 @@
 						</div>
 						<div data-spollers class="dop__spollers spollers-dop">
 							<div class="spollers-dop__item">
-								<button data-spoller type="button" class="spollers-dop__btn icon-arrow-bottom">
+								<button data-spoller type="button" class="spollers-dop__btn">
 									<span>
 										Как использовать итоги исследования
 									</span>
+									<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.783284 0.716716L10 9.93343L19.2167 0.716716" stroke="white" stroke-width="2" />
+									</svg>
 								</button>
 								<div class="spollers-dop__body body-dop">
 									<div class="body-dop__inner">
@@ -260,7 +268,7 @@
 									</div>
 								</div>
 								<div data-tabs-body class="bottom-partners__content partners-tabs">
-									<div class="partners-tabs__body">
+									<div class="partners-tabs__body partners-tabs__body_2021">
 										<div class="partners-tabs__inner">
 											<div class="partners-tabs__companies companies-partners">
 												<div class="companies-partners__img">
@@ -288,7 +296,7 @@
 											</div>
 											<div class="partners-tabs__companies companies-partners">
 												<p class="companies-partners__descr">
-													* В&nbsp;2022 году Минюстом РФ&nbsp;признан средством массовой информации, выполняющим функцию иностранного агента.
+													* Сайт издания заблокирован Роскомнадзором по требованию Генпрокуратуры РФ от 24 февраля 2022 г.
 												</p>
 											</div>
 										</div>
@@ -309,6 +317,12 @@
 												</a>
 												<p class="companies-partners__descr">Активировали городские СМИ на&nbsp;сбор ответов и&nbsp;рассказали в&nbsp;мир об&nbsp;итогах исследования.</p>
 											</div>
+											<div class="partners-tabs__companies companies-partners companies-partners_2022">
+												<a href="https://tochno.st/" target="_blank" class="companies-partners__img">
+													<picture><source srcset="img/partners/esliBitTochnim.webp" type="image/webp"><img class="companies-partners__new" src="img/partners/esliBitTochnim.png" alt="Логотип партнеров"></picture>
+												</a>
+												<p class="companies-partners__descr">Разработали инфографику по географии инициатив и рассказали о проекте у себя</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -321,18 +335,18 @@
 				<div class="experts__container">
 					<div class="experts__content">
 						<div data-tabs class="experts__tabs tabs-experts">
-							<div class="tabs-experts__texts">
+							<div class="tabs-experts__head">
 								<nav data-tabs-titles class="tabs-experts__navigation tabs-nav">
 									<button type="button" class="tabs-experts__btn site-years">2021-2022</button>
 									<button type="button" class="tabs-experts__btn site-years _tab-active">2022-2023</button>
 								</nav>
-								<h2 class="tabs-experts__title">Эксперты</h2>
+								<div class="tabs-experts__texts">
+									<h2 class="tabs-experts__title">Эксперты</h2>
+									<p class="tabs-experts__descr">Эксперты принимают участие в&nbsp;анализе инициатив, полученных опросным методом, комментируют тематические области и&nbsp;проекты. Они представляют гражданский сектор, в&nbsp;проекте участвуют pro bono. Мы&nbsp;выражаем глубокую признательность за&nbsp;работу, которую они делают для устойчивого развития.</p>
+								</div>
 							</div>
 							<div data-tabs-body class="tabs-experts__content">
 								<div class="tabs-experts__body">
-									<div class="tabs-experts__block block-experts">
-										<p class="block-experts__descr">Эксперты принимают участие в&nbsp;анализе инициатив, полученных опросным методом, комментируют тематические области и&nbsp;проекты. Они представляют гражданский сектор, в&nbsp;проекте участвуют pro bono. Мы&nbsp;выражаем глубокую признательность за&nbsp;работу, которую они делают для устойчивого развития</p>
-									</div>
 									<div class="tabs-experts__slider">
 										<div class="tabs-experts__controll">
 											<button type="button" class="tabs-experts__btn-next controll-btn icon-Arrow"></button>
@@ -726,16 +740,21 @@
 												</div>
 											</li>
 										</ul>
-										<button hidden data-showmore-button type="button" class="inner-experts__more icon-arrow-bottom">
-											<span>Показать ещё</span>
-											<span>Скрыть</span>
+										<button hidden data-showmore-button type="button" class="inner-experts__more">
+											<span>Показать ещё
+												<svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1.28328 1.49998L10.5 10.7167L19.7167 1.49998" stroke="white" stroke-width="2" />
+												</svg>
+											</span>
+											<span>Скрыть
+												<svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M19.7167 11.5001L10.5 2.28337L1.28328 11.5001" stroke="white" stroke-width="2" />
+												</svg>
+											</span>
 										</button>
 									</div>
 								</div>
 								<div class="tabs-experts__body">
-									<div class="tabs-experts__block block-experts">
-										<p class="block-experts__descr">Эксперты принимают участие в&nbsp;анализе инициатив, полученных опросным методом, комментируют тематические области и&nbsp;проекты. Они представляют гражданский сектор, в&nbsp;проекте участвуют pro bono. Мы&nbsp;выражаем глубокую признательность за&nbsp;работу, которую они делают для устойчивого развития</p>
-									</div>
 									<div class="tabs-experts__slider">
 										<div class="tabs-experts__controll">
 											<button type="button" class="tabs-experts__btn-next controll-btn icon-Arrow"></button>
@@ -948,46 +967,24 @@
 										<ul data-showmore-content class="inner-experts__list">
 											<li class="inner-experts__item experts-item">
 												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Татьяна_Дроздова.webp" type="image/webp"><img src="img/experts/Татьяна_Дроздова.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Татьяна Дроздова</h3>
-													<span class="info-experts__works">
-														Young Old Lab
-													</span>
-												</div>
-											</li>
-											<li class="inner-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Арина_Плюснина.webp" type="image/webp"><img src="img/experts/Арина_Плюснина.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Арина Плюснина</h3>
-													<span class="info-experts__works">
-														Фонд «Новый учитель»
-													</span>
-												</div>
-											</li>
-											<li class="inner-experts__item experts-item">
-												<div class="experts-item__image">
 													<picture><source srcset="img/experts/Ирина_Шулгестерова.webp" type="image/webp"><img src="img/experts/Ирина_Шулгестерова.jpg" alt="Фото эксперта"></picture>
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Ирина Шулгестерова</h3>
-													<span class="info-experts__works">
+													<a href="https://delfacenter.org/" target="_blank" class="info-experts__works">
 														Научно-экологический Центр спасения «Дельфа»
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
 												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Нина_Ильина.webp" type="image/webp"><img src="img/experts/Нина_Ильина.jpg" alt="Фото эксперта"></picture>
+													<picture><source srcset="img/team-members/Катя_Колчанова.webp" type="image/webp"><img src="img/team-members/Катя_Колчанова.jpg" alt="Фото эксперта"></picture>
 												</div>
 												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Нина Ильина</h3>
-													<span class="info-experts__works">
-														«ЭкоТехнологии»
-													</span>
+													<h3 class="info-experts__name">Екатерина Колчанова</h3>
+													<a href="https://tepertak.ru/bureau/" target="_blank" class="info-experts__works">
+														Бюро партнёрств «Теперь так»
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -996,9 +993,9 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Софья Попова</h3>
-													<span class="info-experts__works">
+													<a href="https://sdg.eplus.marketing/" target="_blank" class="info-experts__works">
 														E+ Change
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1007,42 +1004,47 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Екатерина Антоневич</h3>
-													<span class="info-experts__works">
+													<a href="https://www.un.org/ru/" target="_blank" class="info-experts__works">
 														ООН
-													</span>
+													</a>
 												</div>
 											</li>
+
+
+											<li class="inner-experts__item experts-item">
+												<div class="experts-item__image">
+													<picture><source srcset="img/experts/Нина_Ильина.webp" type="image/webp"><img src="img/experts/Нина_Ильина.jpg" alt="Фото эксперта"></picture>
+												</div>
+												<div class="experts-item__info info-experts">
+													<h3 class="info-experts__name">Нина Ильина</h3>
+													<a href="https://ecotechnologies.ru/" target="_blank" class="info-experts__works">
+														«ЭкоТехнологии»
+													</a>
+												</div>
+											</li>
+
+
 											<li class="inner-experts__item experts-item">
 												<div class="experts-item__image">
 													<img src="img/experts/Ирина Козловских.jpg" alt="Фото эксперта">
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Ирина Козловских</h3>
-													<span class="info-experts__works">
+													<a href="https://vtoroe.ru/" target="_blank" class="info-experts__works">
 														Фонд «Второе дыхание»
-													</span>
+													</a>
 												</div>
 											</li>
-											<li class="inner-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/andrey_skripnik.webp" type="image/webp"><img src="img/experts/andrey_skripnik.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Андрей Скрыпник</h3>
-													<span class="info-experts__works">
-														Журналист, экоблогер
-													</span>
-												</div>
-											</li>
+
 											<li class="inner-experts__item experts-item">
 												<div class="experts-item__image">
 													<picture><source srcset="img/experts/Анастасия_Бабичева.webp" type="image/webp"><img src="img/experts/Анастасия_Бабичева.jpg" alt="Фото эксперта"></picture>
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Анастасия Бабичева</h3>
-													<span class="info-experts__works">
+													<a href="https://silsila.help/" target="_blank" class="info-experts__works">
 														Фонд SILSILA
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1051,9 +1053,9 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Алина Лихачевская</h3>
-													<span class="info-experts__works">
+													<a href="https://sustainable12.ru/" target="_blank" class="info-experts__works">
 														Бюро устойчивых практик «12»
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1062,9 +1064,9 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Екатерина Терентьева</h3>
-													<span class="info-experts__works">
+													<a href="https://baikalfoundation.ru/" target="_blank" class="info-experts__works">
 														Фонд «Озеро Байкал»
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1073,9 +1075,9 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Сергей Георгиевский</h3>
-													<span class="info-experts__works">
+													<a href="https://www.centeragency.org/" target="_blank" class="info-experts__works">
 														Агентство стратегического развития «ЦЕНТР»
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1084,9 +1086,9 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Василий Хорошилов</h3>
-													<span class="info-experts__works">
+													<a href="https://breathe.moscow/" target="_blank" class="info-experts__works">
 														«Дыши:Москва»
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1095,20 +1097,9 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Юлия Грачёва</h3>
-													<span class="info-experts__works">
+													<a href="https://ecounion.ru/" target="_blank" class="info-experts__works">
 														Экологический союз
-													</span>
-												</div>
-											</li>
-											<li class="inner-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Игорь_Новиков.webp" type="image/webp"><img src="img/experts/Игорь_Новиков.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Игорь Новиков</h3>
-													<span class="info-experts__works">
-														Everland, АНО «Пространство равных возможностей»
-													</span>
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1117,9 +1108,33 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Дарья Чекальская</h3>
-													<span class="info-experts__works">
+													<a href="" class="info-experts__works">
 														Специалистка по защите окружающей среды, экоинфлюенсер
-													</span>
+													</a>
+												</div>
+											</li>
+											<li class="inner-experts__item experts-item">
+												<div class="experts-item__image">
+													<picture><source srcset="img/experts/Игорь_Новиков.webp" type="image/webp"><img src="img/experts/Игорь_Новиков.jpg" alt="Фото эксперта"></picture>
+												</div>
+												<div class="experts-item__info info-experts">
+													<h3 class="info-experts__name">Игорь Новиков</h3>
+													<div class="info-experts__works">
+														<a href="https://evland.ru/" target="_blank">Everland</a>,
+														<a href="https://evland.ru/main/o_project/ano-prostranstvo-ravnyh-vozmozhnostej/" target="_blank">АНО «Пространство равных возможностей»</a>
+													</div>
+												</div>
+											</li>
+
+											<li class="inner-experts__item experts-item">
+												<div class="experts-item__image">
+													<picture><source srcset="img/experts/Михаил_Акимов.webp" type="image/webp"><img src="img/experts/Михаил_Акимов.jpg" alt="Фото эксперта"></picture>
+												</div>
+												<div class="experts-item__info info-experts">
+													<h3 class="info-experts__name">Михаил Акимов</h3>
+													<a href="http://eiconsulting.tech/" target="_blank" class="info-experts__works">
+														EI Consulting
+													</a>
 												</div>
 											</li>
 											<li class="inner-experts__item experts-item">
@@ -1128,40 +1143,37 @@
 												</div>
 												<div class="experts-item__info info-experts">
 													<h3 class="info-experts__name">Валерия Денисова</h3>
-													<span class="info-experts__works">
+													<a href="" class="info-experts__works">
 														Эксперт АСИ, Impact Hub и «Теперь так»
-													</span>
+													</a>
 												</div>
 											</li>
+
 											<li class="inner-experts__item experts-item">
 												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Юлия_Островская.webp" type="image/webp"><img src="img/experts/Юлия_Островская.jpg" alt="Фото эксперта"></picture>
+													<picture><source srcset="img/experts/Арина_Плюснина.webp" type="image/webp"><img src="img/experts/Арина_Плюснина.jpg" alt="Фото эксперта"></picture>
 												</div>
 												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Юлия Островская</h3>
-													<span class="info-experts__works">
-														Институт социологии Российской Академии Наук
-													</span>
-												</div>
-											</li>
-											<li class="inner-experts__item experts-item">
-												<div class="experts-item__image">
-													<picture><source srcset="img/experts/Михаил_Акимов.webp" type="image/webp"><img src="img/experts/Михаил_Акимов.jpg" alt="Фото эксперта"></picture>
-												</div>
-												<div class="experts-item__info info-experts">
-													<h3 class="info-experts__name">Михаил Акимов</h3>
-													<span class="info-experts__works">
-														EI Consulting
-													</span>
+													<h3 class="info-experts__name">Арина Плюснина</h3>
+													<a href="https://nuzhnapomosh.ru/funds/novyi-ucitel/" target="_blank" class="info-experts__works">
+														Фонд «Новый учитель»
+													</a>
 												</div>
 											</li>
 
 										</ul>
-										<button hidden data-showmore-button type="button" class="inner-experts__more icon-arrow-bottom">
+										<button hidden data-showmore-button type="button" class="inner-experts__more">
 											<span>
 												Показать ещё
+												<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0.783284 0.716716L10 9.93343L19.2167 0.716716" stroke="white" stroke-width="2" />
+												</svg>
 											</span>
-											<span>Скрыть</span>
+											<span>Скрыть
+												<svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M19.7167 11.5001L10.5 2.28337L1.28328 11.5001" stroke="white" stroke-width="2" />
+												</svg>
+											</span>
 										</button>
 									</div>
 								</div>
@@ -1536,17 +1548,32 @@
 								<div class="tabs-samples__body">
 									<div class="tabs-samples__block active-block-samples">
 										<div class="active-block-samples__row">
-											<span class="active-block-samples__num">40</span>
+											<span class="active-block-samples__num">34</span>
 											<h3 class="active-block-samples__name">СМИ</h3>
 											<div class="active-block-samples__items items-samples">
 												<a target="_blank" href="https://t.me/ekatharsis/8899" class="items-samples__link">
 													Е-катарсис
 												</a>
-												<a target="_blank" href="https://t.me/enter_samara/2759" class="items-samples__link">
-													Enter Самара
+												<a target="_blank" href="https://t.me/choiceekb/24324" class="items-samples__link">
+													Чойс
+												</a>
+												<a target="_blank" href="https://vsetyah.ru/zhitelej-ekaterinburga-priglashayut-podderzhat-lokalnye-ekologicheskie-i-socialnye-proekty/" class="items-samples__link">
+													ВСетях
+												</a>
+												<a target="_blank" href="https://t.me/paperpaper_ru/33088" class="items-samples__link">
+													Бумага: всё о Петербурге*
+												</a>
+												<a target="_blank" href="https://vk.com/wall-173586870_16002" class="items-samples__link">
+													Другой город
 												</a>
 												<a target="_blank" href="https://vk.com/wall-178128211_2966" class="items-samples__link">
-													Курмыши | Самара
+													Курмыши
+												</a>
+												<a target="_blank" href="https://t.me/indekazancity/15128" class="items-samples__link">
+													Инде
+												</a>
+												<a target="_blank" href="https://t.me/enter_samara/2759" class="items-samples__link">
+													Enter Самара
 												</a>
 												<a target="_blank" href="https://t.me/enter_ufa/2883" class="items-samples__link">
 													Enter Уфа
@@ -1557,14 +1584,12 @@
 												<a target="_blank" href="https://t.me/enter_saransk/2148" class="items-samples__link">
 													Enter Саранск
 												</a>
-												<a target="_blank" href="https://t.me/indekazancity/15128" class="items-samples__link">
-													Инде / Город
-												</a>
+
 												<a target="_blank" href="https://vk.com/wall-107978388_102689" class="items-samples__link">
 													Инде Казань
 												</a>
 												<a target="_blank" href="https://rost.media/public/issledovanie-berezhnye-initsiativy-2022" class="items-samples__link">
-													РОСТ. просто медиа
+													Рост.Медиа
 												</a>
 												<a target="_blank" href="https://vk.com/wall-17763347_35722" class="items-samples__link">
 													Город Прима
@@ -1573,16 +1598,16 @@
 													Юга
 												</a>
 												<a target="_blank" href="https://vk.com/wall-175396394_49197" class="items-samples__link">
-													ПЧЕЛА — Новости Челябинска
+													ПЧЕЛА
 												</a>
-												<a target="_blank" href="https://t.me/enter_media/13533" class="items-samples__link">
-													Enter
+												<a target="_blank" href="https://vk.com/wall-171578452_468" class="items-samples__link">
+													Komi Daily
 												</a>
 												<a target="_blank" href="https://news.rambler.ru/sociology/50002470-byuro-teper-tak-provodit-issledovanie-luchshih-proektov-po-ustoychivomu-razvitiyu-strany-novosti-ekologii-1-10-01-2023/" class="items-samples__link">
 													Рамблер
 												</a>
 												<a target="_blank" href="https://t.me/etosher/13524" class="items-samples__link">
-													ШЭР / Шеринг. Экология. Рациональность
+													ШЭР
 												</a>
 												<a target="_blank" href="https://sdpl.ru/3688-teper-tak-provodit-opros-v-ramkah-ezhegodnogo-issledovaniya-berezhnyh-iniciativ.html" class="items-samples__link">
 													Платформа устойчивое развитие
@@ -1597,7 +1622,7 @@
 													Агентство социальной информации
 												</a>
 												<a target="_blank" href="https://platform.plus-one.ru/news/2022/12/30/4675-rossiyan-priglashayut-pouchastvovat-v-issledovanii-berezhnyh-initsiativ" class="items-samples__link">
-													Plus one
+													+1
 												</a>
 												<a target="_blank" href="https://journal.ecostandard.ru/news/byuro-teper-tak-provodit-issledovanie-luchshikh-proektov-po-ustoychivomu-razvitiyu-strany/" class="items-samples__link">
 													EcoStandart.journal
@@ -1614,40 +1639,26 @@
 												<a target="_blank" href="https://vk.com/wall-93429434_246857" class="items-samples__link">
 													Такие дела
 												</a>
-												<a target="_blank" href="https://vk.com/wall-171578452_468" class="items-samples__link">
-													Komi Daily
-												</a>
-												<a target="_blank" href="https://t.me/choiceekb/24324" class="items-samples__link">
-													Чойс
-												</a>
 												<a target="_blank" href="https://t.me/b_gorod/5418" class="items-samples__link">
 													Большой город
 												</a>
 												<a target="_blank" href="https://t.me/recyclemagru/4127" class="items-samples__link">
 													Recycle
 												</a>
-												<a target="_blank" href="https://vk.com/wall-173586870_16002" class="items-samples__link">
-													Другой город
-												</a>
+
 												<a target="_blank" href="https://vk.com/wall-173586870_16002" class="items-samples__link">
 													Гласная
 												</a>
 												<a target="_blank" href="https://t.me/fire_krasnodar/3605" class="items-samples__link">
-													Женское медио «Огонь»
+													Огонь
 												</a>
 												<a target="_blank" href="https://t.me/kedr_media/927" class="items-samples__link">
-													Кедр.медиа
-												</a>
-												<a target="_blank" href="https://vsetyah.ru/zhitelej-ekaterinburga-priglashayut-podderzhat-lokalnye-ekologicheskie-i-socialnye-proekty/" class="items-samples__link">
-													VSETYAH
-												</a>
-												<a target="_blank" class="items-samples__link">
-													Бумага: всё о Петербурге
+													Кедр
 												</a>
 											</div>
 										</div>
 										<div class="active-block-samples__row">
-											<span class="active-block-samples__num">91</span>
+											<span class="active-block-samples__num">88</span>
 											<h3 class="active-block-samples__name">Организация</h3>
 											<div class="active-block-samples__items items-samples">
 												<ul class="items-samples__list">
@@ -1656,10 +1667,13 @@
 															Открытые НКО
 														</a>
 														<a target="_blank" href="https://foodbankrus.ru/" class="items-samples__link">
-															Фонд продовольствия Русь
+															БФ «Банк еды «Русь»
 														</a>
 														<a target="_blank" href="https://dobrygorod.spb.ru/" class="items-samples__link">
-															Фонд «Добрый город Петербург»
+															Агентство социальной информации (АСИ)
+														</a>
+														<a target="_blank" href="https://vtoroe.ru/" class="items-samples__link">
+															БФ «Второе дыхание»
 														</a>
 														<a target="_blank" href="https://altourism.ru/nezavalinka" class="items-samples__link">
 															Незавалинка
@@ -1671,22 +1685,22 @@
 															Второе дыхание
 														</a>
 														<a target="_blank" href="https://greenpeace.ru/" class="items-samples__link">
-															Гринпис
+															Greenpeace
 														</a>
 														<a target="_blank" href="https://ecounion.ru/" class="items-samples__link">
 															Экологический союз
 														</a>
 														<a target="_blank" href="https://pomosch.app/?referrer=appmetrica_tracking_id%3D315615943604569230%26ym_tracking_id%3D1033723780922792334" class="items-samples__link">
-															Проект «ПОМОЩЬ»
+															ПОМОЩЬ
 														</a>
 														<a target="_blank" href="https://drugoedelo.ru/" class="items-samples__link">
 															Другое Дело
 														</a>
 														<a target="_blank" href="https://ecamir.ru/" class="items-samples__link">
-															ЭКА (Все их каналы)
+															ЭКА
 														</a>
 														<a target="_blank" href="http://fridaysforfuture.ru/" class="items-samples__link">
-															Fridays for Future Moscow
+															Fridays for Future
 														</a>
 														<a target="_blank" class="items-samples__link">
 															BuySocial
@@ -1695,22 +1709,22 @@
 															Impact Hub
 														</a>
 														<a target="_blank" href="https://vk.com/wall-15453_16914" class="items-samples__link">
-															Мусора.Больше.Нет (+ локально регионы)
+															Мусора.Больше.Нет
 														</a>
 														<a target="_blank" href="https://vmestemedia.ru/" class="items-samples__link">
-															Вместе медиа
+															ВМЕСТЕ МЕДИА
 														</a>
 														<a target="_blank" class="items-samples__link">
 															Everland
 														</a>
 														<a target="_blank" href="https://dobryegoroda.ru/" class="items-samples__link">
-															Содружество Добрых городов и поселков
+															Добрые города и поселки
 														</a>
 														<a target="_blank" href="#" class="items-samples__link">
 															РазДельный Cбор
 														</a>
 														<a target="_blank" href="https://rsbor.ru/" class="items-samples__link">
-															Центр «Не терпи»
+															Не терпи
 														</a>
 														<a target="_blank" href="https://tineodna.ru/" class="items-samples__link">
 															Ты не одна
@@ -1719,16 +1733,16 @@
 															Чистые игры
 														</a>
 														<a target="_blank" href="https://ecodelai.ru/" class="items-samples__link">
-															Всероссийская общественная организация волонтеров-экологов «Делай!»
+															Делай!
 														</a>
 														<a target="_blank" href="https://vk.com/eco.society" class="items-samples__link">
 															Экология жизни
 														</a>
 														<a target="_blank" href="https://baikalfoundation.ru/" class="items-samples__link">
-															Фонд «Озеро Байкал»
+															БФ «Озеро Байкал»
 														</a>
 														<a target="_blank" href="https://www.opti-com.ru/" class="items-samples__link">
-															«ОПТИКОМ»
+															ОПТИКОМ
 														</a>
 														<a target="_blank" href="https://ecosborka.ru/" class="items-samples__link">
 															Экосборка
@@ -1737,7 +1751,7 @@
 															ЭкоТехнологии
 														</a>
 														<a target="_blank" href="https://anodom.ru/" class="items-samples__link">
-															АНО «Движение за экологию «Друзья окружающего мира (ДОМ)»
+															Друзья окружающего мира
 														</a>
 														<a target="_blank" href="https://breathe.moscow/" class="items-samples__link">
 															Breath Moscow
@@ -1746,13 +1760,13 @@
 															Сдать вещи ПРОСТО
 														</a>
 														<a target="_blank" href="https://edanagotove.ru/" class="items-samples__link">
-															Еда наготове
+															Наготове
 														</a>
 														<a target="_blank" href="https://resurs2030.ru/" class="items-samples__link">
-															Ассоциация содействия экономике замкнутого цикла «Ресурс»
+															РесурсNaked Food
 														</a>
 														<a target="_blank" href="https://vk.com/baby_sharing_msk" class="items-samples__link">
-															Магазин продуктов без упаковки Naked Food Бэбишеринг. Москва
+															Бэбишеринг
 														</a>
 														<a target="_blank" href="https://vk.com/ecotgsha" class="items-samples__link">
 															Экологический союз Тверской ГСХА
@@ -1769,25 +1783,22 @@
 														<a target="_blank" href="https://vk.com/spasiboshop" class="items-samples__link">
 															Магазины «Спасибо»
 														</a>
-														<a target="_blank" href="https://vk.com/dobrypiter" class="items-samples__link">
-															Благотворительный фонд «Добрый город Петербург»
-														</a>
 														<a target="_blank" href="https://justmint.ru/" class="items-samples__link">
-															СПб БОО «Мята»
+															Мята
 														</a>
 														<a target="_blank" href="https://vk.com/privetangar" class="items-samples__link">
-															Общественные мастерские «Ангар»
+															Ангар
 														</a>
 														<a target="_blank" href="https://www.ogonekdobra.ru/" class="items-samples__link">
-															Центр содействия социальным и благотворительным проектам «Огонёк добра»
+															Огонёк добра
 														</a>
 													</li>
 													<li class="items-samples__item">
 														<a target="_blank" href="https://vk.com/club200469381" class="items-samples__link">
-															ЭкоПроект «Зелёнка»
+															Зелёнка
 														</a>
 														<a target="_blank" href="https://vk.com/blagomarketekb" class="items-samples__link">
-															Переработкинская Музей Pro musor
+															Переработкинская Pro musor
 														</a>
 														<a target="_blank" href="https://vk.com/ecoguvm" class="items-samples__link">
 															Экоактив СПбГУВМ
@@ -1796,16 +1807,16 @@
 															Пластик в дело
 														</a>
 														<a target="_blank" href="https://vk.com/breathe.kazan" class="items-samples__link">
-															Проект общественного мониторинга воздуха «Дыши, Казань»
+															Дыши, Казань
 														</a>
 														<a target="_blank" href="https://vk.com/ecomendu" class="items-samples__link">
 															Центр экологических инициатив
 														</a>
 														<a target="_blank" href="https://vk.com/culttorg" class="items-samples__link">
-															КультТорг - фестиваль разумного потребления
+															КультТорг
 														</a>
 														<a target="_blank" href="https://vk.com/blagomarketekb" class="items-samples__link">
-															Благомаркет в Ельцин центре
+															Благомаркет
 														</a>
 														<a target="_blank" href="https://sverdlovsk.ecosociety.ru/" class="items-samples__link">
 															«Аистенок»
@@ -1814,7 +1825,7 @@
 															Свердловское отделение РЭО
 														</a>
 														<a target="_blank" href="https://theural.ru/" class="items-samples__link">
-															Экологический проект #Чисто_Урал
+															#Чисто_Урал
 														</a>
 														<a target="_blank" href="https://vk.com/clear_ekb" class="items-samples__link">
 															Чистый Екатеринбург
@@ -1847,13 +1858,13 @@
 															Чистые водоемы
 														</a>
 														<a target="_blank" href="https://vk.com/blagodaru63" class="items-samples__link">
-															Проект «Благодарю» и СРОО «Свежий ветер»
+															Благодарю и СРОО «Свежий ветер»
 														</a>
 														<a target="_blank" href="https://vk.com/blagodaru63" class="items-samples__link">
-															Региональное общественное движение «ВОЛОНТЕРЫ КУБАНИ»
+															ВОЛОНТЕРЫ КУБАНИ
 														</a>
 														<a target="_blank" href="https://firekrasnodar.ru/" class="items-samples__link">
-															Женское медиа «Огонь»
+															Огонь
 														</a>
 														<a target="_blank" href="https://vk.com/csi_voronezh" class="items-samples__link">
 															Центр Социальных Инициатив - Воронеж
@@ -1862,11 +1873,11 @@
 															ЭКОДВОР Воронеж
 														</a>
 														<a target="_blank" href="https://vk.com/ecocentr_vrn" class="items-samples__link">
-															Экоцентр «Зеленый дом»
+															Зеленый дом
 														</a>
 														<a target="_blank" href="https://vk.com/matreshkashop59" class="items-samples__link">
 															Благотворительный магазин Матрешка
-															АНО «Зеленый маяк»
+															Зеленый маяк
 														</a>
 														<a target="_blank" href="https://xn--80affnbzwljh8b0d5ag.xn--p1ai/" class="items-samples__link">
 															Энергия участия
@@ -1893,7 +1904,7 @@
 															svalka.region54
 														</a>
 														<a target="_blank" href="https://www.xn--54-9kclgsn3atb7a1g.xn--p1ai/" class="items-samples__link">
-															Центр «Добрые Руки»
+															Добрые Руки
 														</a>
 														<a target="_blank" href="https://vk.com/esttdelo" class="items-samples__link">
 															Есть Дело — социальный склад для обмена вещами
@@ -1908,10 +1919,10 @@
 															ЭкоТакси Волгоград
 														</a>
 														<a target="_blank" href="http://xn----7sbbkhaddj9bte4ph.xn--p1ai/" class="items-samples__link">
-															Детский благотворительный фонд «Ангелы надежды»
+															Ангелы надежды
 														</a>
 														<a target="_blank" href="https://dront.ru/" class="items-samples__link">
-															Экоцентр «Дронт»
+															Дронт
 														</a>
 														<a target="_blank" href="https://www.bfnn.ru/" class="items-samples__link">
 															БФ «Нижегородский»
@@ -1922,7 +1933,7 @@
 										</div>
 										<div class="active-block-samples__row">
 											<div class="active-block-samples__inner">
-												<span class="active-block-samples__num">17</span>
+												<span class="active-block-samples__num">15</span>
 												<h3 class="active-block-samples__name">ТГ-каналов</h3>
 												<div class="active-block-samples__items items-samples">
 													<a target="_blank" href="https://t.me/vlast_Zh/10320" class="items-samples__link">
@@ -1979,7 +1990,7 @@
 												</div>
 											</div>
 											<div class="active-block-samples__inner">
-												<span class="active-block-samples__num">17</span>
+												<span class="active-block-samples__num">16</span>
 												<h3 class="active-block-samples__name">Блогеров</h3>
 												<div class="active-block-samples__items items-samples">
 													<a target="_blank" href="https://t.me/ecomisli" class="items-samples__link">
@@ -2032,6 +2043,12 @@
 													</a>
 													<a target="_blank" href="https://vk.com/nowaye" class="items-samples__link">
 														Лидия Пиви
+													</a>
+													<a href="" class="items-samples__link">
+														Роман Саблин
+													</a>
+													<a href="" class="items-samples__link">
+														Сергей Георгиевский
 													</a>
 												</div>
 											</div>
@@ -2244,7 +2261,7 @@
 									<button type="button" class="tabs-team__btn _tab-active site-years">2022-2023</button>
 								</nav>
 								<div class="tabs-team__titles">
-									<h2 class="tabs-team__title">Команда проекта исследования</h2>
+									<h2 class="tabs-team__title">Команда проекта</h2>
 									<div class="tabs-team__subtitl">Волонтёры исследования</div>
 								</div>
 							</div>
@@ -2274,8 +2291,8 @@
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members/Татьяна_Жукова.webp" type="image/webp"><img src="img/team-members/Татьяна_Жукова.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
 												<div class="list-team__name">Татьяна Жукова</div>
@@ -2307,8 +2324,8 @@
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members/Александра_Скородумова.webp" type="image/webp"><img src="img/team-members/Александра_Скородумова.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
 												<div class="list-team__name">Александра Скородумова</div>
@@ -2341,7 +2358,7 @@
 										</li>
 										<li class="list-team__item">
 											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+												<picture><source srcset="img/team-members/Екатерина_Трубицына.webp" type="image/webp"><img src="img/team-members/Екатерина_Трубицына.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
 												<div class="list-team__name">Екатерина Трубицына</div>
@@ -2351,8 +2368,8 @@
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members//Екатерина_Богомолова.webp" type="image/webp"><img src="img/team-members//Екатерина_Богомолова.png" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
 												<div class="list-team__name">Екатерина Богомолова</div>
@@ -2362,11 +2379,11 @@
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members/Маргарита_Стаф.webp" type="image/webp"><img src="img/team-members/Маргарита_Стаф.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
-												<div class="list-team__name">Марго Стаф</div>
+												<div class="list-team__name">Маргарита Стаф</div>
 												<p class="list-team__works">
 													менеджер исследования, Aventica m.staf@aventica.ru
 												</p>
@@ -2389,8 +2406,8 @@
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members/Тамара_Щеглова.webp" type="image/webp"><img src="img/team-members/Тамара_Щеглова.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
 												<div class="list-team__name">Тамара Щеглова</div>
@@ -2400,8 +2417,8 @@
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members/Алтинай_Турижанова.webp" type="image/webp"><img src="img/team-members/Алтинай_Турижанова.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
 												<div class="list-team__name">Алтынай Турижанова</div>
@@ -2422,19 +2439,19 @@
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members/Дарья_Кирбай.webp" type="image/webp"><img src="img/team-members/Дарья_Кирбай.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
-												<div class="list-team__name">Даша Кирбай</div>
+												<div class="list-team__name">Дарья Кирбай</div>
 												<p class="list-team__works">
 													исследователь, Aventica d.kirbay@aventica.ru
 												</p>
 											</div>
 										</li>
 										<li class="list-team__item">
-											<div class="list-team__image img-cats">
-												<picture><source srcset="img/experts/cat.webp" type="image/webp"><img class="image-null" src="img/experts/cat.png" alt="Фотография члена команды"></picture>
+											<div class="list-team__image">
+												<picture><source srcset="img/team-members/Анна_Воеводина.webp" type="image/webp"><img src="img/team-members/Анна_Воеводина.jpg" alt="Фотография члена команды"></picture>
 											</div>
 											<div class="list-team__texts">
 												<div class="list-team__name">Анна Воеводина</div>
@@ -2521,7 +2538,7 @@
 												<div class="list-team__texts">
 													<div class="list-team__name">Мария Гельман</div>
 													<p class="list-team__works">
-														Продвижение исследования, бюро партнёрств «Теперь так»
+														Продвижение и тренд-аналитика, бюро партнёрств «Теперь так»
 													</p>
 												</div>
 											</li>
@@ -2554,7 +2571,7 @@
 												<div class="list-team__texts">
 													<div class="list-team__name">Галина Углирж</div>
 													<p class="list-team__works">
-														Работа с партнёрами, бюро партнёрств «Теперь так»
+														Работа с партнёрами и аналитика, бюро партнёрств «Теперь так»
 													</p>
 												</div>
 											</li>
@@ -2620,7 +2637,7 @@
 												<div class="list-team__texts">
 													<div class="list-team__name">Таня Здобнова</div>
 													<p class="list-team__works">
-														Продакт проекта, бюро партнёрств «Теперь так»
+														Продакт и аналитик, бюро партнёрств «Теперь так»
 													</p>
 												</div>
 											</li>
@@ -2653,7 +2670,7 @@
 												<div class="list-team__texts">
 													<div class="list-team__name">Варя Кузнецова</div>
 													<p class="list-team__works">
-														Продюсер проекта, бюро партнёрств «Теперь так»
+														Продюсер, бюро партнёрств «Теперь так»
 													</p>
 												</div>
 											</li>
@@ -2999,111 +3016,145 @@
 						<div class="inner-team__texts">
 							<h2 class="inner-team__title">Вызовы устойчивого развития</h2>
 							<p class="inner-team__descr">
-								Для создания справедливого мира, благосостояния всего, без исключений, населения планеты, сохранения окружающей среды&nbsp;и, в&nbsp;то&nbsp;же время, стабильного экономического роста, в&nbsp;2015 году в&nbsp;ООН были разработаны 17&nbsp;Целей устойчивого развития (ЦУР). Эти цели являются единым ориентиром для правительств, гражданского общества и&nbsp;бизнесов в&nbsp;решении самых сложных мировых вызовов.
+								Для создания справедливого мира, благосостояния всего, без исключений, населения планеты, сохранения окружающей среды&nbsp;и, в&nbsp;то&nbsp;же время, стабильного экономического роста, в&nbsp;2015 году в&nbsp;ООН были разработаны 17&nbsp;<a href="https://www.un.org/sustainabledevelopment/ru/sustainable-development-goals/" target="_blank" style="text-decoration: underline;">Целей устойчивого развития (ЦУР)</a>. Эти цели являются единым ориентиром для правительств, гражданского общества и&nbsp;бизнесов в&nbsp;решении самых сложных мировых вызовов.
 							</p>
 						</div>
 						<ul class="inner-team__list list-inner-team">
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">01</span>
-								<div class="list-inner-team__descr">
-									Ликвидировать нищету
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/poverty/" target="_blank">
+									<span class="list-inner-team__numb">01</span>
+									<div class="list-inner-team__descr">
+										Ликвидировать нищету
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">02</span>
-								<div class="list-inner-team__descr">
-									Устранить голод
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/hunger/" target="_blank">
+									<span class="list-inner-team__numb">02</span>
+									<div class="list-inner-team__descr">
+										Устранить голод
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">03</span>
-								<div class="list-inner-team__descr">
-									Укрепить здоровье и благополучие людей
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/health/" target="_blank">
+									<span class="list-inner-team__numb">03</span>
+									<div class="list-inner-team__descr">
+										Укрепить здоровье и благополучие людей
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">04</span>
-								<div class="list-inner-team__descr">
-									Сделать доступным образование
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/education/" target="_blank">
+									<span class="list-inner-team__numb">04</span>
+									<div class="list-inner-team__descr">
+										Сделать доступным образование
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">05</span>
-								<div class="list-inner-team__descr">
-									Искоренить гендерное неравенство
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/gender-equality/" target="_blank">
+									<span class="list-inner-team__numb">05</span>
+									<div class="list-inner-team__descr">
+										Искоренить гендерное неравенство
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">06</span>
-								<div class="list-inner-team__descr">
-									Искоренить гендерное неравенство
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/water-and-sanitation/" target="_blank">
+									<span class="list-inner-team__numb">06</span>
+									<div class="list-inner-team__descr">
+										Искоренить гендерное неравенство
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">07</span>
-								<div class="list-inner-team__descr">
-									Обеспечить всех чистой и доступно энергией
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/energy/" target="_blank">
+									<span class="list-inner-team__numb">07</span>
+									<div class="list-inner-team__descr">
+										Обеспечить всех чистой и доступно энергией
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">08</span>
-								<div class="list-inner-team__descr">
-									Достичь условий труда, достойных каждого
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/economic-growth/" target="_blank">
+									<span class="list-inner-team__numb">08</span>
+									<div class="list-inner-team__descr">
+										Достичь условий труда, достойных каждого
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">09</span>
-								<div class="list-inner-team__descr">
-									Помочь развиваться индустриям
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/infrastructure-industrialization/" target="_blank">
+									<span class="list-inner-team__numb">09</span>
+									<div class="list-inner-team__descr">
+										Помочь развиваться индустриям
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">10</span>
-								<div class="list-inner-team__descr">
-									Сократить неравенство
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/inequality/" target="_blank">
+									<span class="list-inner-team__numb">10</span>
+									<div class="list-inner-team__descr">
+										Сократить неравенство
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">11</span>
-								<div class="list-inner-team__descr">
-									Развивать города для комфортной жизни
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/cities/" target="_blank">
+									<span class="list-inner-team__numb">11</span>
+									<div class="list-inner-team__descr">
+										Развивать города для комфортной жизни
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">12</span>
-								<div class="list-inner-team__descr">
-									Перейти на модель бережного производства и потребления
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/sustainable-consumption-production/" target="_blank">
+									<span class="list-inner-team__numb">12</span>
+									<div class="list-inner-team__descr">
+										Перейти на модель бережного производства и потребления
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">13</span>
-								<div class="list-inner-team__descr">
-									Остановить изменение климата
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/climate-change/" target="_blank">
+									<span class="list-inner-team__numb">13</span>
+									<div class="list-inner-team__descr">
+										Остановить изменение климата
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">14</span>
-								<div class="list-inner-team__descr">
-									Сохранить морские системы
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/oceans/" target="_blank">
+									<span class="list-inner-team__numb">14</span>
+									<div class="list-inner-team__descr">
+										Сохранить морские системы
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">15</span>
-								<div class="list-inner-team__descr">
-									Сохранить экосистемы суши
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/biodiversity/" target="_blank">
+									<span class="list-inner-team__numb">15</span>
+									<div class="list-inner-team__descr">
+										Сохранить экосистемы суши
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">16</span>
-								<div class="list-inner-team__descr">
-									Защищать права каждого человека
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/peace-justice/" target="_blank">
+									<span class="list-inner-team__numb">16</span>
+									<div class="list-inner-team__descr">
+										Защищать права каждого человека
+									</div>
+								</a>
 							</li>
 							<li class="list-inner-team__item">
-								<span class="list-inner-team__numb">17</span>
-								<div class="list-inner-team__descr">
-									Партнёрства для достижения целей устойчивого развития
-								</div>
+								<a href="https://www.un.org/sustainabledevelopment/ru/globalpartnerships/" target="_blank">
+									<span class="list-inner-team__numb">17</span>
+									<div class="list-inner-team__descr">
+										Партнёрства для достижения целей устойчивого развития
+									</div>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -3245,7 +3296,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230417214209"></script>
+	<script src="js/app.min.js?_v=20230420234236"></script>
 </body>
 
 </html>
