@@ -4057,6 +4057,19 @@
             titleVolontr.innerHTML = "Волонтёры исследования";
         }));
     }));
+    const resBtnSpoller = document.getElementById("spollerRes"), infoBtnSpoller = document.getElementById("spollerInfo"), smallListSpoller = document.querySelector(".header-spollers__list_small"), bigListSpoller = document.querySelector(".header-spollers__list_big");
+    resBtnSpoller.addEventListener("click", (() => {
+        infoBtnSpoller.classList.remove("_spoller-active");
+        bigListSpoller.classList.add("hidden");
+        resBtnSpoller.classList.add("_spoller-active");
+        smallListSpoller.classList.remove("hidden");
+    }));
+    infoBtnSpoller.addEventListener("click", (() => {
+        resBtnSpoller.classList.remove("_spoller-active");
+        smallListSpoller.classList.add("hidden");
+        infoBtnSpoller.classList.add("_spoller-active");
+        bigListSpoller.classList.remove("hidden");
+    }));
     window["FLS"] = true;
     isWebp();
     addTouchClass();
