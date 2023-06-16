@@ -4057,6 +4057,7 @@
             titleVolontr.innerHTML = "Волонтёры исследования";
         }));
     }));
+<<<<<<< HEAD
     const resBtnSpoller = document.getElementById("spollerRes"), infoBtnSpoller = document.getElementById("spollerInfo"), smallListSpoller = document.querySelector(".header-spollers__list_small"), bigListSpoller = document.querySelector(".header-spollers__list_big");
     resBtnSpoller.addEventListener("click", (() => {
         infoBtnSpoller.classList.remove("_spoller-active");
@@ -4070,6 +4071,8 @@
         infoBtnSpoller.classList.add("_spoller-active");
         bigListSpoller.classList.remove("hidden");
     }));
+=======
+>>>>>>> 4160696 (add old version)
     window["FLS"] = true;
     isWebp();
     addTouchClass();
