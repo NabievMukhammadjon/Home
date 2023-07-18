@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CRM</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="@img/Logo.svg">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="scss/choices.min.css">
+		<link rel="stylesheet" href="scss/main.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<div class="header__content">
+						<a href="#" class="header__logo">
+							<img src="img/Logo.svg" alt="Логотип">
+						</a>
+						<form action="#" class="form header__form">
+							<label for="headerForm" class="header__label"></label>
+							<input id="headerForm" value="" type="text" class="header__search" autocomplete="off" placeholder="Введите запрос" name="from[]">
+						</form>
+					</div>
+				</div>
+			</header>
+			<main class="page page__clients">
+					<section class="clients">
+						<div class="clients__container">
+							<h1 class="clients__title">Клиенты</h1>
+							<table class="clients__table">
+								<thead>
+									<th class="clients__table-title _icon-arrow_filter" data-column="id">ID</th>
+									<th class="clients__table-title _icon-arrow_filter" data-column="fio">Фамилия Имя Отчество</th>
+									<th class="clients__table-title _icon-arrow_filter" data-column="birthCreate">Дата и время создания</th>
+									<th class="clients__table-title _icon-arrow_filter" data-column="lastChange">Последние изменения</th>
+									<th class="clients__table-title" data-column="contacts">Контакты</th>
+									<th class="clients__table-title" data-column="actions">Действия</th>
+								</thead> 
+								<tbody id="clientsList">
+									
+								</tbody>
+							</table>
+							<div class="clients__btns">
+								<button data-modal id="clients-btn" class="clients__button button _icon-userAdd">
+									Добавить клиента
+								</button>
+							</div>
+							
+						</div>
+					</section>
+			</main>
+
+			<div class="modal">
+				<div class="modal__dialog">
+					<div class="modal__content">
+						<h4 class="modal__title"></h4>
+						<span class="modal__user-id"></span>
+						<div data-close class="modal__close">&times;</div>
+						<div class="modal__body"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/choices.min.js"></script>
+		<script src="js/script.js" type="module"></script>
+	</body>
+</html>
