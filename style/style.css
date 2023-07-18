@@ -116,8 +116,9 @@
   /* .cards__list */
 }
 .cards__list {
-  display: flex;
+  display: grid;
   gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
 }
 .cards__item {
   flex: 1 1 auto;
