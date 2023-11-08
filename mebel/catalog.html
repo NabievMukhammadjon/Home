@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231108153607">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231109004254">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -255,12 +255,35 @@
 									<a href="./sales.html" class="bottom-header__link">Акции</a>
 								</li>
 								<li class="bottom-header__item">
-									<a href="#" class="bottom-header__link">
-										Натяжне потолки
-										<svg class="icon">
-											<use xlink:href="#arrow-spoll"></use>
-										</svg>
-									</a>
+									<div data-spollers class="bottom-header__spollers header-spollers">
+										<div class="header-spollers__item">
+											<button type="button" data-spoller class="header-spollers__title">
+												Натяжне потолки
+												<svg class="icon">
+													<use xlink:href="#arrow-spoll"></use>
+												</svg>
+											</button>
+											<div class="header-spollers__body">
+												<ul class="header-spollers__list">
+													<li class="header-spollers__item">
+														<a href="#" class="header-spollers__link">Links</a>
+													</li>
+													<li class="header-spollers__item">
+														<a href="#" class="header-spollers__link">Links</a>
+													</li>
+													<li class="header-spollers__item">
+														<a href="#" class="header-spollers__link">Links</a>
+													</li>
+													<li class="header-spollers__item">
+														<a href="#" class="header-spollers__link">Links</a>
+													</li>
+													<li class="header-spollers__item">
+														<a href="#" class="header-spollers__link">Links</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</li>
 								<li class="bottom-header__item">
 									<a href="#" class="bottom-header__link">Услуги</a>
@@ -686,10 +709,10 @@
 									<div class="quantity-calc__item">
 										<strong class="quantity-calc__title quantity-calc__title_left calc-title">Кол-во комнат</strong>
 										<select name="form[]" class="quantity-calc__select" data-class-modif="form">
-											<option value="1">1</option>
-											<option value="2" selected>2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
+											<option class="quantity-calc__option" value="1">1</option>
+											<option class="quantity-calc__option" value="2" selected>2</option>
+											<option class="quantity-calc__option" value="3">3</option>
+											<option class="quantity-calc__option" value="4">4</option>
 										</select>
 									</div>
 								</div>
@@ -934,16 +957,16 @@
 				<div class="popup__body">
 					<strong class="popup__title">Оставить заявку</strong>
 					<p class="popup__descr">Перезвоним вам в ближайшие 24 часа</p>
-					<form action="#" method="POST" class="popup__form" data-dev data-goto-error data-popup-message="#form-message">
+					<form method="POST" class="popup__form site-form" data-dev data-popup-message="#form-message">
 						<label for="popupName" class="popup__label">
-							<input id="popupName" type="text" name="form[name]" data-error="Поле не заполнено!" data-required placeholder="Имя" class="popup__input">
+							<input id="popupName" type="text" name="name" data-error="Поле не заполнено!" data-required="text" autocomplete="off" placeholder="Имя" class="popup__input">
 						</label>
 						<label for="popupTel" class="popup__label">
-							<input id="popupTel" type="text" name="form[number]" data-error="Поле не заполнено!" data-required placeholder="+7(000)000-00-00" class="popup__input">
+							<input id="popupTel" type="text" name="phone" data-error="Поле не заполнено!" data-required="phone" placeholder="+7(000)000-00-00" class="popup__input">
 						</label>
 						<button type="submit" class="popup__button btn-blue">Заказать звонок</button>
 						<div class="popup__checkbox checkbox-form">
-							<input id="checkBoxPopup" type="checkbox" class="checkbox-form__input" checked>
+							<input id="checkBoxPopup" value="1" data-error="Требуется поставить галочку!" data-required="checkbox" type="checkbox" class="checkbox-form__input" checked name="form[]">
 							<label for="checkBoxPopup" class="checkbox-form__label">
 								<span class="checkbox-form__text">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</span>
 							</label>
@@ -969,7 +992,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20231108153607"></script>
+	<script src="js/app.min.js?_v=20231109004254"></script>
 </body>
 
 </html>

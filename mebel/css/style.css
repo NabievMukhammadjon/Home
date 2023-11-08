@@ -1069,9 +1069,11 @@ body::after {
   /* .bottom-header__list */
   /* .bottom-header__item */
   /* .bottom-header__link */
+  /* .bottom-header__spollers */
 }
 
 .bottom-header__list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,6 +1114,71 @@ body::after {
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   background-color: #fff;
+}
+
+.header-spollers {
+  /* .header-spollers__item */
+  /* .header-spollers__title */
+  /* .header-spollers__body */
+  /* .header-spollers__list */
+  /* .header-spollers__link */
+}
+
+.header-spollers__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.header-spollers__title {
+  position: relative;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: none;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  color: #fff;
+}
+
+.header-spollers__title .icon {
+  position: absolute;
+  top: 0.1875rem;
+  right: -28px;
+  width: 0.875rem;
+  height: 0.875rem;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.header-spollers__title._spoller-active .icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header-spollers__title::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  bottom: -0.3125rem;
+  left: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  background-color: #fff;
+}
+
+.header-spollers__body {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.header-spollers__link {
+  line-height: 0.75;
 }
 
 .menu {
@@ -2789,8 +2856,19 @@ input[type=range]::-webkit-slider-thumb {
   /* .checkbox-form__text */
 }
 
-.checkbox-form__input {
+.checkbox-form._form-error .checkbox-form__label::before {
+  border-color: red;
+}
+
+.checkbox-form .form__error {
   display: none;
+}
+
+.checkbox-form__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .checkbox-form__input:checked + .checkbox-form__label::after {
@@ -4272,6 +4350,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 1.125rem;
   }
 
+  .header-spollers__title {
+    font-size: 1.125rem;
+  }
+
+  .header-spollers__link {
+    font-size: 1.5rem;
+  }
+
   .footer {
     padding-top: 3rem;
   }
@@ -5189,6 +5275,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .bottom-header__link {
     font-size: 0.875rem;
+  }
+
+  .header-spollers__title {
+    font-size: 0.875rem;
+  }
+
+  .header-spollers__link {
+    font-size: 1rem;
   }
 
   .footer {
@@ -6553,6 +6647,30 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @supports not (font-size: clamp( 0.875rem , 0.7762345679rem  +  0.4938271605vw , 1.125rem )) {
     .bottom-header__link {
       font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 50.625);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.7762345679rem  +  0.4938271605vw , 1.125rem )) {
+    .header-spollers__title {
+      font-size: clamp( 0.875rem , 0.7762345679rem  +  0.4938271605vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.7762345679rem  +  0.4938271605vw , 1.125rem )) {
+    .header-spollers__title {
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 50.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.8024691358rem  +  0.987654321vw , 1.5rem )) {
+    .header-spollers__link {
+      font-size: clamp( 1rem , 0.8024691358rem  +  0.987654321vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.8024691358rem  +  0.987654321vw , 1.5rem )) {
+    .header-spollers__link {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 50.625);
     }
 }
 
@@ -8966,6 +9084,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .bottom-header__link:hover::after {
+    width: 100%;
+  }
+
+  .header-spollers__title:hover::after {
     width: 100%;
   }
 

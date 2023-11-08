@@ -10332,14 +10332,24 @@ PERFORMANCE OF THIS SOFTWARE.
         da.init();
         if (document.getElementById("calcDemo")) {
             const demo = document.getElementById("calcDemo"), range = document.getElementById("calcRange");
+            const allPrice = document.querySelector(".response-calc__price");
+            const selectContent = document.querySelectorAll(".quantity-calc__option");
             demo.innerHTML = range.value;
             range.addEventListener("input", (function() {
                 demo.value = this.value;
+                selectContent.forEach(((item, i) => {
+                    if (item.selected) allPrice.textContent = 2 * this.value * item.textContent;
+                }));
             }));
             demo.addEventListener("input", (e => {
                 const regex = /^\d+$/;
                 const inputValue = e.target.value;
-                if (!regex.test(inputValue)) e.target.value = ""; else range.value = inputValue;
+                if (!regex.test(inputValue)) e.target.value = ""; else {
+                    range.value = inputValue;
+                    selectContent.forEach(((item, i) => {
+                        if (item.selected) allPrice.textContent = 2 * inputValue * item.textContent;
+                    }));
+                }
                 if (inputValue > 100) e.target.value = "";
             }));
         }
