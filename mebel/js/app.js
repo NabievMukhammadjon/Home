@@ -8365,15 +8365,11 @@
                 modules: [ Navigation, Pagination, Autoplay ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 3,
-                spaceBetween: 40,
+                slidesPerView: 1.2,
+                spaceBetween: 10,
                 speed: 800,
                 breakpoints: {
                     320: {
-                        slidesPerView: 1,
-                        spaceBetween: 10
-                    },
-                    480: {
                         slidesPerView: 1.2,
                         spaceBetween: 20
                     },
@@ -10456,6 +10452,48 @@ PERFORMANCE OF THIS SOFTWARE.
             let im = new Inputmask("+7(999)999-99-99");
             im.mask(selector);
         }
+        const stagesTabsBtn = document.querySelectorAll(".tabs-stages__title"), stagesTabsBody = document.querySelectorAll(".tabs-stages__body"), stagesBtnPrev = document.querySelectorAll(".btns-states__btn_white"), stagesBtnNext = document.querySelectorAll(".btns-states__btn_blue");
+        stagesBtnNext.forEach(((btn, i) => {
+            btn.addEventListener("click", (e => {
+                if (stagesTabsBtn.length > i + 1) if (stagesTabsBtn[i].classList.contains("_tab-active")) {
+                    stagesTabsBtn[i].classList.remove("_tab-active");
+                    stagesTabsBtn[i + 1].classList.add("_tab-active");
+                    stagesTabsBody[i].hidden = true;
+                    stagesTabsBody[i + 1].hidden = false;
+                } else {
+                    stagesTabsBtn[i].classList.add("_tab-active");
+                    stagesTabsBtn[i + 1].classList.remove("_tab-active");
+                    stagesTabsBody[i].hidden = false;
+                    stagesTabsBody[i + 1].hidden = true;
+                } else {
+                    stagesTabsBody[i].hidden = true;
+                    stagesTabsBtn[i].classList.remove("_tab-active");
+                    stagesTabsBody[0].hidden = false;
+                    stagesTabsBtn[0].classList.add("_tab-active");
+                }
+            }));
+        }));
+        stagesBtnPrev.forEach(((btn, i) => {
+            let allLenght = stagesTabsBtn.length - 1;
+            btn.addEventListener("click", (e => {
+                if (i > 0) if (stagesTabsBtn[i].classList.contains("_tab-active")) {
+                    stagesTabsBtn[i].classList.remove("_tab-active");
+                    stagesTabsBtn[i - 1].classList.add("_tab-active");
+                    stagesTabsBody[i].hidden = true;
+                    stagesTabsBody[i - 1].hidden = false;
+                } else {
+                    stagesTabsBtn[i].classList.add("_tab-active");
+                    stagesTabsBtn[i - 1].classList.remove("_tab-active");
+                    stagesTabsBody[i].hidden = false;
+                    stagesTabsBody[i - 1].hidden = true;
+                } else {
+                    stagesTabsBody[i].hidden = true;
+                    stagesTabsBtn[i].classList.remove("_tab-active");
+                    stagesTabsBody[allLenght].hidden = false;
+                    stagesTabsBtn[allLenght].classList.add("_tab-active");
+                }
+            }));
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
