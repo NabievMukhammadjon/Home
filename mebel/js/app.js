@@ -10334,11 +10334,19 @@ PERFORMANCE OF THIS SOFTWARE.
             const demo = document.getElementById("calcDemo"), range = document.getElementById("calcRange");
             const allPrice = document.querySelector(".response-calc__price");
             const selectContent = document.querySelectorAll(".quantity-calc__option");
+            const radioCalc = document.querySelectorAll(".radios-calc__radio");
             demo.innerHTML = range.value;
+            let material = "";
             range.addEventListener("input", (function() {
                 demo.value = this.value;
+                radioCalc.forEach((radio => {
+                    if (radio.checked) {
+                        material = radio.dataset.number;
+                        console.log(material);
+                    }
+                }));
                 selectContent.forEach(((item, i) => {
-                    if (item.selected) allPrice.textContent = 2 * this.value * item.textContent;
+                    if (item.selected) allPrice.textContent = material * this.value * item.textContent;
                 }));
             }));
             demo.addEventListener("input", (e => {
@@ -10346,8 +10354,14 @@ PERFORMANCE OF THIS SOFTWARE.
                 const inputValue = e.target.value;
                 if (!regex.test(inputValue)) e.target.value = ""; else {
                     range.value = inputValue;
+                    radioCalc.forEach((radio => {
+                        if (radio.checked) {
+                            material = radio.dataset.number;
+                            console.log(material);
+                        }
+                    }));
                     selectContent.forEach(((item, i) => {
-                        if (item.selected) allPrice.textContent = 2 * inputValue * item.textContent;
+                        if (item.selected) allPrice.textContent = material * inputValue * item.textContent;
                     }));
                 }
                 if (inputValue > 100) e.target.value = "";
