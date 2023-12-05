@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css?family=Merienda:300,regular,500,600,700,800,900);
+.page {
+  /* .page__container */
+  /* .page__content */
+  /* .page__title */
+  /* .page__list */
+  /* .page__item */
+  /* .page__link */
+  /* .page__link */
+  /* .page__img */
+  /* .page__text */
+}
+.main {
+  margin-top: 36px;
+}
+.page__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page__content {
+  margin-top: -3.125rem;
+}
+.page__title {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 120%;
+  color: #333;
+}
+.page__list {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+.page__item:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+.page__descr {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.page__link {
+  transition: color 0.3s ease 0s;
+}
+.page__link:hover {
+  color: lime;
+}
+.page__img-link {
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .page__img-link:hover {
+    transform: scale(0.9);
+  }
+}
+.footer {
+  height: 100vh;
+  /* .footer__container */
+  /* .footer__content */
+  /* .footer__image */
+}
+.footer__container {
+  display: flex;
+  height: 100%;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer__image {
+  max-width: 16.25rem;
+}
+
+.content-footer {
+  /* .content-footer__logo */
+  /* .content-footer__texts */
+  /* .content-footer__bottom */
+  /* .content-footer__descr */
+}
+.content-footer__logo {
+  max-width: 11.25rem;
+  margin-bottom: 0.75rem;
+}
+.content-footer__texts {
+  margin-bottom: 1.5rem;
+}
+.content-footer__descr {
+  font-size: 1.125rem;
+  line-height: 120%;
+}
+
+.null-1 {
+  font-weight: 600;
+}
+.null-3 {
+  margin-bottom: 0.25rem;
+}
+.null-4 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards {
+  padding: 30px 0;
+  /* .cards__container */
+  /* .cards__list */
+}
+.cards__list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cards__item {
+  flex: 1 1 auto;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.cards__link {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+.cards__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease 0s;
+  background: url("../img/search.svg") center center/20px no-repeat rgba(0, 0, 0, 0.7);
+}
+.cards__link:hover::after, .cards__link:focus-visible::after {
+  height: 100%;
+}
+.cards__link img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}/*# sourceMappingURL=style.css.map */
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/ 
+.tabcontainer {
+}
+
+.tabcontent {
+  position: relative;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 15.375rem;
+}
+.tabsbody {
+
+}
+
+.tabheader {
+  margin: 20px 0 36px;
+}
+
+.tabheader__items {
+  display: flex;
+  gap: 20px;
+}
+
+.tabheader__item {
+  flex: 1 1 auto;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.5s ease 0s;
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.tabheader__item_active {
+  background-color: #666;
+  color: #fff;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/ 
+.show {
+  display: grid;
+}
+.hide {
+  display: none;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+      opacity: 0.1;
+  } to {
+      opacity: 1;
+  }
+}
