@@ -6,6 +6,12 @@ function openModal(modalSelector, title, userId = '') {
     modal.classList.remove('hide');
     document.body.style.overflow = 'hidden';
 
+    if (title === 'Удалить клиента') {
+        modalTitle.classList.add('remove-title')
+    } else {
+        modalTitle.classList.remove('remove-title')
+    };
+
     const idUser = document.querySelector('.modal__user-id');
     if (userId === '') {
         idUser.classList.remove('active');
@@ -17,7 +23,11 @@ function openModal(modalSelector, title, userId = '') {
 }
 
 function closeModal(modalSelector) {
-    document.querySelector('.modal__form').remove();
+    if (document.querySelector('.modal__form')) {
+        document.querySelector('.modal__form').remove();
+    } else if (document.querySelector('.modal__remove-content')) {
+        document.querySelector('.modal__remove-content').remove();
+    }
     const modal = document.querySelector(modalSelector);
     modal.classList.add('hide');
     modal.classList.remove('show');
