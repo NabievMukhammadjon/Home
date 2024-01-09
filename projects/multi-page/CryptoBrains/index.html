@@ -6,10 +6,18 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230616234009">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240109220239">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		if (document.querySelector('title').textContent === 'Market') {
+			const link = document.createElement('link');
+			link.rel = "stylesheet";
+			link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css';
+			document.head.append(link);
+		}
+	</script>
 </head>
 
 <body>
@@ -28,7 +36,7 @@
 							</button>
 							<ul class="spollers-header__body">
 								<li class="spollers-header__item">
-									<a href="#" class="spollers-header__link">Ссылка-1</a>
+									<a href="market.html" class="spollers-header__link">market</a>
 								</li>
 								<li class="spollers-header__item">
 									<a href="#" class="spollers-header__link">Ссылка-2</a>
@@ -73,10 +81,10 @@
 							</ul>
 						</li>
 						<li class="nav-header__item">
-							<a href="#" class="nav-header__link">About</a>
+							<a href="about.html" class="nav-header__link">About</a>
 						</li>
 						<li class="nav-header__item">
-							<a href="#" class="nav-header__link">Career</a>
+							<a href="career.html" class="nav-header__link">Career</a>
 						</li>
 					</ul>
 				</nav>
@@ -86,7 +94,7 @@
 						Sign Up
 						<span class="flare"></span>
 					</button>
-					<div hidden class="btns-header__menu menu">
+					<div class="btns-header__menu menu">
 						<button type="button" class="menu__icon icon-menu">
 							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M8.3125 5.25C6.62113 5.25 5.25 6.62113 5.25 8.3125C5.25 10.0039 6.62113 11.375 8.3125 11.375C10.0039 11.375 11.375 10.0039 11.375 8.3125C11.375 6.62113 10.0039 5.25 8.3125 5.25ZM3.5 8.3125C3.5 5.65463 5.65463 3.5 8.3125 3.5C10.9704 3.5 13.125 5.65463 13.125 8.3125C13.125 10.9704 10.9704 13.125 8.3125 13.125C5.65463 13.125 3.5 10.9704 3.5 8.3125Z" fill="white" />
@@ -113,17 +121,17 @@
 			<section class="page-home__hero hero-home">
 				<div class="hero-home__body body-hero">
 					<div class="body-hero__container">
-						<div class="body-hero__body">
-							<div class="body-hero__content content-hero">
-								<div class="content-hero__name"><span>Crypto Brains</span></div>
-								<div class="content-hero__main">
-									<h1 class="content-hero__title">
+						<div class="body-hero__body hero-body">
+							<div class="body-hero__content content-hero hero-content">
+								<div class="content-hero__name hero-name"><span>Crypto Brains</span></div>
+								<div class="content-hero__main hero-main">
+									<h1 class="content-hero__title hero-title">
 										Buy &amp;&nbsp;Sell Crypto Easy
 										With Crypto Brains
 									</h1>
 									<picture><source srcset="img/hero/hero-line.webp" type="image/webp"><img src="img/hero/hero-line.png" alt="Line"></picture>
 								</div>
-								<p class="content-hero__descr">
+								<p class="content-hero__descr hero-descr">
 									It&nbsp;is&nbsp;a&nbsp;long established fact that a&nbsp;reader will be&nbsp;distracted by&nbsp;the readable content of&nbsp;a&nbsp;page when
 									looking at&nbsp;its layout.
 								</p>
@@ -132,7 +140,7 @@
 									<button class="content-hero__btn btn-border">Beginner’s Guide</button>
 								</div>
 							</div>
-							<div class="body-hero__media media-hero">
+							<div class="body-hero__media media-hero hero-img">
 
 							</div>
 						</div>
@@ -212,7 +220,7 @@
 				<div class="market-home__container">
 					<div data-tabs class="market-home__tabs tabs-market-home">
 						<div class="tabs-market-home__head">
-							<h2 class="market-home__title">Market Trends</h2>
+							<h2 class="market-home__title site-title">Market Trends</h2>
 							<nav data-tabs-titles class="tabs-market-home__navigation">
 								<button type="button" class="tabs-market-home__title _tab-active">All</button>
 								<button type="button" class="tabs-market-home__title">Top Gainers</button>
@@ -223,9 +231,9 @@
 							</nav>
 						</div>
 						<div data-tabs-body class="tabs-market-home__content">
-							<div class="tabs-market-home__body body-market-home">
-								<div class="body-market-home__cards">
-									<article class="body-market-home__card card-market-body">
+							<div class="tabs-market-home__body body-market">
+								<div class="body-market__cards">
+									<article class="body-market__card card-market-body">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/btc.webp" type="image/webp"><img src="img/marketTrends/icons/btc.png" alt="btc"></picture>
@@ -238,7 +246,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body">
+									<article class="body-market__card card-market-body">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
@@ -251,7 +259,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-lg">
+									<article class="body-market__card card-market-body hidden-lg">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
@@ -264,7 +272,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-xl">
+									<article class="body-market__card card-market-body hidden-xl">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
@@ -277,7 +285,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-tab">
+									<article class="body-market__card card-market-body hidden-tab">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
@@ -290,7 +298,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-pc">
+									<article class="body-market__card card-market-body hidden-pc">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/etp.webp" type="image/webp"><img src="img/marketTrends/icons/etp.png" alt="etp"></picture>
@@ -305,22 +313,22 @@
 									</article>
 								</div>
 							</div>
-							<div class="tabs-market-home__body body-market-home">
-								<div class="body-market-home__cards">
-									<article class="body-market-home__card card-market-body">
+							<div class="tabs-market-home__body body-market">
+								<div class="body-market__cards">
+									<article class="body-market__card card-market-body">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
+												<picture><source srcset="img/marketTrends/icons/btc.webp" type="image/webp"><img src="img/marketTrends/icons/btc.png" alt="btc"></picture>
 											</div>
-											<h3 class="card-market-body__name">BTS / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 2,541.12</div>
+											<h3 class="card-market-body__name">Bitcoin / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
+											<div class="card-market-body__price">₹ 28,214,25.341</div>
 											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
+												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body">
+									<article class="body-market__card card-market-body hidden-lg">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
@@ -333,7 +341,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-xl">
+									<article class="body-market__card card-market-body hidden-xl">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
@@ -346,7 +354,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-tab">
+									<article class="body-market__card card-market-body hidden-tab">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
@@ -359,7 +367,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-pc">
+									<article class="body-market__card card-market-body hidden-pc">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/etp.webp" type="image/webp"><img src="img/marketTrends/icons/etp.png" alt="etp"></picture>
@@ -374,22 +382,9 @@
 									</article>
 								</div>
 							</div>
-							<div class="tabs-market-home__body body-market-home">
-								<div class="body-market-home__cards">
-									<article class="body-market-home__card card-market-body">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/etp.webp" type="image/webp"><img src="img/marketTrends/icons/etp.png" alt="etp"></picture>
-											</div>
-											<h3 class="card-market-body__name">Etp / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
-											<div class="card-market-body__price">₹ 420.83</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body">
+							<div class="tabs-market-home__body body-market">
+								<div class="body-market__cards">
+									<article class="body-market__card card-market-body">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/btc.webp" type="image/webp"><img src="img/marketTrends/icons/btc.png" alt="btc"></picture>
@@ -402,7 +397,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-lg">
+									<article class="body-market__card card-market-body">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
@@ -415,7 +410,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-xl">
+									<article class="body-market__card card-market-body hidden-lg">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
@@ -428,7 +423,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-tab">
+									<article class="body-market__card card-market-body hidden-xl">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
@@ -441,7 +436,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-pc">
+									<article class="body-market__card card-market-body hidden-tab">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
@@ -454,76 +449,7 @@
 											</div>
 										</a>
 									</article>
-								</div>
-							</div>
-							<div class="tabs-market-home__body body-market-home">
-								<div class="body-market-home__cards">
-									<article class="body-market-home__card card-market-body">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
-											</div>
-											<h3 class="card-market-body__name">DGD / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
-											<div class="card-market-body__price">₹ 284.64</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/btc.webp" type="image/webp"><img src="img/marketTrends/icons/btc.png" alt="btc"></picture>
-											</div>
-											<h3 class="card-market-body__name">Bitcoin / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
-											<div class="card-market-body__price">₹ 28,214,25.341</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body hidden-lg">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
-											</div>
-											<h3 class="card-market-body__name">BTS / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 2,541.12</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body hidden-xl">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
-											</div>
-											<h3 class="card-market-body__name">Ethos / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 1,146,25.96</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body hidden-tab">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
-											</div>
-											<h3 class="card-market-body__name">KMD / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 245.21</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body hidden-pc">
+									<article class="body-market__card card-market-body hidden-pc">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/etp.webp" type="image/webp"><img src="img/marketTrends/icons/etp.png" alt="etp"></picture>
@@ -538,35 +464,9 @@
 									</article>
 								</div>
 							</div>
-							<div class="tabs-market-home__body body-market-home">
-								<div class="body-market-home__cards">
-									<article class="body-market-home__card card-market-body">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
-											</div>
-											<h3 class="card-market-body__name">BTS / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 2,541.12</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
-											</div>
-											<h3 class="card-market-body__name">DGD / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
-											<div class="card-market-body__price">₹ 284.64</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body hidden-lg">
+							<div class="tabs-market-home__body body-market">
+								<div class="body-market__cards">
+									<article class="body-market__card card-market-body">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/btc.webp" type="image/webp"><img src="img/marketTrends/icons/btc.png" alt="btc"></picture>
@@ -579,7 +479,33 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-xl">
+									<article class="body-market__card card-market-body">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
+											</div>
+											<h3 class="card-market-body__name">BTS / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
+											<div class="card-market-body__price">₹ 2,541.12</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-lg">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
+											</div>
+											<h3 class="card-market-body__name">DGD / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
+											<div class="card-market-body__price">₹ 284.64</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-xl">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
@@ -592,7 +518,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-tab">
+									<article class="body-market__card card-market-body hidden-tab">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
@@ -605,7 +531,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-pc">
+									<article class="body-market__card card-market-body hidden-pc">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/etp.webp" type="image/webp"><img src="img/marketTrends/icons/etp.png" alt="etp"></picture>
@@ -620,35 +546,9 @@
 									</article>
 								</div>
 							</div>
-							<div class="tabs-market-home__body body-market-home">
-								<div class="body-market-home__cards">
-									<article class="body-market-home__card card-market-body">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
-											</div>
-											<h3 class="card-market-body__name">Ethos / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 1,146,25.96</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
-											</div>
-											<h3 class="card-market-body__name">KMD / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 245.21</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body hidden-lg">
+							<div class="tabs-market-home__body body-market">
+								<div class="body-market__cards">
+									<article class="body-market__card card-market-body">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/btc.webp" type="image/webp"><img src="img/marketTrends/icons/btc.png" alt="btc"></picture>
@@ -661,20 +561,7 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-xl">
-										<a href="#" class="card-market-body__link">
-											<div class="card-market-body__icon">
-												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
-											</div>
-											<h3 class="card-market-body__name">BTS / BTC</h3>
-											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
-											<div class="card-market-body__price">₹ 2,541.12</div>
-											<div class="card-market-body__schedule">
-												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
-											</div>
-										</a>
-									</article>
-									<article class="body-market-home__card card-market-body hidden-tab">
+									<article class="body-market__card card-market-body hidden-lg">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
@@ -687,7 +574,115 @@
 											</div>
 										</a>
 									</article>
-									<article class="body-market-home__card card-market-body hidden-pc">
+									<article class="body-market__card card-market-body hidden-xl">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
+											</div>
+											<h3 class="card-market-body__name">Ethos / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
+											<div class="card-market-body__price">₹ 1,146,25.96</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-tab">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
+											</div>
+											<h3 class="card-market-body__name">KMD / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
+											<div class="card-market-body__price">₹ 245.21</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-pc">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/etp.webp" type="image/webp"><img src="img/marketTrends/icons/etp.png" alt="etp"></picture>
+											</div>
+											<h3 class="card-market-body__name">Etp / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
+											<div class="card-market-body__price">₹ 420.83</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+								</div>
+							</div>
+							<div class="tabs-market-home__body body-market">
+								<div class="body-market__cards">
+									<article class="body-market__card card-market-body">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/btc.webp" type="image/webp"><img src="img/marketTrends/icons/btc.png" alt="btc"></picture>
+											</div>
+											<h3 class="card-market-body__name">Bitcoin / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
+											<div class="card-market-body__price">₹ 28,214,25.341</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/bts.webp" type="image/webp"><img src="img/marketTrends/icons/bts.png" alt="bts"></picture>
+											</div>
+											<h3 class="card-market-body__name">BTS / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
+											<div class="card-market-body__price">₹ 2,541.12</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-lg">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/dgd.webp" type="image/webp"><img src="img/marketTrends/icons/dgd.png" alt="dgd"></picture>
+											</div>
+											<h3 class="card-market-body__name">DGD / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareUp percent percent-up">5.76%</span>
+											<div class="card-market-body__price">₹ 284.64</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphUp.webp" type="image/webp"><img src="img/marketTrends/GraphUp.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-xl">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/ethos.webp" type="image/webp"><img src="img/marketTrends/icons/ethos.png" alt="ethos"></picture>
+											</div>
+											<h3 class="card-market-body__name">Ethos / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
+											<div class="card-market-body__price">₹ 1,146,25.96</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-tab">
+										<a href="#" class="card-market-body__link">
+											<div class="card-market-body__icon">
+												<picture><source srcset="img/marketTrends/icons/kmd.webp" type="image/webp"><img src="img/marketTrends/icons/kmd.png" alt="kmd"></picture>
+											</div>
+											<h3 class="card-market-body__name">KMD / BTC</h3>
+											<span class="card-market-body__perc _icon-arrowShareDown percent percent-down">5.76%</span>
+											<div class="card-market-body__price">₹ 245.21</div>
+											<div class="card-market-body__schedule">
+												<picture><source srcset="img/marketTrends/GraphDown.webp" type="image/webp"><img src="img/marketTrends/GraphDown.png" alt="График роста"></picture>
+											</div>
+										</a>
+									</article>
+									<article class="body-market__card card-market-body hidden-pc">
 										<a href="#" class="card-market-body__link">
 											<div class="card-market-body__icon">
 												<picture><source srcset="img/marketTrends/icons/etp.webp" type="image/webp"><img src="img/marketTrends/icons/etp.png" alt="etp"></picture>
@@ -711,7 +706,7 @@
 			</section>
 			<section class="page-home__start-trading start-trading-home">
 				<div class="start-trading-home__container">
-					<h2 class="start-trading-home__title">
+					<h2 class="start-trading-home__title site-title site-title--center">
 						Start Trading In Simple Process
 					</h2>
 					<p class="start-trading-home__descr">
@@ -767,7 +762,7 @@
 			</section>
 			<section class="page-home__advantages advantages-home">
 				<div class="advantages-home__container">
-					<h2 class="advantages-home__title">Why Choose Crypto Brains!</h2>
+					<h2 class="advantages-home__title site-title site-title--center">Why Choose Crypto Brains!</h2>
 					<p class="advantages-home__descr">
 						When an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book.
 					</p>
@@ -828,7 +823,7 @@
 			<section class="page-home__comments comments-home">
 				<div class="comments-home__container">
 					<div class="comments-home__head">
-						<h2 class="comments-home__title">What Traders Saying About Us!</h2>
+						<h2 class="comments-home__title site-title">What Traders Saying About Us!</h2>
 						<p class="comments-home__descr">
 							Lorem Ipsum has been the industry's standard dummy text since the 1500s, when an unknown printer took a galley of type and scrambled type specimen book.
 						</p>
@@ -888,14 +883,14 @@
 								</p>
 							</div>
 						</div>
-						<div class="comments-home__dotts"></div>
+						<div class="comments-home__dotts swiper-dotts"></div>
 					</div>
 				</div>
 			</section>
 			<section class="page-home__app app-home">
 				<div class="app-home__container">
 					<div class="app-home__content">
-						<h2 class="app-home__title">Never Miss Trading, Download Our Application</h2>
+						<h2 class="app-home__title site-title">Never Miss Trading, Download Our Application</h2>
 						<p class="app-home__descr">
 							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 						</p>
@@ -929,9 +924,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="page-home__questions questions-home">
+			<section class="page-home__questions questions-home questions--users">
 				<div class="questions-home__container">
-					<h2 class="questions-home__title">Frequently Asked Questions</h2>
+					<h2 class="questions-home__title site-title site-title--center">Frequently Asked Questions</h2>
 					<p class="questions-home__descr">
 						When an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book.
 					</p>
@@ -1091,7 +1086,7 @@
 								<button type="button" data-spoller class="spollers-body-footer__title _icon-arrowOpen">Knowledge</button>
 								<ul class="spollers-body-footer__list list-spollers-footer">
 									<li class="list-spollers-footer__item">
-										<a href="#" class="list-spollers-footer__link">F.A.Q.</a>
+										<a href="questions.html" class="list-spollers-footer__link">F.A.Q.</a>
 									</li>
 									<li class="list-spollers-footer__item">
 										<a href="#" class="list-spollers-footer__link">Articals</a>
@@ -1172,7 +1167,7 @@
 								<button type="button" data-spoller class="spollers-body-footer__title _icon-arrowOpen">Press</button>
 								<ul class="spollers-body-footer__list list-spollers-footer">
 									<li class="list-spollers-footer__item">
-										<a href="#" class="list-spollers-footer__link">Blog</a>
+										<a href="blog.html" class="list-spollers-footer__link">Blog</a>
 									</li>
 									<li class="list-spollers-footer__item">
 										<a href="#" class="list-spollers-footer__link">News</a>
@@ -1230,7 +1225,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230616234009"></script>
+	<script src="js/app.min.js?_v=20240109220239"></script>
 </body>
 
 </html>

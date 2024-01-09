@@ -2,22 +2,10 @@
 <html lang="en">
 
 <head>
-	<title>Blog</title>
 	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240109220239">
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script>
-		if (document.querySelector('title').textContent === 'Market') {
-			const link = document.createElement('link');
-			link.rel = "stylesheet";
-			link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css';
-			document.head.append(link);
-		}
-	</script>
+	<title>Details-Page</title>
 </head>
 
 <body>
@@ -117,272 +105,167 @@
 				</div>
 			</div>
 		</header>
-		<main class="page page-blog">
-			<section class="page-blog__hero hero-blog">
-				<div class="hero-blog__container">
-					<div class="hero-blog__content">
-						<div class="hero-blog__media">
-							<picture><source srcset="img/blog-page/bg-bitcoin.webp" type="image/webp"><img src="img/blog-page/bg-bitcoin.jpg" alt="bitcoin"></picture>
-						</div>
-						<div class="hero-blog__slider swiper center--article">
-							<div class="hero-blog__wrapper swiper-wrapper">
-								<div class="hero-blog__slide slide-hero-blog swiper-slide">
-									<div data-swiper-parallax="-50" class="slide-hero-blog__head article--head">
-										<div class="slide-hero-blog__date article--date">
-											<span>Created On-</span>
-											20 Mar, 2022
-										</div>
-										<div class="slide-hero-blog__current article--current">10 Mins Read</div>
-									</div>
-									<h2 data-swiper-parallax="-100" class="slide-hero-blog__title article--title">Crypto Traders Has News About Crypto Currency.</h2>
-									<p data-swiper-parallax="-150" class="slide-hero-blog__descr article--descr">
-										Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book...
-									</p>
-									<div data-swiper-parallax="-200" class="slide-hero-blog__user article--user">
-										<picture><source srcset="img/comments/user.webp" type="image/webp"><img src="img/comments/user.png" alt="user" class="slide-hero-blog__logo"></picture>
-										<span class="slide-hero-blog__name">Smith Watson</span>
-									</div>
-								</div>
-								<div class="hero-blog__slide slide-hero-blog swiper-slide">
-									<div data-swiper-parallax="-50" class="slide-hero-blog__head article--head">
-										<div class="slide-hero-blog__date article--date">
-											<span>Created On-</span>
-											20 Mar, 2022
-										</div>
-										<div class="slide-hero-blog__current article--current">10 Mins Read</div>
-									</div>
-									<h2 data-swiper-parallax="-100" class="slide-hero-blog__title article--title">Crypto Traders Has News About Crypto Currency.</h2>
-									<p data-swiper-parallax="-150" class="slide-hero-blog__descr article--descr">
-										Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book...
-									</p>
-									<div data-swiper-parallax="-200" class="slide-hero-blog__user article--user">
-										<picture><source srcset="img/comments/user.webp" type="image/webp"><img src="img/comments/user.png" alt="user" class="slide-hero-blog__logo"></picture>
-										<span class="slide-hero-blog__name">Smith Watson</span>
-									</div>
-								</div>
-								<div class="hero-blog__slide slide-hero-blog swiper-slide">
-									<div data-swiper-parallax="-50" class="slide-hero-blog__head article--head">
-										<div class="slide-hero-blog__date article--date">
-											<span>Created On-</span>
-											20 Mar, 2022
-										</div>
-										<div class="slide-hero-blog__current article--current">10 Mins Read</div>
-									</div>
-									<h2 data-swiper-parallax="-100" class="slide-hero-blog__title article--title">Crypto Traders Has News About Crypto Currency.</h2>
-									<p data-swiper-parallax="-150" class="slide-hero-blog__descr article--descr">
-										Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book...
-									</p>
-									<div data-swiper-parallax="-200" class="slide-hero-blog__user article--user">
-										<picture><source srcset="img/comments/user.webp" type="image/webp"><img src="img/comments/user.png" alt="user" class="slide-hero-blog__logo"></picture>
-										<span class="slide-hero-blog__name">Smith Watson</span>
-									</div>
-								</div>
-								<div class="hero-blog--prop"></div>
+		<main class="page page-blog-details">
+			<section class="page-blog-details__article article-blog-det">
+				<div class="article-blog-det__container">
+					<div class="article-blog-det__media">
+						<picture><source srcset="img/blog-page/bg-bitcoin.webp" type="image/webp"><img src="img/blog-page/bg-bitcoin.jpg" alt="bitcoin"></picture>
+					</div>
+					<div class="article-blog-det__content content-blog-det article--center">
+						<div class="content-blog-det__head article--head">
+							<div class="content-blog-det__date article--date">
+								<span>Created On-</span>
+								20 Mar, 2022
+							</div>
+							<div class="content-blog-det__user article--user">
+								<picture><source srcset="img/comments/user.webp" type="image/webp"><img src="img/comments/user.png" alt="user" class="content-blog-det__logo"></picture>
+								<span class="content-blog-det__name">Smith Watson</span>
 							</div>
 						</div>
-						<div class="hero-blog__dotts swiper-dotts"></div>
+						<h2 class="content-blog-det__title article--title">
+							Crypto Traders Has News About Crypto Currency.
+						</h2>
+						<p class="content-blog-det__descr article--descr">
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type
+							specimen book. Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book. It&nbsp;has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It&nbsp;was popularised in&nbsp;the 1960s with the release of&nbsp;Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of&nbsp;Lorem Ipsum.
+							<br>
+							<br>
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type
+							specimen book. Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book. It&nbsp;has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It&nbsp;was popularised in&nbsp;the 1960s with the release of&nbsp;Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of&nbsp;Lorem Ipsum.
+						</p>
+						<div class="content-blog-det__subtitle">
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s.
+						</div>
+						<p class="content-blog-det__descr article--descr">
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type
+							specimen book. Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book. It&nbsp;has survived not only five centuries.
+						</p>
+						<div class="content-blog-det__subtitle">
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s.
+						</div>
+						<p class="content-blog-det__descr article--descr">
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type
+							specimen book. Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book. It&nbsp;has survived not only five centuries.
+						</p>
+						<figure class="content-blog-det__figure">
+							<blockquote class="content-blog-det__blockquote">
+								<p>
+									&quot; Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book. &quot;
+								</p>
+							</blockquote>
+							<figcaption>Jerry Smith </figcaption>
+						</figure>
+						<div class="content-blog-det__subtitle">
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s.
+						</div>
+						<p class="content-blog-det__descr article--descr">
+							Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type
+							specimen book. Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book. It&nbsp;has survived not only five centuries.
+						</p>
 					</div>
 				</div>
 			</section>
-			<section class="page-blog__news news-cards">
-				<div class="news-cards__container container">
-					<h2 class="news-cards__title visually-hidden">...</h2>
-					<div class="news-cards__body">
-						<article class="news-cards__item item-cards">
-							<a href="./blog-details.html" class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-1.webp" type="image/webp"><img src="img/blog-page/cards/card-1.jpg" alt="Magazine"></picture>
-							</a>
-							<div class="item-cards__texts">
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
+			<section class="page-blog-details__similar similar-articles">
+				<div class="similar-articles__container">
+					<div class="similar-articles__slider swiper">
+						<div class="similar-articles__wrapper swiper-wrapper">
+							<div class="similar-articles__slide swiper-slide">
+								<article class="news-cards__item item-cards">
+									<div class="item-cards__image-ibg">
+										<picture><source srcset="img/blog-page/cards/card-2.webp" type="image/webp"><img src="img/blog-page/cards/card-2.jpg" alt="Magazine"></picture>
+									</div>
+									<div class="item-cards__texts">
+										<div class="item-cards__head item-cards">
+											<span class="item-cards__data">20 Mar, 2022</span>
+											<span class="item-cards__current">5 Mins Read</span>
+										</div>
+										<h3 class="item-cards__subtitle">
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+										</h3>
+									</div>
+									<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
+								</article>
 							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-2.webp" type="image/webp"><img src="img/blog-page/cards/card-2.jpg" alt="Magazine"></picture>
+							<div class="similar-articles__slide swiper-slide">
+								<article class="news-cards__item item-cards">
+									<div class="item-cards__image-ibg">
+										<picture><source srcset="img/blog-page/cards/card-2.webp" type="image/webp"><img src="img/blog-page/cards/card-2.jpg" alt="Magazine"></picture>
+									</div>
+									<div class="item-cards__texts">
+										<div class="item-cards__head item-cards">
+											<span class="item-cards__data">20 Mar, 2022</span>
+											<span class="item-cards__current">5 Mins Read</span>
+										</div>
+										<h3 class="item-cards__subtitle">
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+										</h3>
+									</div>
+									<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
+								</article>
 							</div>
-							<div class="item-cards__texts">
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-									Crypto Has New Announcement About Russia And
-									Crypto Has New Announcement About Russia And
-								</h3>
+							<div class="similar-articles__slide swiper-slide">
+								<article class="news-cards__item item-cards">
+									<div class="item-cards__image-ibg">
+										<picture><source srcset="img/blog-page/cards/card-1.webp" type="image/webp"><img src="img/blog-page/cards/card-1.jpg" alt="Magazine"></picture>
+									</div>
+									<div class="item-cards__texts">
+										<div class="item-cards__head item-cards">
+											<span class="item-cards__data">20 Mar, 2022</span>
+											<span class="item-cards__current">5 Mins Read</span>
+										</div>
+										<h3 class="item-cards__subtitle">
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+										</h3>
+									</div>
+									<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
+								</article>
 							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-3.webp" type="image/webp"><img src="img/blog-page/cards/card-3.jpg" alt="Magazine"></picture>
+							<div class="similar-articles__slide swiper-slide">
+								<article class="news-cards__item item-cards">
+									<div class="item-cards__image-ibg">
+										<picture><source srcset="img/blog-page/cards/card-4.webp" type="image/webp"><img src="img/blog-page/cards/card-4.jpg" alt="Magazine"></picture>
+									</div>
+									<div class="item-cards__texts">
+										<div class="item-cards__head item-cards">
+											<span class="item-cards__data">20 Mar, 2022</span>
+											<span class="item-cards__current">5 Mins Read</span>
+										</div>
+										<h3 class="item-cards__subtitle">
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+										</h3>
+									</div>
+									<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
+								</article>
 							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
+							<div class="similar-articles__slide swiper-slide">
+								<article class="news-cards__item item-cards">
+									<div class="item-cards__image-ibg">
+										<picture><source srcset="img/blog-page/cards/card-3.webp" type="image/webp"><img src="img/blog-page/cards/card-3.jpg" alt="Magazine"></picture>
+									</div>
+									<div class="item-cards__texts">
+										<div class="item-cards__head item-cards">
+											<span class="item-cards__data">20 Mar, 2022</span>
+											<span class="item-cards__current">5 Mins Read</span>
+										</div>
+										<h3 class="item-cards__subtitle">
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+											Crypto Has New Announcement About Russia And
+										</h3>
+									</div>
+									<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
+								</article>
 							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-4.webp" type="image/webp"><img src="img/blog-page/cards/card-4.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-5.webp" type="image/webp"><img src="img/blog-page/cards/card-5.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-6.webp" type="image/webp"><img src="img/blog-page/cards/card-6.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-7.webp" type="image/webp"><img src="img/blog-page/cards/card-7.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-8.webp" type="image/webp"><img src="img/blog-page/cards/card-8.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-9.webp" type="image/webp"><img src="img/blog-page/cards/card-9.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-10.webp" type="image/webp"><img src="img/blog-page/cards/card-10.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-11.webp" type="image/webp"><img src="img/blog-page/cards/card-11.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-						<article class="news-cards__item item-cards">
-							<div class="item-cards__image-ibg">
-								<picture><source srcset="img/blog-page/cards/card-12.webp" type="image/webp"><img src="img/blog-page/cards/card-12.jpg" alt="Magazine"></picture>
-							</div>
-							<div class="item-cards__texts">
-
-								<div class="item-cards__head item-cards">
-									<span class="item-cards__data">20 Mar, 2022</span>
-									<span class="item-cards__current">5 Mins Read</span>
-								</div>
-								<h3 class="item-cards__subtitle">
-									Crypto Has New Announcement About Russia And
-								</h3>
-							</div>
-							<a href="blog-details.html" target="_blank" class="item-cards__link">Read More</a>
-						</article>
-					</div>
-					<div class="news-cards__btns">
-						<button class="news-cards__button btn-primary">Load More</button>
+						</div>
+						<div class="similar-articles__dotts swiper-dotts"></div>
 					</div>
 				</div>
 			</section>
@@ -570,18 +453,8 @@
 				</div>
 			</div>
 		</footer>
+		<script src="js/app.min.js?_v=20240109220239"></script>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20240109220239"></script>
 </body>
 
 </html>
