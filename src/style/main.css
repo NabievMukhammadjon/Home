@@ -12,8 +12,6 @@
     --index: calc(1vw + 1vh);
 }
 body {
-    width: 100vw;
-    height: 100vh;
     background-color: #333;
     /* background-color: #fff; */
 }

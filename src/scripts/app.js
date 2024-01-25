@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+    
     function createTabs() {
         const tabs = document.querySelectorAll('.tabheader__item'),
             tabsContent = document.querySelectorAll('.tabcontent'),
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 item.classList.remove('tabheader__item_active');
             });
         }
+        console.log(tabs);
 
         function showTabContent(i = 0) {
             tabsContent[i].classList.add('show', 'fade');
