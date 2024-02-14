@@ -62,6 +62,7 @@ function newClientTr(client) {
     timeChange.textContent = client.lastChange.nowTime;
     
     for (const key in client.contacts) {
+        console.log(client.contacts[key]);
         client.contacts[key].forEach(item => {
             const tooltipPhone = document.createElement('a'),
                 tooltipContent = document.createElement('div'),
