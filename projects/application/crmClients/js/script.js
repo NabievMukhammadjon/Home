@@ -320,6 +320,10 @@ function settingClients(obj = '') {
 }
 
 function changeContacts(obj, key, element, index) {
+    console.log(obj);
+    console.log(key);
+    console.log(element);
+    console.log(index);
     switch (key) {
         case 'allphone':
             obj.selectData.childNodes[0].textContent = 'Доп. телефон';
