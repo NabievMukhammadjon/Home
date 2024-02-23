@@ -40,10 +40,7 @@ body {
 }
 
 .form__label {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 135%;
-    color: #333;
+
 }
 
 .form__input {
@@ -59,8 +56,9 @@ body {
 }
 
 .form__btn {
+    position: relative;
     margin-top: 8px;
-    padding: 16px 32px;
+    padding: 16px 36px 16px 32px;
     border: none;
     outline: none;
     color: #fff;
@@ -79,4 +77,26 @@ body {
 .form__btn:hover {
     background-color: #4fa4d8;
     color: #cecece;
+}
+.form__btn:disabled {
+    cursor: auto;
+    opacity: .5;
+}
+
+.spinner {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
